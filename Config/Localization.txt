@@ -167,7 +167,7 @@ meleeToolAxeT3StrongChainsawDesc,items,Tool,,,Look at you! Just like Leatherface
 meleeToolRepairT0PlasticHammer,items,Tool,,,Plastic Hammer,,
 meleeToolRepairT0PlasticHammerDesc,items,Tool,,,The Plastic hammer is great for repairing and upgrading base walls and not bad as a weapon.\n\nRepair with a Repair Kit.,,"
 meleeToolPickT0PlantFiberPickaxe,items,Tool,,,Plant Fiber Pickaxe,,
-meleeToolPickT0PlantFiberPickaxeDesc,items,Tool,,,Plant Fiber Pickaxe,,
+meleeToolPickT0PlantFiberPickaxeDesc,items,Tool,,,"Primitive pickaxe, gets the job done.",,
 meleeToolT0PlantFiberAxeDesc,items,Tool,,,Plant Fiber Axe,,
 meleeToolT0PlantFiberAxe,items,Tool,,,Plant Fiber Axe,,
 meleeToolShovelT0PlantFiberShovelDesc,items,Tool,,,Plant Fiber Shovel,,
