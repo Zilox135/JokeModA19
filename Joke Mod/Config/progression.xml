@@ -1,8 +1,0 @@
-<configs>
-	
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='2,5']/@tags">,drinkJarPapaRizzsPooTea</append>
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='4,5']/@tags">,foodRizzosBerryCrunch</append>
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='3,5']/@tags">,foodbeefdog</append>
-	<append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='1,5']/@tags">,foodKPsBuns</append>
-	
-</configs>
