@@ -1,0 +1,155 @@
+<config>
+	<!-- Removes stone tools from loot and adds a small chance of good shit early on -->
+	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT0']/loot/@prob">0</set>
+	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT0Backup']/loot/@prob">0</set>
+	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.010</set>
+	
+<append xpath="/lootcontainers/lootgroup[@name='drinks']">
+	<item name="drinkJarPapaRizzsPooTea" count="1,2" prob="0.5"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='beverages']">
+	<item name="drinkJarPapaRizzsPooTea" prob="0.5"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='rareFoodDrink']">
+	<item name="foodRizzosBerryCrunch"/>
+	<item name="foodbeefdog"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='coldfood']">
+	<item name="foodKPsBuns"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='cannedfood']">
+	<item name="foodCanPremiumDogFood"/>
+</append>
+
+<append xpath="/lootcontainers/lootcontainer[@id='65']">
+	<item name="foodEdibleturd" count="1,2" prob="0.1"/>
+	<item name="drugToiletBrush" count="1,2" prob="0.075"/>
+	<item name="Goldtoiletpaper" prob="0.025"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='medicine']">
+	<item name="TubeSock"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='rareMedicine']">
+	<item name="drugStrongPainkillers"/>
+	<item name="drugStrongAntistink"/>
+	<item name="drugToiletBrush"/>
+	<item name="drugHerbalAntibiotics"/>
+	<item name="Goldtoiletpaper" prob="0.025"/>		
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='airdropMedicine']">
+	<item name="drugHerbalAntibiotics"/>
+	<item name="drugStrongPainkillers"/>
+	<item name="drugStrongAntistink"/>	
+</append>
+
+<!-- EntityLootContainerStrong, rare random drop off strong zombies -->
+<append xpath="/lootcontainers/lootcontainer[@id='71']">
+	<item name="drugToiletBrush" count="1,2" prob="0.1"/>
+	<item name="drugStrongPainkillers" count="1,2" prob="0.2"/>
+	<item name="Toiletpaper" count="1,2" prob="0.1"/>		
+</append>
+
+<!-- EntityLootContainerRegular, rare random drop off regular zombies -->
+<append xpath="/lootcontainers/lootcontainer[@id='70']">
+	<item name="drugToiletBrush" count="1,2" prob="0.1"/>
+	<item name="drugStrongPainkillers" count="1,2" prob="0.2"/>
+	<item name="Toiletpaper" count="1,2" prob="0.1"/>		
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestChallenge']">
+	<item name="qc_ladiesofthenight" prob="0.2"/>
+	<item name="qc_dontgetcocky" prob="0.2"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
+	<item name="noteToiletpoem"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']">
+	<item name="noteToiletpoem"/>
+</append>
+
+<append xpath="/lootcontainers/lootcontainer[@id='14']">
+	<item name="Goldtoiletpaper" prob="0.025"/>	
+	<item name="noteToiletpoem" prob="0.2"/>
+	<item name="noteBoobs" prob="0.2"/>
+	<item name="noteFucksGiven" prob="0.2"/>		
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='junk']">
+	<item name="Goldtoiletpaper" prob="0.025"/>	
+	<item name="noteBoobs" prob="0.2"/>
+	<item name="noteFucksGiven" prob="0.2"/>	
+	<item name="TubeSock"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT2']">
+	<item name="gunRifleT2GoldenRifle" loot_quality_template="questT2QualTemplate"/>
+	<item name="ammoCasinoCoin" count="6,25"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_DeadEye']">
+	<item name="gunRifleT2GoldenRifle" loot_quality_template="QLTemplateT2"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='schematicsWeaponsArmorT1']">
+	<item name="gunRifleT2MarksmanRifleSchematic"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestAmmo']">
+	<item name="ammoCasinoCoin" count="120" loot_prob_template="QuestT1Prob"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupAmmoRegularT1']">
+	<item name="ammoCasinoCoin" count="8,17"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupAmmoRegularT2']">
+	<item name="ammoCasinoCoin" count="12,25"/>						
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
+	<item name="drinkJarPapaRizzsPooTeaSchematic"/>
+	<item name="foodKPsBunsSchematic"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT1']">
+	<item name="foodRizzosBerryCrunchSchematic"/>
+	<item name="foodbeefdogSchematic"/>	
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT2']">
+	<item name="drinkCanMegaCrushSchematic"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest']">
+	<item name="foodEdibleturd" count="1,2" prob="0.1"/>
+	<item name="foodEgg" count="1,4" prob="0.75"/>
+	<item name="resourceFeather" count="1,10" prob="0.25"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupToolsT3']">
+	<item name="meleeToolAxeT3StrongChainsaw" count="1" loot_prob_template="QLTemplateT3"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT3']">
+	<item name="meleeToolAxeT3StrongChainsaw" count="1" loot_prob_template="questT3QualTemplate"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupToolsT2']">
+	<item name="meleeToolPickT2ForkPickaxe" count="1" loot_prob_template="QLTemplateT2"/>
+</append>
+
+<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT2']">
+	<item name="meleeToolPickT2ForkPickaxe" count="1" loot_prob_template="questT2QualTemplate"/>
+</append>
+
+</config>
+

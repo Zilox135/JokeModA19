@@ -1,0 +1,20 @@
+<Configs>
+<!-- Removes the crap sounds from the auger and chainsaw -->
+<remove	xpath="/Sounds/SoundDataNode[@name='bullethitstone']"/>
+<remove	xpath="/Sounds/SoundDataNode[@name='bullethitearth']"/>
+<remove	xpath="/Sounds/SoundDataNode[@name='bullethitwood']"/>
+<remove	xpath="/Sounds/SoundDataNode[@name='bullethitmetal']"/>
+<append xpath="/Sounds">
+	
+<SoundDataNode name="WaterGunFire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/WaterGunSounds.unity3d?WaterGunSounds"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>	
+
+<SoundDataNode name="WaterGunDry"> <AudioSource name="Sounds/AudioSource_Reloads"/>
+	<Noise ID="6" noise="7" time="2" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/WaterGunSounds.unity3d?WaterDry"/>
+	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
+	
+</append>
+</Configs>	
