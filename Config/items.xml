@@ -1564,7 +1564,8 @@
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="player_eating"/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
 	</property>
 	<effect_group tiered="false" name="Food Tier 0">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
@@ -2557,11 +2558,10 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="meleeToolPickT0PlantFiberPickaxe">
+<item name="meleeToolPickT0PlantFiberPickxe">
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="CustomIcon" value="PlantFiberPickaxe"/>	
-	<property name="DescriptionKey" value="meleeToolPickT0PlantFiberPickaxeDesc"/>		
 	<property name="HoldType" value="63"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlantFiberTools.unity3d?PlantFiberPickaxe.prefab"/>
 	<property name="Material" value="Mmetal"/>
@@ -3514,6 +3514,32 @@
 		<passive_effect name="HealthMax" operation="base_subtract" value="@$PlayerLevelBonus"/>
 		<passive_effect name="StaminaMax" operation="base_add" value="-5"/><display_value name="dStaminaMax" value="-5"/>
 		<passive_effect name="StaminaMax" operation="base_subtract" value="@$PlayerLevelBonus"/>		
+	</effect_group>
+</item>
+
+<item name="apparelBeerGoggles">
+	<property name="Extends" value="apparelShades"/>
+	<property name="DisplayType" value="apparelAviatorGoggles"/>
+	<property name="CustomIcon" value="apparelAviatorGoggles"/>
+	<property name="CustomIconTint" value="30,30,30"/>
+	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
+	<property class="UMA">
+		<property name="Overlay0Tint" value="52,66,138"/>
+		<property name="Mesh" value="aviator_goggles"/>
+		<property name="Overlay0" value="aviator_goggles"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyScreenEffect" effect_name="Drunk" intensity="1" fade="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyScreenEffect" effect_name="Drunk" intensity="0" fade="0"/>
+	</effect_group>
+	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="Ragdoll" duration=".5" />
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,1" operation="LTE" value="1"/>
 	</effect_group>
 </item>
 
