@@ -1564,8 +1564,7 @@
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
 		<property name="Use_time" value="..."/>
-		<property name="Sound_start" value="player_drinking"/>
-		<property name="Create_item" value="drinkJarEmpty"/>
+		<property name="Sound_start" value="player_eating"/>
 	</property>
 	<effect_group tiered="false" name="Food Tier 0">
 		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="8"/>
@@ -2558,10 +2557,11 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="meleeToolPickT0PlantFiberPickxe">
+<item name="meleeToolPickT0PlantFiberPickaxe">
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="CustomIcon" value="PlantFiberPickaxe"/>	
+	<property name="DescriptionKey" value="meleeToolPickT0PlantFiberPickaxeDesc"/>		
 	<property name="HoldType" value="63"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlantFiberTools.unity3d?PlantFiberPickaxe.prefab"/>
 	<property name="Material" value="Mmetal"/>
