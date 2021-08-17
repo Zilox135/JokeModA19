@@ -2801,6 +2801,34 @@
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
+<item name="notePaint">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="notePaintDesc"/>
+	<property name="CustomIcon" value="questMaster" />
+</item>
+
+<item name="noteLotto">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteLottoDesc"/>
+	<property name="CustomIcon" value="questMaster" />
+</item>
+
+<item name="noteGrocery">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteGroceryDesc"/>
+	<property name="CustomIcon" value="questMaster" />
+</item>
+
+<item name="noteDirections">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteDirectionsDesc"/>
+	<property name="CustomIcon" value="questMaster" />
+</item>
+
 <item name="questMaster">
 	<property name="CreativeMode" value="None"/>
 	<property name="HoldType" value="21"/>
