@@ -12,6 +12,10 @@
 		<item_property_overrides name="gunGrenadeLauncher">
             <property name="ScopeCameraOffset" value="0,-.1035,-.080"/>
         </item_property_overrides>
+		
+	    <item_property_overrides name="gunHandgunT0BBGun">
+            <property name="ScopeCameraOffset" value="-.0003,-.043,0"/>
+        </item_property_overrides>
 </append>		
 		
 <append xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']">
