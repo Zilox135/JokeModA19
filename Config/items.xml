@@ -3438,7 +3438,7 @@
 	<property name="CustomIcon" value="GrenadeLauncher"/>	
 	<property name="DescriptionKey" value="gunGrenadeLauncherDesc"/>
 	<property name="HoldType" value="5"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/GrenadeLauncher.unity3d?GrenadeLauncher.prefab"/> 
 	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
@@ -3479,7 +3479,7 @@
 		<property name="Class" value="Zoom"/>
 		<property name="Zoom_max_out" value="55"/>
 		<property name="Zoom_max_in" value="55"/>
-		<property name="ScopeCameraOffset" value="0,-.005,0"/>
+		<property name="ScopeCameraOffset" value="0,-.110,0"/>
 	</property>
 
 	<effect_group name="gunGrenadeLauncher">
