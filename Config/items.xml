@@ -3432,6 +3432,134 @@
 	</effect_group>
 </item>
 
+<item name="gunGrenadeLauncher">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,sideAttachments,smallTopAttachments"/>
+	<property name="DisplayType" value="rangedLauncher"/>
+	<property name="DescriptionKey" value="gunGrenadeLauncherDesc"/>
+	<property name="HoldType" value="5"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab"/>
+	<property name="Material" value="MShotgunParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+	<property name="LightSource" value="lightSource"/> <!-- Start: Needed for the attachment flashlight -->
+	<property name="ActivateObject" value="Attachments/flashlight/lightSource"/>
+	<property name="AttachmentFlashlight" value="meleeToolFlashlight02"/> <!-- End: Needed for the attachment flashlight -->
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="LightValue" value=".45"/>
+	<property name="EconomicValue" value="1000"/>
+	<property name="UnlockedBy" value=""/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Launcher"/>
+		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoLauncherGrenade"/>
+		<property name="Reload_time" value="3"/>
+		<property name="Sound_start" value="pump_shotgun_fire"/>
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Particles_muzzle_fire" value="gunfire_shotgun"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_shotgun_fpv"/>
+		<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
+		<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+		<property name="ScopeOffset" value="-.00062,.088,.065"/>
+		<property name="SideOffset" value="0,0,0"/>
+		<property name="BarrelOffset" value="0,0,0"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="0,-.005,0"/>
+	</property>
+
+	<effect_group name="gunExplosivesT3RocketLauncher">
+		<!--<passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>-->
+		<passive_effect name="MaxRange" operation="base_set" value="100" tags="perkDemolitionsExpert"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDemolitionsExpert"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkDemolitionsExpert"/> <!-- random effective rng -->
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkDemolitionsExpert"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkDemolitionsExpert"/> <!-- tier bonus -->
+		<passive_effect name="ProjectileVelocity" operation="perc_add" value="-.08,.08" tags="perkDemolitionsExpert"/> <!-- random Veloc -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkDemolitionsExpert"/> <!-- random DegMax -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkDemolitionsExpert"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="60" tags="perkDemolitionsExpert"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="6" tags="perkDemolitionsExpert"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value=".7" tags="perkDemolitionsExpert"/> <!-- 2.7s -->
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="7" tags="perkDemolitionsExpert"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="7" tags="perkDemolitionsExpert"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".15" tags="perkDemolitionsExpert"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkDemolitionsExpert"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkDemolitionsExpert"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2" tags="perkDemolitionsExpert"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="10" tags="perkDemolitionsExpert"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="10" tags="perkDemolitionsExpert"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.5" tags="perkDemolitionsExpert"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".5" tags="perkDemolitionsExpert"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2.2" tags="perkDemolitionsExpert"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".4" tags="perkDemolitionsExpert"/>
+
+		<passive_effect name="DegradationMax" operation="base_set" value="80,150" tier="1,6" tags="perkDemolitionsExpert"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkDemolitionsExpert"/>
+	</effect_group>
+</item>
+
+<item name="ammoLauncherGrenade">
+	<property name="Tags" value="ammo"/>
+	<property name="DisplayType" value="ammoLauncher"/>
+	<property name="DescriptionKey" value="ammoLauncherGrenadeDesc"/>
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
+	<property name="CustomIcon" value="ammoGrenadeContact"/><property name="CustomIconTint" value="167,62,62"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mlead_scrap"/>
+	<property name="Stacknumber" value="20"/>
+	<property name="EconomicValue" value="250"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="UnlockedBy" value=""/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="5"/> <!-- which Prefab/particle is used -->
+		<property name="Explosion.RadiusBlocks" value="5"/> <!-- damage radius for blocks -->
+		<property name="Explosion.RadiusEntities" value="4"/> <!-- damage radius for entities -->
+		<property name="Explosion.DamageBonus.water" value="0"/>
+		<property name="Gravity" value="-6"/>
+		<property name="FlyTime" value=".2"/>
+		<property name="LifeTime" value="20"/>
+
+		<property name="Explosion.BlockDamage" value="0"/> <!-- workaround, not affected by perks at all -->
+		<property name="Explosion.EntityDamage" value="442"/> <!-- workaround, not affected by perks at all -->
+	</property>
+	<effect_group name="ammoRocketHE" tiered="false">
+		<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/><display_value name="dExDamageBlock" value="2500"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDemolitionsExpert"/><display_value name="dExDamageEntity" value="420"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>
+		<display_value name="dExRadius" value="5"/>
+	</effect_group>
+</item>
+
 
 <!-- This part contains all the schematics. -->
 
@@ -3607,6 +3735,7 @@
 
 <item name="apparelBeerGoggles">
 	<property name="Extends" value="apparelShades"/>
+	<property name="DescriptionKey" value="apparelBeerGogglesDesc"/>
 	<property name="DisplayType" value="apparelAviatorGoggles"/>
 	<property name="CustomIcon" value="apparelAviatorGoggles"/>
 	<property name="CustomIconTint" value="30,30,30"/>
@@ -3627,7 +3756,47 @@
 	
 	<effect_group tiered="false">
 		<triggered_effect trigger="onSelfEquipStart" action="Ragdoll" duration=".5" />
-			<requirement name="RandomRoll" seed_type="Random" min_max="0,1" operation="LTE" value="1"/>
+			<requirement name="RandomRoll" seed_type="Random" min_max="0,10" operation="LTE" value="2"/>
+	</effect_group>
+</item>
+
+<item name="apparelColorBlinders">
+	<property name="Extends" value="apparelShades"/>
+	<property name="DescriptionKey" value="apparelColorBlindersDesc"/>
+	<property name="DisplayType" value="clothingNerdGlasses"/>
+	<property name="CustomIcon" value="apparelAviatorGoggles"/>
+	<property name="CustomIconTint" value="30,60,90"/>
+	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
+	<property class="UMA">
+		<property name="Overlay0Tint" value="52,66,138"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyScreenEffect" effect_name="Grayscale" intensity="1" fade="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyScreenEffect" effect_name="Grayscale" intensity="0" fade="0"/>
+	</effect_group>
+</item>
+
+<item name="apparelRadGlasses">
+	<property name="Extends" value="apparelShades"/>
+	<property name="DescriptionKey" value="apparelRadGlassesDesc"/>
+	<property name="DisplayType" value="apparelToughGuySunglasses"/>
+	<property name="CustomIcon" value="apparelShades"/>
+	<property name="CustomIconTint" value="30,30,30"/>
+	<property name="Tags" value="head,clothing,canHaveCosmetic,noMods"/>
+	<property class="UMA">
+		<property name="Overlay0Tint" value="52,66,138"/>
+	</property>
+	<effect_group tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+	
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfEquipStart" action="ModifyScreenEffect" effect_name="Radiation" intensity="1" fade="0"/>
+		<triggered_effect trigger="onSelfEquipStop" action="ModifyScreenEffect" effect_name="Radiation" intensity="0" fade="0"/>
 	</effect_group>
 </item>
 
