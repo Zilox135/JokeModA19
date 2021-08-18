@@ -2558,7 +2558,7 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
-<item name="meleeToolPickT0PlantFiberPickxe">
+<item name="meleeToolPickT0PlantFiberPickaxe">
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>
 	<property name="CustomIcon" value="PlantFiberPickaxe"/>	
@@ -2599,7 +2599,7 @@
 		<property name="SwingAngle" value="130"/>
 	</property>
 	<property name="Group" value="Tools/Traps"/>
-	<effect_group name="meleeToolPickT0PlantFiberPickxe">
+	<effect_group name="meleeToolPickT0PlantFiberPickaxe">
 		<passive_effect name="EntityDamage" operation="base_set" value="11.2" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="35.5" tags="perkMiner69r,miningTool"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="65" tags="perkMiner69r"/>
@@ -3435,6 +3435,7 @@
 <item name="gunGrenadeLauncher">
 	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,launcher,attPerception,perkDemolitionsExpert,canHaveCosmetic,barrelAttachments,noSilencer,sideAttachments,smallTopAttachments"/>
 	<property name="DisplayType" value="rangedLauncher"/>
+	<property name="CustomIcon" value="GrenadeLauncher"/>	
 	<property name="DescriptionKey" value="gunGrenadeLauncherDesc"/>
 	<property name="HoldType" value="5"/>
 	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/SawedOffPumpShotgun/PumpShotgunPrefab.prefab"/>
@@ -3481,7 +3482,7 @@
 		<property name="ScopeCameraOffset" value="0,-.005,0"/>
 	</property>
 
-	<effect_group name="gunExplosivesT3RocketLauncher">
+	<effect_group name="gunGrenadeLauncher">
 		<!--<passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>-->
 		<passive_effect name="MaxRange" operation="base_set" value="100" tags="perkDemolitionsExpert"/>
 		<passive_effect name="DamageFalloffRange" operation="base_set" value="70" tags="perkDemolitionsExpert"/>
@@ -3527,13 +3528,13 @@
 
 <item name="ammoLauncherGrenade">
 	<property name="Tags" value="ammo"/>
-	<property name="DisplayType" value="ammoLauncher"/>
-	<property name="DescriptionKey" value="ammoLauncherGrenadeDesc"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
-	<property name="CustomIcon" value="ammoGrenadeContact"/><property name="CustomIconTint" value="167,62,62"/>
-	<property name="HoldType" value="45"/>
+	<property name="DisplayType" value="ammoLauncher"/>	
+	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>	
+	<property name="DescriptionKey" value="ammoLauncherGrenadeDesc"/>	
 	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="CustomIcon" value="thrownGrenade"/><property name="CustomIconTint" value="167,62,62"/>
+	<property name="HoldType" value="45"/>
 	<property name="Material" value="Mlead_scrap"/>
 	<property name="Stacknumber" value="20"/>
 	<property name="EconomicValue" value="250"/>

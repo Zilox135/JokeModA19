@@ -15,14 +15,7 @@
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnSledgeT0StoneSledgehammer']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnKnucklesT0LeatherKnuckles']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnBladeT0BoneKnife']"/>	
-	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.025</set>	
-
-<append xpath="/lootcontainers">
-<lootgroup name="groupWeaponsT0_Gunslinger" count="all" loot_quality_template="QLTemplateT0">
-	<item name="gunHandgunFinger"/>
-	<item name="ammo9mmBulletBall" count="10,40"/>
-</lootgroup>
-</append>	
+	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.025</set>		
 	
 <append xpath="/lootcontainers/lootgroup[@name='drinks']">
 	<item name="drinkJarPapaRizzsPooTea" count="1,2" prob="0.5"/>
@@ -244,14 +237,6 @@
 
 <append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsMeleeT1']">
 	<item name="meleeWpnBladeWatermelonSword" count="1" loot_prob_template="questT1QualTemplate"/>
-</append>
-
-<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_Ranged']">
-	<item group="groupWeaponsT0_Gunslinger"/>
-</append>
-
-<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']">
-	<item group="groupWeaponsT0_Gunslinger"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT1_Gunslinger']">
