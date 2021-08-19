@@ -205,8 +205,12 @@ gunHandgunT0BBGun,items,Gun,,,BB Gun,,
 gunHandgunT0BBGunDesc,items,Gun,,,A basic pistol that uses 9mm ammo.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.,,"
 ammoCasinoCoin,items,Ammo,,,Casino Token Ammo,,"
 ammoCasinoCoinDesc,items,Item,,,Weaponized Dukes. Make it rain!,,
-ammoLauncherGrenade,items,Ammo,,,Grenade Launcher Rounds,,
-ammoLauncherGrenadeDesc,items, Item,,,Rounds for the Grenade Launcher,,
+ammoLauncherGrenade,items,Ammo,,,GL Rounds,,
+ammoLauncherGrenadeDesc,items,Item,,,Rounds for the Grenade Launcher,,
+ammoLauncherGrenadeMD,items,Ammo,,,GL MD Rounds,,
+ammoLauncherGrenadeMDDesc,items,Item,,,Mass destruction rounds for the Grenade Launcher.\n\nWarning: these do high block damage!,,
+ammoLauncherMolotov,items,Ammo,,,GL Molotov Rounds,,
+ammoLauncherMolotovDesc,items,Item,,,Molotov ammo for the Grenade Launcher.\n\nYes these WILL set you on fire... and your friends.,,
 qc_ladiesofthenight,items,Quest - Challenge,,,Ladies of the Night Challenge,,
 challenge_ladiesofthenight,Quest,Challenge Info,,,Ladies of the Night,,
 challenge_ladiesofthenight_offer,Quest,Challenge Info,,,"Dear jackass,\nSome unsavory ladies have invaded these lands! Go deal with them so they stop tempting my husband.\n\nSincerely, Karen\n\nChallenge: Kill Some Ladies of the Night",,"
