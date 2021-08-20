@@ -3983,6 +3983,26 @@
 	</effect_group>
 </item>
 
+<item name="meleeHandAnnoyingKid">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="1"/>
+		<property name="DamageBlock" value="1"/>
+		<!--<property name="Buff" value="buffInjuryBleedingTwo,buffInfectionCatch,buffInjuryStunned01"/>-->
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<!-- these base_add or perc_add have no effect whatsoever on zombies
+		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
+		-->
+
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+
+	</effect_group>
+</item>
+
 </append>
 </configs>
 
