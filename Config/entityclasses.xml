@@ -260,6 +260,7 @@
 	<property name="LootDropProb" value="0.01"/> <!-- Whether it drops a loot bag on death or not. -->
 
 	<!-- Gameplay -->
+	<property name="HandItem" value="meleeHandAnnoyingKid"/>
 	<effect_group name="Base Effects">
 		<passive_effect name="HealthMax" operation="base_set" value="1500"/>
 		<passive_effect name="HealthMax" operation="perc_set" value="1"/> <!-- Zombie HP scale -->
