@@ -235,5 +235,11 @@
 	<property name="SortOrder1" value="a0d0"/>
 </block>		
 
+<block name="lanternDecorLight">
+	<property name="Extends" value="porchLight01"/>
+	<property name="Model" value="Entities/Lighting/lanternDecorPrefab"/>
+	<property name="CanPickup" value="true"/>
+</block>
+
 </append>
 </configs>

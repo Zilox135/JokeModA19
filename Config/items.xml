@@ -2558,6 +2558,78 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
+<item name="meleeToolT3BanHammer">
+	<property name="Tags" value="melee,light,tool,attStrength,canHaveCosmetic,noMods"/>
+	<property name="DisplayType" value="meleeRepairTool"/>
+	<property name="CustomIcon" value="PlasticHammer"/>
+	<property name="CustomIconTint" value="166,42,219"/>
+	<property name="DescriptionKey" value="meleeToolT3BanHammerDesc"/>	
+	<property name="HoldType" value="32"/>
+	<property name="Meshfile" value="#@modfolder:Resources/PlasticHammer.unity3d?PlasticHammer.prefab"/>
+	<property name="Material" value="Mstone"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="ItemNeedsRepair"/>
+	<property name="SoundDestroy" value="wooddestroy1"/>
+	<property name="FuelValue" value="150"/>
+	<property name="EconomicValue" value="500"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="DynamicMelee"/>
+		<property name="Sphere" value=".1"/>
+		<property name="Sound_start" value="swoosh"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+		<property name="GrazeStart" value=".12"/>
+		<property name="GrazeEnd" value=".3"/>
+		<property name="SwingDegrees" value="45"/>
+		<property name="SwingAngle" value="135"/>
+		<property name="UseGrazingHits" value="true"/>
+		
+		<property class="HitSounds">		
+		<property name="Override0" value="organic" param1="stonehitorganic"/>
+		</property>
+		
+		<property class="GrazeSounds">
+		<property name="Override0" value="organic" param1="metalgrazeorganic"/>
+		</property>
+	</property>		
+	
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".64"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="500"/>
+		<property name="Upgrade_hit_offset" value="-1"/> 
+		<property name="Sound_start" value="repair_block"/>
+		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail"/>
+		<property name="UsePowerAttackAnimation" value="false"/>
+	</property>
+	<effect_group name="meleeToolT3BanHammer">
+		<passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkMiner69r"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="2000" tags="perkMiner69r"/>
+		<passive_effect name="AttacksPerMinute" operation="base_set" value="300" tags="perkMiner69r"/>
+		<passive_effect name="StaminaLoss" operation="base_set" value="10" tags="primary"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="280,955" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value=".75" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.2" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3" tags="perkMiner69r"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random DegMax -->
+		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> <!-- random APM -->
+		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
+
+		<display_value name="dBlockRepairAmount" value="100"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="5.5"/>
+</item>
+
 <item name="meleeToolPickT0PlantFiberPickaxe">
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
 	<property name="DisplayType" value="melee"/>

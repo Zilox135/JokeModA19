@@ -181,13 +181,15 @@ meleeToolPickT1PlasticPickaxeDesc,items,Tool,,,A plastic pickaxe. At least it is
 meleeToolAxeT3StrongChainsaw,items,Tool,,,Beaver Tooth Special,,
 meleeToolAxeT3StrongChainsawDesc,items,Tool,,,Look at you! Just like Leatherface!\n\nThis monster of a chainsaw will allow you to shred wood and flesh alike!,,
 meleeToolRepairT0PlasticHammer,items,Tool,,,Plastic Hammer,,
-meleeToolRepairT0PlasticHammerDesc,items,Tool,,,The Plastic hammer is great for repairing and upgrading base walls and not bad as a weapon.\n\nRepair with a Repair Kit.,,"
+meleeToolRepairT0PlasticHammerDesc,items,Tool,,,The Plastic hammer is great for repairing and upgrading base walls and not bad as a weapon.\n\nRepair with a Repair Kit.,,
 meleeToolPickT0PlantFiberPickaxe,items,Tool,,,Plant Fiber Pickaxe,,
 meleeToolPickT0PlantFiberPickaxeDesc,items,Tool,,,A pickaxe made from plant fibers. It will probably break before you can even harvest anything.,,
 meleeToolT0PlantFiberAxe,items,Tool,,,Plant Fiber Axe,,
 meleeToolT0PlantFiberAxeDesc,items,Tool,,,An axe made from plant fibers. This thing sucks.,,
 meleeToolShovelT0PlantFiberShovel,items,Tool,,,Plant Fiber Shovel,,
 meleeToolShovelT0PlantFiberShovelDesc,items,Tool,,,A shovel made from plant fibers. You couldn't even dig your own grave with this.,,
+meleeToolT3BanHammer,items,Tool,,,Ban Hammer,,
+meleeToolT3BanHammerDesc,items,Tool,,,,Need to clear out some blocks in a hurry?\n\nThe ultimate builders tool, the Ban Hammer!,,
 gunShotgunT1DoubleBarrel,items,Gun,,,BoomStick,,
 gunShotgunT1DoubleBarrelDesc,items,Gun,,,"A rusty old BoomStick, great for close range carnage.\n\nRepair with a Repair Kit.\nScrap to Shotgun Parts.",,"
 gunShotgunT1DoubleBarrelSchematic,items,Gun,,,BoomStick Schematic,,
