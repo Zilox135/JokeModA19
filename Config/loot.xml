@@ -204,23 +204,11 @@
 	<item name="meleeToolAxeT2KnifeAxe" count="1" loot_prob_template="questT2QualTemplate"/>	
 </append>
 
-<append xpath="/lootcontainers/lootgroup[@name='groupToolsT1']">
-	<item name="meleeToolPickT1PlasticPickaxe" count="1" loot_prob_template="QLTemplateT1"/>
-	<item name="meleeToolShovelT1PlasticShovel" count="1" loot_prob_template="QLTemplateT1"/>
-	<item name="meleeToolAxeT1PlasticFireaxe" count="1" loot_prob_template="QLTemplateT1"/>	
-</append>
-
-<append xpath="/lootcontainers/lootgroup[@name='groupQuestToolsT1']">
-	<item name="meleeToolPickT1PlasticPickaxe" count="1" loot_prob_template="questT1QualTemplate"/>
-	<item name="meleeToolShovelT1PlasticShovel" count="1" loot_prob_template="questT1QualTemplate"/>
-	<item name="meleeToolAxeT1PlasticFireaxe" count="1" loot_prob_template="questT1QualTemplate"/>	
-</append>
-
 <append xpath="/lootcontainers/lootgroup[@name='groupToolsT0']">
-	<item name="meleeToolPickT0PlantFiberPickaxe" count="1" loot_prob_template="QLTemplateT0"/>
-	<item name="meleeToolT0PlantFiberAxe" count="1" loot_prob_template="QLTemplateT0"/>
-	<item name="meleeToolShovelT0PlantFiberShovel" count="1" loot_prob_template="QLTemplateT0"/>
-	<item name="meleeToolRepairT0PlasticHammer" count="1" loot_prob_template="QLTemplateT0"/>	
+	<item name="meleeToolPickT1PlasticPickaxe" count="1" loot_prob_template="QLTemplateT0"/>
+	<item name="meleeToolShovelT1PlasticShovel" count="1" loot_prob_template="QLTemplateT0"/>
+	<item name="meleeToolAxeT1PlasticFireaxe" count="1" loot_prob_template="QLTemplateT0"/>
+	<item name="meleeToolRepairT0PlasticHammer" count="1" loot_prob_template="QLTemplateT0"/>		
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_Melee']">
