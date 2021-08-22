@@ -167,6 +167,7 @@ meleeWpnClubBatTotheMoon,items,Melee,,,Bat To the Moon,,
 meleeWpnClubBatTotheMoonDesc,items,Melee,,,"As I walk through the valley of the shadow of death, I shall fear no evil, for I carry a big stick.\n\nRepair with a Repair Kit.\nLoot only, scraps to Wood.",,
 meleeWpnBladeWatermelonSword,items,Melee,,,Watermelon Sword,,
 meleeWpnBladeWatermelonSwordDesc,items,Melee,,,"It is a sword made of watermelon.\n\nWait, there are watermelons in this game?",,"
+meleeWpnClubT0RollingPin,items,Melee,,,Rolling Pin,,
 meleeToolPickT2ForkPickaxe,items,Tool,,,Fork Pickaxe,,
 meleeToolPickT2ForkPickaxeDesc,items,Tool,,,A giant fork for harvesting ore or eating a giant salad.,,
 meleeToolShovelT2SpoonShovel,items,Tool,,,Table Spoon Shovel,,
