@@ -144,5 +144,16 @@
 	<ingredient name="modArmorWaterPurifier" count="1"/>	
 </recipe>
 
+<!-- Decor Items -->
+
+<!-- 
+<recipe name="cntWoodBurningStove" count="1">
+	<ingredient name="resourceForgedIron" count="4"/>
+	<ingredient name="resourceLeather" count="8"/>
+	<ingredient name="resourceMechanicalParts" count="4"/>
+	<ingredient name="resourceCropCottonPlant" count="10"/>
+</recipe> 
+-->
+
 </append>
 </configs>

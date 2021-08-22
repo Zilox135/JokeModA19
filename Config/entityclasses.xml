@@ -149,6 +149,70 @@
 	<property name="NavObject" value="twitch_spawn,twitch_spawn_other,animaltracking_boar,clear_sleeper" />
 </entity_class>
 
+<entity_class name="animalRageCock" extends="animalTemplateHostile">
+	<property name="Tags" value="entity,animal,chicken,hostile,perkAT01,perkAT02,perkAT03"/>
+	<property name="MapIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="TrackerIcon" value="ui_game_symbol_tracking_chicken"/>
+	<property name="Mesh" value="Animals/CHICKEN/chickenPrefab"/>
+	<property name="Prefab" value="NPC"/>
+	<property name="Class" value="EntityVulture"/>
+	<property name="Parent" value="Animals"/>
+	<property name="Faction" value="animals"/>
+	<property name="PhysicsBody" value="chicken"/>
+	<property name="Mass" value="15"/>
+	<property name="Weight" value="10"/>
+	<property name="SoundHurt" value="Animals/Chicken/chickenpain"/>
+	<property name="SoundDeath" value="Animals/Chicken/chickendeath"/>
+	<property name="SwimOffset" value="2"/>
+	<property name="HasRagdoll" value="false"/>
+	<property name="HasDeathAnim" value="false"/>
+	<property name="SizeScale" value="1.5"/>
+	<property name="AITask-1" value="BreakBlock"/>
+	<property name="AITask-2" value="Territorial"/>
+	<property name="AITask-3" value="ApproachAndAttackTarget" data="class=EntityPlayer,20,EntityNPC,20"/>
+	<property name="AITask-4" value="ApproachSpot"/>
+	<property name="AITask-5" value="Look"/>
+	<property name="AITask-6" value="Wander"/>
+	<property name="AITask-7" value=""/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityNPC,EntityPlayer"/>
+	<property name="AITarget-2" value="BlockingTargetTask"/>
+	<property name="AITarget-3" value="SetNearestCorpseAsTarget" data="class=EntityPlayer"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data="class=EntityPlayer,20,0,EntityNPC,0,0"/>
+	<property name="AITarget-5" value=""/>
+
+	<!-- Stealth -->
+	<property name="SightRange" value="70"/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="1"/>
+	<property name="MoveSpeedAggro" value="2.1, 2.1"/> <!-- Used when player in vehicle -->
+	<property name="MaxTurnSpeed" value="190"/>
+
+	<property name="HandItem" value="meleeHandRageCock"/>
+	<property name="Immunity" value="sickness;disease;wellness"/> <!-- bleeding; -->
+	<property name="MoveSpeedPanic" value="1.3"/>
+	<property name="ExperienceGain" value="130"/>
+	<property name="DeadBodyHitPoints" value="175"/>
+	<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+	<drop event="Harvest" name="foodRawMeat" tag="butcherHarvest" count="10"/> <!-- animalChicken -->
+	<drop event="Harvest" name="resourceFeather" tag="butcherHarvest" count="23"/>
+	<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="4"/>
+	<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+	<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		<passive_effect name="HealthMax" operation="perc_add" value="1"/> <!-- Animal HP scale -->
+	</effect_group>
+	
+	<effect_group name="Base Effects"> <!-- animalTemplateHostile -->
+		<passive_effect name="BuffResistance" operation="base_set" value="5" tags="buffInjuryKnockdown01,buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffInfectionCatch,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"/>
+	</effect_group>
+
+	<property name="NavObject" value="animaltracking_chicken" />
+</entity_class>
+
 <entity_class name="zombieMiniDemolition" extends="zombieSoldier">
 	<property name="SizeScale" value="0.5"/>
 	<property name="RandomSize" value="false" />
@@ -242,7 +306,7 @@
 	</effect_group>
 </entity_class>
 
-<!-- Kid should do 0 damage and not cause debuffs like stink, broken limbs, etc -->
+<!-- Kid should not cause debuffs like stink, broken limbs, etc -->
 
 <entity_class name="zombieAnnoyingKid" extends="zombieTemplateMale">
 	<property name="SizeScale" value="0.65"/>
