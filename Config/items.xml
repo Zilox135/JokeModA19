@@ -1528,7 +1528,6 @@
 	<property name="SoundDestroy" value="metaldestroy1"/>
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="350"/>
-	<property name="UnlockedBy" value="perkMiner69r,meleeToolIronSetSchematic"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -1603,7 +1602,6 @@
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="350"/>
 	<property name="SellableToTrader" value="true"/>
-	<property name="UnlockedBy" value="perkMiner69r,meleeToolIronSetSchematic"/>
 		<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
 		<property name="Sphere" value=".15"/>   <!-- limit to 0.15, else the sphere cast can overlap the target already -->

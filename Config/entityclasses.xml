@@ -121,7 +121,7 @@
 	<property name="SoundHurt" value="Animals/Boar/boarpain"/>
 	<property name="SoundDeath" value="Animals/Boar/boardeath"/>
 	<property name="SoundSense" value="Animals/Boar/boarsense"/>
-	<property name="SoundGiveUp" value="Animals/Boar/boargiveup"/>
+	<property name="SoundGiveUp" value="Animals/Boar/boargiveup"/> -->
 
 	<!-- Gameplay -->
 	<property name="PainResistPerHit" value=".75"/>
@@ -220,7 +220,6 @@
 	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardDemolitionRagdoll.prefab"/>
 	<property name="Class" value="EntityZombieCop"/>
 	<property name="Mass" value="300"/>
-	<property name="ParticleOnSpawn" value="#@modfolder:Resources/Ball.unity3d?48 Particle Effect Pack/Effect/Ball" data="SetShapeToMesh0"/>
 
 	<property name="AITask-1" value="BreakBlock"/>
 	<property name="AITask-2" value="DestroyArea"/>
