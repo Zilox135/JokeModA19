@@ -145,5 +145,34 @@
 	<property name="ActivationDistance" value="12"/>
 </block>
 
+<block name="rockPetBoulder"> <!-- biome decoration -->
+	<property name="CreativeMode" value="Dev"/>
+	<property name="Material" value="Mboulder"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="BigDecorationRadius" value="3"/>
+	<property name="IsDistantDecoration" value="false"/>
+	<property name="Model" value="Entities/Resources/rock_resourcePrefab"/>
+	<property name="ModelOffset" value="0,0,0"/>
+	<property name="DisplayType" value="blockHardenedMulti"/>
+	<property name="MultiBlockDim" value="3,2,3"/>
+	<property name="OnlySimpleRotations" value="true"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="PassThroughDamage" value="true"/>
+	<drop event="Harvest" name="resourceScrapIron" count="105" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceScrapLead" count="150" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceCoal" count="150" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourcePotassiumNitratePowder" count="150" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceOilShale" count="150" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceSilverNugget" count="3" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceGoldNugget" count="2" tag="oreWoodHarvest"/>
+	<drop event="Harvest" name="resourceBone" count="20" tag="oreWoodHarvest"/>
+	<drop event="Destroy" count="0"/>
+	<property name="Map.Color" value="120,120,120"/>
+	<property name="FilterTags" value="foutdoor"/>
+</block>
+
 </append>
 </configs>

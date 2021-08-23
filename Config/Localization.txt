@@ -78,6 +78,8 @@ BlinkerFluid,items,Junk,,,Blinker fluid,,
 BlinkerFluidDesc,items,Junk,,,"Fix up your post apocalyptic shanty wagon with some Blinker fluid.",,
 AirGuitar,items,Junk,,,Air Guitar,,
 AirGuitarDesc,items,Junk,,,"Sweet find! You could really wail some tunes, if only you knew how to play.",,
+junkPetRock,items,Junk,,,Pet Rock,,
+junkPetRockDesc,items,Junk,,,Some kids pet rock.\n\nMaybe you can do something with this?,,
 resourcePaintDesc,items,Item,,,Use a paint brush to paint building blocks.\n\nEat at your own risk.,,
 noteToiletpoem,items,Quest - Note,,,Toilet Poem,,
 noteToiletpoemDesc,items,Quest - Note,,,"Here I sit, broken hearted \nTried to shit, but only farted \nLater on I took a chance \nTried to fart and shit my pants",,
@@ -183,7 +185,7 @@ meleeToolPickT1PlasticPickaxeDesc,items,Tool,,,A plastic pickaxe. At least it is
 meleeToolAxeT3StrongChainsaw,items,Tool,,,Beaver Tooth Special,,
 meleeToolAxeT3StrongChainsawDesc,items,Tool,,,Look at you! Just like Leatherface!\n\nThis monster of a chainsaw will allow you to shred wood and flesh alike!,,
 meleeToolRepairT0PlasticHammer,items,Tool,,,Plastic Hammer,,
-meleeToolRepairT0PlasticHammerDesc,items,Tool,,,The Plastic hammer is great for repairing and upgrading base walls and not bad as a weapon.\n\nRepair with a Repair Kit.,,
+meleeToolRepairT0PlasticHammerDesc,items,Tool,,,This kids toy is perfect for your fragile little hands!,,
 meleeToolPickT0PlantFiberPickaxe,items,Tool,,,Plant Fiber Pickaxe,,
 meleeToolPickT0PlantFiberPickaxeDesc,items,Tool,,,A pickaxe made from plant fibers. It will probably break before you can even harvest anything.,,
 meleeToolT0PlantFiberAxe,items,Tool,,,Plant Fiber Axe,,
@@ -208,8 +210,8 @@ gunHandgunT1WaterGunDesc,items,Gun,,,"This is just like the water gun from that 
 gunHandgunT1WaterGunSchematic,items,Gun,,,Water Gun Schematic,,
 gunGrenadeLauncher,items,Gun,,,Grenade Launcher,,
 gunGrenadeLauncherDesc,items,Gun,,,Sad you cannot throw grenades fast enough? Well do we have a weapon for you!,,
-gunHandgunT0BBGun,items,Gun,,,BB Gun,,
-gunHandgunT0BBGunDesc,items,Gun,,,A basic pistol that uses 9mm ammo.\n\nRepair with a Repair Kit.\nScrap to Handgun Parts.,,"
+gunHandgunT0BBGun,items,Gun,,,Dead Rider BB Gun,,
+gunHandgunT0BBGunDesc,items,Gun,,,Try not to shoot your eye out. Hell, you probably can't shoot anything's eye out with this.,,"
 ammoCasinoCoin,items,Ammo,,,Casino Token Ammo,,"
 ammoCasinoCoinDesc,items,Item,,,Weaponized Dukes. Make it rain!,,
 ammoLauncherGrenade,items,Ammo,,,GL Rounds,,
@@ -218,6 +220,12 @@ ammoLauncherGrenadeMD,items,Ammo,,,GL MD Rounds,,
 ammoLauncherGrenadeMDDesc,items,Item,,,Mass destruction rounds for the Grenade Launcher.\n\nWarning: these do high block damage!,,
 ammoLauncherMolotov,items,Ammo,,,GL Molotov Rounds,,
 ammoLauncherMolotovDesc,items,Item,,,Molotov ammo for the Grenade Launcher.\n\nYes these WILL set you on fire... and your friends.,,
+modOrganGrinder,item_modifiers,mod,,,Organ Grinder Mod,,
+modOrganGrinderDesc,item_modifiers,mod,,,A mod for the Auger that greatly increases entity damage while slightly decreasing block damage.\n\nDrill baby drill!,,
+modRipNTear,item_modifiers,mod,,,Rip N Tear Mod,,
+modRipNTearDesc,item_modifiers,mod,,,A mod for the Chainsaw that greatly increases entity damage while slightly decreasing block damage.\n\nNow you can go all Ash on them zeds!,,
+modSnorkel,item_modifiers,mod,,,Snorkel Mod,,
+modSnorkelDesc,item_modifiers,mod,,,Wanna breathe underwater? Well now you can!\n\nHow does it work without an oxygen tank? Who cares!,,
 qc_ladiesofthenight,items,Quest - Challenge,,,Ladies of the Night Challenge,,
 challenge_ladiesofthenight,Quest,Challenge Info,,,Ladies of the Night,,
 challenge_ladiesofthenight_offer,Quest,Challenge Info,,,"Dear jackass,\nSome unsavory ladies have invaded these lands! Go deal with them so they stop tempting my husband.\n\nSincerely, Karen\n\nChallenge: Kill Some Ladies of the Night",,"
@@ -249,7 +257,7 @@ qc_AnimalGroupDesc,items,Quest - Animal Challenge,,,A strange note that is askin
 qc_ZombieGroupDesc,items,Quest - Challenge,,,A strange note from the local trader asking for blood sacrifices in the form of zombie slaying.,,
 qt_desc,items,Quest - Treasure Map,,,"Yarrr, an old tattered pirates treasure map. Go plunder some booty!",,
 tutorialTipQuest01,Journal Tip,,,,"Welcome to Joke Mod!\n\nI know what you are thinking: 'Wait, this isn't Darkness Falls!' But hey, while you are here, why not give this mod a shot? Who knows, you may actually enjoy it!\n\nSpecial blame goes to Zilox and Khaine for this creation.\n\n-XOXO, RizzoMF\n\nP.S. - Don't forget to wipe",,
-tutorialTipQuest01_title,Journal Tip,,,,Welcome To The Shit Show!,,
+tutorialTipQuest01_title,Journal Tip,,,,Oh Hai There,,
 quest_BasicSurvival,Quest,Quest Info,,,Started Children's Basics of Survival,,
 quest_BasicSurvival_offer,Quest,Quest Info,,,"Dear roadkill,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies on the side of the road. But here is a kids book on wilderness survival. Hope it helps! And also that you can read.\n\nLove, peace, & chicken grease, -Noah",,
 quest_WhiteRiverCitizen1,Quest,Quest Info,,,White River Citizen 1/1,,
@@ -350,6 +358,8 @@ treeOakDeco,blocks,Block,,,Plastic Oak Tree Decoration,,"
 treeFir,blocks,Block,,,Plastic Fir Tree,,"
 treePalm,blocks,Block,,,Plastic Palm Tree,,"
 treePoplar,blocks,Block,,,Plastic Poplar Tree,,"
+rockPetBoulder,blocks,Block,,,Pet Boulder,,
+rockPetBoulderDesc,blocks,Block,,,You made a pet boulder!\n\nNow place him and destroy him for some cool resources!,,
 
 
 

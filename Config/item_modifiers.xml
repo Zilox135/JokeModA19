@@ -25,5 +25,73 @@
 			<property name="Sound_loop" value="WaterGunFire"/>
 		</item_property_overrides>
 </append>
+
+
+<append xpath="/item_modifiers">
+
+<item_modifier name="modOrganGrinder" installable_tags="meleeToolPickT3Auger" modifier_tags="damage,rare" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="apparelBallCap"/> <!-- placeholder icon -->
+		<property name="DescriptionKey" value="modOrganGrinderDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		<item_property_overrides name="*">
+			<property name="Material" value="Mmetal"/>
+			<property name="Damage_type" value="Piercing"/>
+		</item_property_overrides>
+		
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.25"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+			<requirement name="HasBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+		
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="modRipNTear" installable_tags="meleeToolAxeT3Chainsaw" modifier_tags="damage,rare" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONRipNTear"/>
+		<property name="DescriptionKey" value="modRipNTearDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		<item_property_overrides name="*">
+			<property name="Material" value="Mmetal"/>
+			<property name="Damage_type" value="Piercing"/>
+		</item_property_overrides>
+		
+		<effect_group tiered="false">
+			<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
+			<passive_effect name="BlockDamage" operation="perc_add" value="-.25"/>
+			<triggered_effect trigger="onSelfEquipStart" action="AddBuff" buff="buffHarvestXPBalance"/>
+			<triggered_effect trigger="onSelfEquipStop" action="RemoveBuff" buff="buffHarvestXPBalance"/>
+			<requirement name="HasBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfPrimaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+				<triggered_effect trigger="onSelfSecondaryActionRayHit" action="AddBuff" target="other" buff="buffInjuryBleeding"/>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+	</item_modifier>
+	
+	<item_modifier name="modSnorkel" installable_tags="head" modifier_tags="rare" blocked_tags="noMods,clothing" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONSnorkel"/>
+		<property name="DescriptionKey" value="modSnorkelDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		<property name="EconomicValue" value="440"/>
+		<property name="DisplayType" value="clothing"/>
+		
+		<effect_group tiered="false">
+		<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffDrowning01,buffDrowning02,buffDrowning03"/>
+		</effect_group>
+	</item_modifier>
+	
+</append>
 	
 </configs>

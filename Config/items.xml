@@ -616,6 +616,22 @@
     </effect_group>
 </item>
 
+<!-- Other stuff -->
+
+<item name="junkPetRock">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="ICONPetRock"/>
+	<property name="DescriptionKey" value="junkPetRockDesc"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Crafting/rock_smallPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceRockSmall"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="Group" value="Resources"/>
+</item>
+
 <item name="JarOfFarts">
 	<property name="HoldType" value="3"/>
 	<property name="Meshfile" value="#Other/Items?Food/emptyJarPrefab.prefab"/>

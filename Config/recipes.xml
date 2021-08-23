@@ -159,6 +159,11 @@
 	<ingredient name="modArmorWaterPurifier" count="1"/>	
 </recipe>
 
+<recipe name="rockPetBoulder" count="1" craft_time="10" craft_area="workbench" tags="perkMiner69r">
+	<ingredient name="junkPetRock" count="1"/>
+	<ingredient name="resourceRockSmall" count="5000"/>
+</recipe>
+
 <!-- Decor Items -->
 
 <!-- 
