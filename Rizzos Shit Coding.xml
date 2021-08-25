@@ -1,0 +1,85 @@
+<!-- ***BLOCKS*** -->
+
+<append xpath="/blocks/block[@name='cntGunSafe']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntGunSafeInsecure']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntHardenedChestSecure']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntHardenedChestInsecure']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntToilet01']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntToilet02']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<append xpath="/blocks/block[@name='cntToilet03']">
+	<property name="destroy_on_close" value="true"/>
+</append>
+
+<!-- ***ENTITYCLASSES*** -->
+
+		<!-- checked and works -->
+<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']">
+	<property name="SoundAlert" value="Animals/Boar/boaralert"/>
+	<property name="SoundAttack" value="Animals/Boar/boarattack"/>
+	<property name="SoundHurt" value="Animals/Boar/boarpain"/>
+	<property name="SoundDeath" value="Animals/Boar/boardeath"/>
+	<property name="SoundSense" value="Animals/Boar/boarsense"/>	
+</append>
+
+		<!-- attempt at a non-hostile "friendly" zombie. Gives 1xp since he is nice and you are a dick for killing him. Wanna do more with him later. -->
+<entity_class name="zombieJasper" extends="zombieTemplateMale">
+	<property name="SizeScale" value=".75"/>
+	<property name="Tags" value="entity,zombie,walker"/>
+	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
+	<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
+	<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
+	<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
+	<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
+	<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
+	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBoeHDRagdoll.prefab"/>
+	<property name="AvatarController" value="AvatarZombie01Controller"/>
+	<property name="ModelType" value="Standard"/>
+	<property name="WalkType" value="2"/>
+	<property name="RootMotion" value="true"/>
+	<property name="HasDeathAnim" value="true"/>
+	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/Z_eye1.mat"/>
+	<property name="ExperienceGain" value="1"/>
+	
+	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0"/>
+	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal"/>
+	<property name="AITarget-4" value="SetNearestEntityAsTarget" data=""/>
+
+	<!-- Gameplay -->
+	<property name="MoveSpeed" value="0.06"/>
+	<property name="MoveSpeedAggro" value="0.2, 1.1"/>
+
+	<effect_group name="Base Effects">
+		<passive_effect name="HealthMax" operation="base_set" value="150"/>
+		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+	</effect_group>
+</entity_class>
+
+<!-- ***ITEM MODIFIERS*** -->
+
+<!-- ***ITEMS*** -->
+
+<item name="apparelCigarette">
+	<property name="Extends" value="apparelCigar"/>
+	<property name="DescriptionKey" value="apparelCigaretteDesc"/>  <!-- added this for Local -->
+
+<!-- ***QUESTS*** -->
+
+<!-- ***RECIPES*** -->
