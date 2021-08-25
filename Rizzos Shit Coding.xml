@@ -1,36 +1,9 @@
 <!-- ***BLOCKS*** -->
 
-<append xpath="/blocks/block[@name='cntGunSafe']">
-	<property name="destroy_on_close" value="true"/>
-</append>
 
-<append xpath="/blocks/block[@name='cntGunSafeInsecure']">
-	<property name="destroy_on_close" value="true"/>
-</append>
-
-<append xpath="/blocks/block[@name='cntHardenedChestSecure']">
-	<property name="destroy_on_close" value="true"/>
-</append>
-
-<append xpath="/blocks/block[@name='cntHardenedChestInsecure']">
-	<property name="destroy_on_close" value="true"/>
-</append>
-
-<append xpath="/blocks/block[@name='cntToilet01']">
-	<property name="destroy_on_close" value="true"/>
-</append>
-
-<append xpath="/blocks/block[@name='cntToilet02']">
-	<property name="destroy_on_close" value="true"/>
-</append>
-
-<append xpath="/blocks/block[@name='cntToilet03']">
-	<property name="destroy_on_close" value="true"/>
-</append>
 
 <!-- ***ENTITYCLASSES*** -->
 
-		<!-- checked and works -->
 <append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']">
 	<property name="SoundAlert" value="Animals/Boar/boaralert"/>
 	<property name="SoundAttack" value="Animals/Boar/boarattack"/>
@@ -72,6 +45,7 @@
 	</effect_group>
 </entity_class>
 
+
 <!-- ***ITEM MODIFIERS*** -->
 
 <!-- ***ITEMS*** -->
@@ -80,6 +54,100 @@
 	<property name="Extends" value="apparelCigar"/>
 	<property name="DescriptionKey" value="apparelCigaretteDesc"/>  <!-- added this for Local -->
 
+<!-- ***LOOT*** -->
+
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='7']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='40']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='41']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='65']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='66']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='95']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='100']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='101']" name="destroy_on_close">true</setattribute>	
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='121']" name="destroy_on_close">true</setattribute>
+
 <!-- ***QUESTS*** -->
 
 <!-- ***RECIPES*** -->
+
+<!-- ***WORKS IN PROGRESS*** -->
+
+<!-- will also need advanced food recipes, unlockedby? (does it need one?) -->
+<block name="WorkingWoodStove">
+	<property name="Class" value="Campfire"/>
+	<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+	<property name="CustomIcon" value="cntWoodBurningStove" />
+	<property name="Material" value="MstoneNoGlue"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
+	<property name="Shape" value="ModelEntity"/>
+	<property name="ImposterDontBlock" value="true"/>
+	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="ParticleName" value="campfire"/>
+	<property name="ParticleOffset" value="0.5,0,0.5"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="HeatMapStrength" value="3"/>
+	<property name="HeatMapTime" value="3000"/>
+	<property name="HeatMapFrequency" value="750"/>
+	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
+	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
+	<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
+	<property name="CanPickup" value="true"/>
+
+	<property class="Workstation">
+		<property name="Modules" value="tools,output,fuel,input"/>
+		<property name="Collide" value="melee,bullet,arrow,rocket"/>
+	</property>
+	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
+	<property name="CraftActionName" value="lblContextActionCook"/>
+	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
+	<property name="OpenSound" value="campfire_open"/>
+	<property name="CloseSound" value="campfire_close"/>
+	<property name="CraftSound" value="campfire_cook_click"/>
+	<property name="CraftCompleteSound" value="campfire_complete_item"/>
+	<property name="WorkstationJournalTip" value="heatMapTip"/>
+	<property name="PickupJournalEntry" value="campfireTip"/>
+	<property class="RepairItems"> <property name="resourceForgedIron" value="5"/> </property>
+	<drop event="Destroy" name="resourceForgedIron" count="3"/>
+	<property name="Group" value="Food/Cooking,Decor"/>
+	<property name="DescriptionKey" value="WorkingWoodStoveDesc"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="SellableToTrader" value="false"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="SortOrder1" value="70i0"/>
+</block>
+
+<recipe name="WorkingWoodStove" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="3"/>
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
+
+WorkingWoodStove,blocks,Block,,,Wood Burning Stove,,
+WorkingWoodStoveDesc,blocks,Block,,,A wood burning stove for cooking food plus advanced recipes. Generates less heat that a campfire.\n\nCrafted in a workbench.,,
+
+<!-- needs unlockedby?, water code -->
+
+<block name="WorkingSink">
+	<property name="Material" value="Mmetal"/>
+	<property name="MaxDamage" value="500"/>
+	<property name="StabilitySupport" value="false"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Plumbing/utility_sinkPrefab"/> <property name="Place" value="TowardsPlacerInverted"/>
+	<property name="Path" value="solid"/>
+	<property name="EconomicValue" value="60"/> <!-- disassemble value -->
+	<property name="SellableToTrader" value="false"/>
+	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
+	<property name="DescriptionKey" value="WorkingSinkDesc"/>
+	<property name="FilterTags" value="ffurniture"/>
+	<property name="CanPickup" value="true"/>
+</block>
+
+<recipe name="WorkingSink" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="3"/>
+	<ingredient name="resourceScrapPolymers" count="10"/>
+</recipe>
+
+WorkingSink,blocks,Block,,,Working Sink,,
+WorkingSinkDesc,blocks,Block,,,A working sink. Not the cleanest water.\n\nFill empty jars or drink from directly.\n\nCrafted in a workbench.,,
