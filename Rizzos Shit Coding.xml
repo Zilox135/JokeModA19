@@ -4,87 +4,51 @@
 
 <!-- ***ENTITYCLASSES*** -->
 
-<append xpath="/entity_classes/entity_class[@name='zombieFatHawaiian']">
-	<property name="SoundAlert" value="Animals/Boar/boaralert"/>
-	<property name="SoundAttack" value="Animals/Boar/boarattack"/>
-	<property name="SoundHurt" value="Animals/Boar/boarpain"/>
-	<property name="SoundDeath" value="Animals/Boar/boardeath"/>
-	<property name="SoundSense" value="Animals/Boar/boarsense"/>	
-</append>
-
-		<!-- attempt at a non-hostile "friendly" zombie. Gives 1xp since he is nice and you are a dick for killing him. Wanna do more with him later. -->
-<entity_class name="zombieJasper" extends="zombieTemplateMale">
-	<property name="SizeScale" value=".75"/>
-	<property name="Tags" value="entity,zombie,walker"/>
-	<property name="SoundRandom" value="Enemies/Base_Zombie_Male2/zombiemale2roam"/>
-	<property name="SoundAlert" value="Enemies/Base_Zombie_Male2/zombiemale2alert"/>
-	<property name="SoundAttack" value="Enemies/Base_Zombie_Male2/zombiemale2attack"/>
-	<property name="SoundHurt" value="Enemies/Base_Zombie_Male2/zombiemale2pain"/>
-	<property name="SoundDeath" value="Enemies/Base_Zombie_Male2/zombiemale2death"/>
-	<property name="SoundSense" value="Enemies/Base_Zombie_Male2/zombiemale2sense"/>
-	<property name="Mesh" value="#Entities/Zombies?Zombies/zombieStandardBoeHDRagdoll.prefab"/>
-	<property name="AvatarController" value="AvatarZombie01Controller"/>
-	<property name="ModelType" value="Standard"/>
-	<property name="WalkType" value="2"/>
-	<property name="RootMotion" value="true"/>
-	<property name="HasDeathAnim" value="true"/>
-	<property name="ReplaceMaterial1" value="#Entities/Zombies?Zombies/Materials/Z_eye1.mat"/>
-	<property name="ExperienceGain" value="1"/>
-	
-	<property name="AITask-5" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0"/>
-	<property name="AITarget-1" value="SetAsTargetIfHurt" data="class=EntityEnemyAnimal"/>
-	<property name="AITarget-4" value="SetNearestEntityAsTarget" data=""/>
-
-	<!-- Gameplay -->
-	<property name="MoveSpeed" value="0.06"/>
-	<property name="MoveSpeedAggro" value="0.2, 1.1"/>
-
-	<effect_group name="Base Effects">
-		<passive_effect name="HealthMax" operation="base_set" value="150"/>
-		<passive_effect name="HealthMax" operation="perc_set" value="1"/>
-	</effect_group>
-</entity_class>
 
 
 <!-- ***ITEM MODIFIERS*** -->
 
+<item_modifier name="modSwatch" installable_tags="armorHands" modifier_tags="" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONSwatch"/>
+		<property name="DescriptionKey" value="modSwatchDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="EconomicValue" value="750"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		
+		<effect_group tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+			<passive_effect name="BarteringBuying" operation="base_add" value=".2"/>
+			<passive_effect name="BarteringSelling" operation="base_add" value=".2"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="modFannyPack" installable_tags="pocketMod" modifier_tags="carryweight" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONFannyPack"/>
+		<property name="DescriptionKey" value="modFannyPackDesc"/>
+		<property name="DisplayType" value="modCarryCapacity"/>
+		<property name="Material" value="Mleather"/>
+		<property name="EconomicValue" value="250"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods,clothing"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="CarryCapacity" operation="base_add" value="3"/>
+			<display_value name="dCarryCapacity" value="3"/>
+		</effect_group>
+</item_modifier>
+
+
 <!-- ***ITEMS*** -->
-
-	<!-- This needs added to Turd for hilarious results. Now we need a mesh for poop sock -->
-<property name="StickPercent" value="1"/>
-
-
-<item name="apparelCigarette">
-	<property name="Extends" value="apparelCigar"/>
-	<property name="DescriptionKey" value="apparelCigaretteDesc"/>  <!-- added this for Local -->
-	
-  <!-- This needs added for Pet Rock, because why not be able to throw your pet -->
-  <property name="DropMeshfile" value="#Other/Items?Crafting/rock_smallPrefab.prefab"/>
-	
-	<!-- Add this to Pet Rock and BOTH toilet papers, but on TP's it needs to be Action1 -->
-	<property class="Action0">
-        <property name="Class" value="ThrowAway"/>
-        <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
-        <property name="Throw_strength_default" value="6"/>
-        <property name="Throw_strength_max" value="28"/>
-        <property name="Max_strain_time" value="1.25"/>
-        <property name="Sound_start" value="swoosh"/>
-        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-    </property>
 
 
 
 <!-- ***LOOT*** -->
 
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='7']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='40']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='41']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='65']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='66']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='95']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='100']" name="destroy_on_close">true</setattribute>
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='101']" name="destroy_on_close">true</setattribute>	
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='121']" name="destroy_on_close">true</setattribute>
+
 
 <!-- ***QUESTS*** -->
 
