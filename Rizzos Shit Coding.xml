@@ -50,9 +50,29 @@
 
 <!-- ***ITEMS*** -->
 
+	<!-- This needs added to Turd for hilarious results. Now we need a mesh for poop sock -->
+<property name="StickPercent" value="1"/>
+
+
 <item name="apparelCigarette">
 	<property name="Extends" value="apparelCigar"/>
 	<property name="DescriptionKey" value="apparelCigaretteDesc"/>  <!-- added this for Local -->
+	
+  <!-- This needs added for Pet Rock, because why not be able to throw your pet -->
+  <property name="DropMeshfile" value="#Other/Items?Crafting/rock_smallPrefab.prefab"/>
+	
+	<!-- Add this to Pet Rock and BOTH toilet papers, but on TP's it needs to be Action1 -->
+	<property class="Action0">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Throw_strength_default" value="6"/>
+        <property name="Throw_strength_max" value="28"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="swoosh"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>
+
+
 
 <!-- ***LOOT*** -->
 
@@ -151,3 +171,24 @@ WorkingWoodStoveDesc,blocks,Block,,,A wood burning stove for cooking food plus a
 
 WorkingSink,blocks,Block,,,Working Sink,,
 WorkingSinkDesc,blocks,Block,,,A working sink. Not the cleanest water.\n\nFill empty jars or drink from directly.\n\nCrafted in a workbench.,,
+
+<block name="WorkingComputer">
+	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePCPrefab"/>
+	<property name="DescriptionKey" value="WorkingComputerDesc"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="DisplayType" value="blockMulti"/>
+	<property name="MultiBlockDim" value="2,1,1"/>
+	<property name="ModelOffset" value=".5,.5,0"/>
+	<property name="Path" value="solid"/>
+	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
+	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/>
+	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
+	<drop event="Destroy" name="resourceScrapIron" count="4,6"/>
+	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
+	<property class="Workstation">
+				<property name="Modules" value="output"/>
+	</property>
+</block>
+
+WorkingComputer,blocks,Block,,,Working Computer,,
+WorkingComputerDesc,blocks,Block,,,A computer that works. Still runs off Windows 95 but at least it connects to the internet.\n\nUsed to obtain quests from traders on Reddit.\n\nCrafted in a workbench.,,
