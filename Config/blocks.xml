@@ -148,13 +148,16 @@
 <block name="rockPetBoulder"> <!-- biome decoration -->
 	<property name="CreativeMode" value="Dev"/>
 	<property name="Material" value="Mboulder"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="SellableToTrader" value="false"/>	
+	<property name="CustomIcon" value="ICONPetBoulder" />	
 	<property name="StabilitySupport" value="false"/>
 	<property name="Shape" value="ModelEntity"/>
 	<property name="IsTerrainDecoration" value="true"/>
 	<property name="BigDecorationRadius" value="3"/>
 	<property name="IsDistantDecoration" value="false"/>
-	<property name="Model" value="Entities/Resources/rock_resourcePrefab"/>
-	<property name="ModelOffset" value="0,0,0"/>
+	<property name="Model" value="#@modfolder:Resources/PetBoulder.unity3d?PetRock.prefab" />
+	<property name="ModelOffset" value="0,0.50,0"/>
 	<property name="DisplayType" value="blockHardenedMulti"/>
 	<property name="MultiBlockDim" value="3,2,3"/>
 	<property name="OnlySimpleRotations" value="true"/>

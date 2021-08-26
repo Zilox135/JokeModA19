@@ -15,7 +15,17 @@
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnSledgeT0StoneSledgehammer']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnKnucklesT0LeatherKnuckles']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnBladeT0BoneKnife']"/>	
-	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.025</set>		
+	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.025</set>
+	<!-- Some containers get destroyed upon closing them so loot cannot respawn in them -->	
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='7']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='40']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='41']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='65']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='66']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='95']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='100']" name="destroy_on_close">true</setattribute>
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='101']" name="destroy_on_close">true</setattribute>	
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='121']" name="destroy_on_close">true</setattribute>	
 	
 <append xpath="/lootcontainers/lootgroup[@name='drinks']">
 	<item name="drinkJarPapaRizzsPooTea" count="1,2" prob="0.5"/>

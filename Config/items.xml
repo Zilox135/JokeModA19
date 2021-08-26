@@ -1,6 +1,10 @@
 <configs>	
 <set xpath="/items/item[contains(@name,'food')]/property[@name='Meshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[contains(@name,'food')]/property[@name='DropMeshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
+<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set>
+<append xpath="/items/item[@name='meleeToolPickT3Auger']">
+    <property name="Tags" value="melee,heavy,tool,motorTool,auger,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>    
+</append>
 <insertAfter  xpath="/items/item[@name='drinkCanMegaCrush']/property[@name='DisplayType']">
     <property name="CustomIcon" value="Brawndo"/>
 </insertAfter>
@@ -157,6 +161,7 @@
 	<property name="DescriptionKey" value="foodEdibleturdDesc"/>
 	<property name="DisplayType" value="foodRaw"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Turd.unity3d?Turd.prefab"/>
+	<property name="StickPercent" value="1"/>
 	<property name="Material" value="Morganic"/>
 	<property name="DropScale" value="4"/>	
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
@@ -486,6 +491,7 @@
 <item name="Goldtoiletpaper">
 	<property name="HoldType" value="21"/>	
 	<property name="Meshfile" value="#@modfolder:Resources/GoldTP.unity3d?Goldroll.prefab"/>
+	<property name="DropScale" value="4"/>		
 	<property name="Material" value="Mpaper"/>
 	<property name="Weight" value="10"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
@@ -500,6 +506,15 @@
 		<property name="Sound_start" value="PlayerMaleHungry"/>
 		<property name="Create_item" value="foodEdibleturd"/>		
 	</property>
+		<property class="Action1">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Throw_strength_default" value="6"/>
+        <property name="Throw_strength_max" value="28"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="swoosh"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>
 	<effect_group tiered="false" name="Drink Tier 5">
 		<requirement name="NotHasBuff" buff="buffIsOnFire"/>		
 			<display_value name="dPlayerExpGain" value=".2"/>			
@@ -526,9 +541,19 @@
 	<property name="CustomIcon" value="Goldroll"/>	
 	<property name="DescriptionKey" value="ToiletpaperDesc"/>
 	<property name="Meshfile" value="#@modfolder:Resources/TP.unity3d?TP roll.prefab"/>
+	<property name="DropScale" value="4"/>		
 	<property name="Material" value="Mpaper"/>
 	<property name="Stacknumber" value="10"/> <!-- STK food -->
 	<property name="EconomicValue" value="50"/>
+	<property class="Action1">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Throw_strength_default" value="6"/>
+        <property name="Throw_strength_max" value="28"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="swoosh"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>	
 	<property class="Action0">
 		<property name="Class" value="Eat"/>
 		<property name="Delay" value="1.0"/>
@@ -550,8 +575,8 @@
     <property name="HoldType" value="31"/>
     <property name="DisplayType" value="TubeSock"/>
 	<property name="DescriptionKey" value="TubeSockDesc"/>	
-    <property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
-    <property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Socks.unity3d?TubeSocks.prefab"/>
+	<property name="DropScale" value="4"/>	
     <property name="Material" value="Mcloth"/>
     <property name="CustomIcon" value="ICONTubeSocks"/>
     <property name="EconomicValue" value="5"/>
@@ -577,13 +602,23 @@
 	<property name="CustomIcon" value="ICONPoopSocks" />
 	<property name="DescriptionKey" value="PoopSockDesc"/>	
 	<property name="Tags" value="junk"/>
-	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Socks.unity3d?PoopSocks.prefab"/>
+	<property name="DropScale" value="4"/>	
+    <property name="StickPercent" value="1"/>	
 	<property name="Material" value="Mcloth"/>
 	<property name="Weight" value="10"/>
 	<property name="SellableToTrader" value="false"/>
 	<property name="Stacknumber" value="10"/> <!-- STK resource -->
 	<property name="Group" value="Medical"/>
+		<property class="Action0">
+		<property name="Class" value="ThrowAway"/>
+		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Throw_strength_default" value="10"/>
+		<property name="Throw_strength_max" value="35"/>
+		<property name="Max_strain_time" value="1"/>
+		<property name="Sound_start" value="swoosh"/>
+	    </property>
+	<property name="ThrowableDecoy" value="true"/>
 </item>
 
 <item name="medicalButtPlug">
@@ -616,20 +651,30 @@
     </effect_group>
 </item>
 
-<!-- Other stuff -->
+<!-- Other stuff/useless items -->
 
 <item name="junkPetRock">
-	<property name="HoldType" value="45"/>
+	<property name="HoldType" value="40"/>
 	<property name="CustomIcon" value="ICONPetRock"/>
 	<property name="DescriptionKey" value="junkPetRockDesc"/>
 	<property name="Tags" value="junk"/>
 	<property name="Meshfile" value="#Other/Items?Crafting/rock_smallPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="MresourceRockSmall"/>
+	<property name="DropMeshfile" value="#@modfolder:Resources/PetBoulder.unity3d?PetRock.prefab"/>	
+	<property name="DropScale" value="1"/>	
+	<property name="Material" value="MresourceRockSmall"/>	
 	<property name="Weight" value="5"/>
 	<property name="EconomicValue" value="25"/>
-	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
 	<property name="Group" value="Resources"/>
+		<property class="Action0">
+        <property name="Class" value="ThrowAway"/>
+        <property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Throw_strength_default" value="6"/>
+        <property name="Throw_strength_max" value="28"/>
+        <property name="Max_strain_time" value="1.25"/>
+        <property name="Sound_start" value="swoosh"/>
+        <requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+    </property>
 </item>
 
 <item name="JarOfFarts">
@@ -851,7 +896,7 @@
 		<!-- Moaning and grunting sounds moved to buffs.xml, <effect_group name="Power Attack Grunt"> -->
 	</effect_group>
 	
-	<property name="Group" value="Tools/Traps,Basics"/>
+	<property name="Group" value="Tools/Traps"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
@@ -1162,6 +1207,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/PlasticFireaxe.unity3d?PlasticFireaxe.prefab"/>
     <property name="CustomIcon" value="PlasticFireaxe"/>
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="200"/>	
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1254,6 +1300,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/PlasticShovel.unity3d?PlasticShovel.prefab"/>
     <property name="CustomIcon" value="PlasticShovel"/>
 	<property name="Material" value="Mmetal"/>
+    <property name="Weight" value="200"/>	
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="350"/>
@@ -1314,6 +1361,7 @@
 	<property name="Meshfile" value="#@modfolder:Resources/PlasticPickaxe.unity3d?PlasticPickaxe.prefab"/>
     <property name="CustomIcon" value="PlasticPickaxe"/>
 	<property name="Material" value="Mmetal"/>
+	<property name="Weight" value="200"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1391,6 +1439,7 @@
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlasticHammer.unity3d?PlasticHammer.prefab"/>
 	<property name="Material" value="Mstone"/>
+	<property name="Weight" value="150"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1450,7 +1499,7 @@
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="wood"/>
 		<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="earth"/>
 	</effect_group>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Tools/Traps,Basics"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
@@ -1462,7 +1511,7 @@
 	<property name="DescriptionKey" value="meleeToolT3BanHammerDesc"/>	
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlasticHammer.unity3d?PlasticHammer.prefab"/>
-	<property name="Material" value="Mstone"/>
+	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
@@ -1526,7 +1575,7 @@
 		<passive_effect name="StaminaLoss" operation="perc_add" value="-.05,.05"/> <!-- random StamLoss -->
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
 	</effect_group>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Tools/Traps,Basics"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
@@ -1536,8 +1585,9 @@
 	<property name="CustomIcon" value="PlantFiberPickaxe"/>	
 	<property name="HoldType" value="63"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlantFiberTools.unity3d?PlantFiberPickaxe.prefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Material" value="Mstone"/>
+	<property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceYuccaFibers"/>
 	<property name="DegradationBreaksAfter" value="false"/>
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="metaldestroy1"/>
@@ -1569,7 +1619,6 @@
 		<property name="SwingDegrees" value="70"/>
 		<property name="SwingAngle" value="130"/>
 	</property>
-	<property name="Group" value="Tools/Traps"/>
 	<effect_group name="meleeToolPickT0PlantFiberPickaxe">
 		<passive_effect name="EntityDamage" operation="base_set" value="11.2" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="35.5" tags="perkMiner69r,miningTool"/>
@@ -1601,6 +1650,7 @@
 		<passive_effect name="BlockDamage" operation="perc_add" value="1" tags="secondary"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="31.3" tags="secondary"/>
 	</effect_group>
+	<property name="Group" value="Tools/Traps,Basics"/>	
 	<property name="PickupJournalEntry" value="miningTip"/>
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
@@ -1612,8 +1662,9 @@
 	<property name="SoundDestroy" value="wooddestroy1"/>	
 	<property name="Tags" value="melee,grunting,medium,tool,longShaft,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlantFiberTools.unity3d?PlantFiberShovel.prefab"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="Material" value="Mstone"/>
+	<property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceYuccaFibers"/>
 	<property name="FuelValue" value="250"/>
 	<property name="EconomicValue" value="350"/>
 	<property name="SellableToTrader" value="true"/>
@@ -1662,7 +1713,7 @@
 		<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
 		<passive_effect name="StaminaLoss" operation="base_set" value="40.6" tags="secondary"/>
 	</effect_group>
-	<property name="Group" value="Tools/Traps"/>
+	<property name="Group" value="Tools/Traps,Basics"/>
 </item>
 
 <item name="meleeToolT0PlantFiberAxe">
@@ -1672,7 +1723,8 @@
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/PlantFiberTools.unity3d?PlantFiberAxe.prefab"/>
 	<property name="Material" value="Mstone"/>
-	<property name="RepairTools" value="resourceRockSmall"/>
+    <property name="Weight" value="6"/>	
+	<property name="RepairTools" value="resourceYuccaFibers"/>
 	<property name="EconomicValue" value="175"/>
 	<property name="EconomicBundleSize" value="1"/>
 	<property name="SellableToTrader" value="false"/>
@@ -3034,6 +3086,7 @@ needed?
 
 <item name="apparelCigarette">
 	<property name="Extends" value="apparelCigar"/>
+	<property name="DescriptionKey" value="apparelCigaretteDesc"/>	
 	<property name="DisplayType" value="clothingCigarette"/>	
 	<property name="Tags" value="head,clothing"/>
 	<property class="UMA">
