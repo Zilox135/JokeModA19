@@ -1,10 +1,22 @@
 <configs>	
 <set xpath="/items/item[contains(@name,'food')]/property[@name='Meshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[contains(@name,'food')]/property[@name='DropMeshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
-<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set>
+<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set> 
+
 <append xpath="/items/item[@name='meleeToolPickT3Auger']">
     <property name="Tags" value="melee,heavy,tool,motorTool,auger,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>    
 </append>
+
+<append xpath="/items/item[@name='meleeToolRepairT3Nailgun']">
+    <effect_group name="meleeToolRepairT3Nailgun">	
+	</effect_group> 
+</append>
+
+<append xpath="/items/item[@name='meleeToolRepairT1ClawHammer']"> 
+    <effect_group name="meleeToolRepairT1ClawHammer" tiered="false">
+	</effect_group>
+</append>
+
 <insertAfter  xpath="/items/item[@name='drinkCanMegaCrush']/property[@name='DisplayType']">
     <property name="CustomIcon" value="Brawndo"/>
 </insertAfter>
@@ -1445,7 +1457,7 @@
 	<property name="SoundJammed" value="ItemNeedsRepair"/>
 	<property name="SoundDestroy" value="wooddestroy1"/>
 	<property name="FuelValue" value="150"/>
-	<property name="EconomicValue" value="500"/>
+	<property name="EconomicValue" value=".50"/>
 	<property name="ShowQuality" value="true"/>
 	<property class="Action0">
 		<property name="Class" value="DynamicMelee"/>
@@ -1473,7 +1485,7 @@
 		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail"/>
 		<property name="UsePowerAttackAnimation" value="false"/>
 	</property>
-	<effect_group name="meleeToolRepairT0PlasticHammer">
+    <effect_group name="meleeToolRepairT0PlasticHammer" tiered="false">
 		<passive_effect name="EntityDamage" operation="base_set" value="12" tags="perkMiner69r"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="22" tags="perkMiner69r"/>
 		<passive_effect name="AttacksPerMinute" operation="base_set" value="70" tags="perkMiner69r"/>
@@ -1507,7 +1519,6 @@
 	<property name="Tags" value="melee,light,tool,attStrength,perkMiner69r,canHaveCosmetic,noMods"/>	
 	<property name="DisplayType" value="melee"/>
 	<property name="CustomIcon" value="BanHammer"/>
-	<property name="CustomIconTint" value="166,42,219"/>
 	<property name="DescriptionKey" value="meleeToolT3BanHammerDesc"/>	
 	<property name="HoldType" value="32"/>
 	<property name="Meshfile" value="#@modfolder:Resources/BanHammer1.unity3d?BanHammer.prefab"/>
