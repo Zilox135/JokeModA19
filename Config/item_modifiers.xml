@@ -94,7 +94,40 @@
 		<effect_group tiered="false">
 		<passive_effect name="BuffResistance" operation="base_set" value="100" tags="buffDrowning01,buffDrowning02,buffDrowning03"/>
 		</effect_group>
-	</item_modifier>	
+	</item_modifier>
+
+<item_modifier name="modSwatch" installable_tags="armorHands" modifier_tags="" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONSwatch"/>
+		<property name="DescriptionKey" value="modSwatchDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="EconomicValue" value="750"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		
+		<effect_group tiered="false">
+			<passive_effect name="ModSlots" operation="base_set" value="0"/>
+			<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
+			<passive_effect name="BarteringBuying" operation="base_add" value=".2"/>
+			<passive_effect name="BarteringSelling" operation="base_add" value=".2"/>
+		</effect_group>
+</item_modifier>
+
+<item_modifier name="modFannyPack" installable_tags="pocketMod" modifier_tags="carryweight" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="?"/>
+		<property name="CustomIcon" value="ICONFannyPack"/>
+		<property name="DescriptionKey" value="modFannyPackDesc"/>
+		<property name="DisplayType" value="modCarryCapacity"/>
+		<property name="Material" value="Mleather"/>
+		<property name="EconomicValue" value="250"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods,clothing"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+
+		<effect_group tiered="false">
+			<passive_effect name="CarryCapacity" operation="base_add" value="3"/>
+			<display_value name="dCarryCapacity" value="3"/>
+		</effect_group>
+</item_modifier>	
 	
 </append>
 	

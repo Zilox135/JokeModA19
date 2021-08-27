@@ -1,0 +1,19 @@
+<config>
+		
+<append xpath="/blockplaceholders">
+<placeholder name="cntWallSafePooTeaRandomLootHelper">
+		<block name="air" prob=".75"/>
+		<block name="cntWallSafePooTea" prob=".25"/>
+	</placeholder>
+</append>
+	
+<append xpath="/blockplaceholders/placeholder[@name='paintingPictureRandomHelper']">
+		<block name="paintingRizCo"/>
+		<block name="paintingRizzoTwitch"/>
+		<block name="paintingRizzoZombie"/>
+	</append>
+
+<append xpath="/blockplaceholders/placeholder[@name='cntPaintingPictureSafeRandomLootHelper']">
+		<block name="hiddenSafePaintingPooTea"/>
+	</append>		
+</config>

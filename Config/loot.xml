@@ -1,5 +1,5 @@
 <config>
-	<!-- Removes primitive stuff from loot and adds a small chance of good shit early on -->
+   <!-- Removes primitive stuff from loot and adds a small chance of good shit early on -->
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_Melee']/item[@name='meleeWpnSpearT0StoneSpear']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_Melee']/item[@name='meleeWpnClubT0WoodenClub']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_Melee']/item[@name='meleeWpnSledgeT0StoneSledgehammer']"/>
@@ -16,7 +16,7 @@
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnKnucklesT0LeatherKnuckles']"/>
     <remove xpath="/lootcontainers/lootgroup[@name='groupWeaponsT0_All']/item[@name='meleeWpnBladeT0BoneKnife']"/>	
 	<set xpath="/lootcontainers/lootprobtemplates/lootprobtemplate[@name='ProbT1']/loot[@level='0,9']/@prob">.025</set>
-	<!-- Some containers get destroyed upon closing them so loot cannot respawn in them -->	
+    <!-- Some containers get destroyed upon closing them so loot cannot respawn in them -->	
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='7']" name="destroy_on_close">true</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='40']" name="destroy_on_close">true</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='41']" name="destroy_on_close">true</setattribute>
@@ -25,7 +25,7 @@
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='95']" name="destroy_on_close">true</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='100']" name="destroy_on_close">true</setattribute>
 	<setattribute xpath="/lootcontainers/lootcontainer[@id='101']" name="destroy_on_close">true</setattribute>	
-	<setattribute xpath="/lootcontainers/lootcontainer[@id='121']" name="destroy_on_close">true</setattribute>	
+	<setattribute xpath="/lootcontainers/lootcontainer[@id='121']" name="destroy_on_close">true</setattribute>
 	
 <append xpath="/lootcontainers/lootgroup[@name='drinks']">
 	<item name="drinkJarPapaRizzsPooTea" count="1,2" prob="0.5"/>
@@ -170,7 +170,6 @@
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='farmingCookingRecipesT0']">
-	<item name="drinkJarPapaRizzsPooTeaSchematic"/>
 	<item name="foodKPsBunsSchematic"/>
 </append>
 
@@ -245,5 +244,12 @@
 	<item name="gunHandgunT1WaterGun" count="1" loot_prob_template="questT1QualTemplate"/>
 </append>
 
-</config>
+<!-- cntWallSafePooTea, Poo Tea Hidden Wall Safe -->
+<append xpath="/lootcontainers">
+<lootcontainer id="146" count="1,5" size="8,5" sound_open="UseActions/open_safe" sound_close="UseActions/close_safe" open_time="1" loot_quality_template="qualPlus1Template">
+	<item name="drinkJarPapaRizzsPooTea"/>
+	<item name="drinkJarPapaRizzsPooTeaSchematic" prob="0.10"/>
+</lootcontainer>
+</append>
 
+</config>
