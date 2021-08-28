@@ -1,10 +1,29 @@
 <configs>	
 <set xpath="/items/item[contains(@name,'food')]/property[@name='Meshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[contains(@name,'food')]/property[@name='DropMeshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
-<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set> 
+<set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set>
 
 <append xpath="/items/item[@name='meleeToolPickT3Auger']">
     <property name="Tags" value="melee,heavy,tool,motorTool,auger,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>    
+</append>
+
+<append xpath="/items/item[@name='drinkJarEmpty']">
+    <property class="Action0">
+    <property name="Class" value="ExchangeItem" />
+    <property name="Delay" value="1.0" />
+    <property name="Change_item_to" value="drinkJarRiverWater" />
+    <property name="Focused_blockname_1" value="cntGraniteSink" />	
+    <property name="Focused_blockname_2" value="cntToilet01" />
+    <property name="Focused_blockname_3" value="cntToilet02" />
+    <property name="Focused_blockname_4" value="cntToilet03" />		
+    <property name="Focused_blockname_5" value="urinalCommercialMounted" />
+    <property name="Focused_blockname_6" value="pedestalSink" />
+    <property name="Focused_blockname_7" value="utilitySink" />
+    <property name="Focused_blockname_8" value="wallMountSinkCommercial" />	
+    <property name="Focused_blockname_9" value="counterSinkCommercialTile" />
+    <property name="Focused_blockname_10" value="cntCabinetOldSink" />	
+    <property name="Sound_start" value="bucketfill_water" />
+    </property>
 </append>
 
 <append xpath="/items/item[@name='meleeToolRepairT3Nailgun']">
