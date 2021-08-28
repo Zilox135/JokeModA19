@@ -8,43 +8,165 @@
 
 <!-- ***ITEM MODIFIERS*** -->
 
-<item_modifier name="modSwatch" installable_tags="armorHands" modifier_tags="" blocked_tags="noMods" type="attachment">
-		<property name="UnlockedBy" value="?"/>
-		<property name="CustomIcon" value="ICONSwatch"/>
-		<property name="DescriptionKey" value="modSwatchDesc"/>
-		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
-		<property name="EconomicValue" value="750"/>
-		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-		
-		
-		<effect_group tiered="false">
-			<passive_effect name="ModSlots" operation="base_set" value="0"/>
-			<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>
-			<passive_effect name="BarteringBuying" operation="base_add" value=".2"/>
-			<passive_effect name="BarteringSelling" operation="base_add" value=".2"/>
-		</effect_group>
-</item_modifier>
-
-<item_modifier name="modFannyPack" installable_tags="pocketMod" modifier_tags="carryweight" blocked_tags="noMods" type="attachment">
-		<property name="UnlockedBy" value="?"/>
-		<property name="CustomIcon" value="ICONFannyPack"/>
-		<property name="DescriptionKey" value="modFannyPackDesc"/>
-		<property name="DisplayType" value="modCarryCapacity"/>
-		<property name="Material" value="Mleather"/>
-		<property name="EconomicValue" value="250"/>
-		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods,clothing"/>
-		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-
-		<effect_group tiered="false">
-			<passive_effect name="CarryCapacity" operation="base_add" value="3"/>
-			<display_value name="dCarryCapacity" value="3"/>
-		</effect_group>
-</item_modifier>
 
 
 <!-- ***ITEMS*** -->
 
+		<!-- tested, works. Needs icon -->
+<item name="resourceFuelCrapSack"> <!-- scrap material -->
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceWood"/>
+	<property name="Weight" value="5"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="FuelValue" value="750"/>
+	<property name="EconomicValue" value="25"/>
+	<property name="EconomicBundleSize" value="50"/>
+	<property name="Group" value="Resources"/>
+	<property name="RepairAmount" value="100"/>
+	<property name="LootExpValue" value="1"/>
+	<property name="CraftingIngredientTime" value="3"/>
+</item>
 
+<item name="ammoNailSteel">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="CustomIconTint" value="101,104,138"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="1000"/> <!-- STK resource -->
+	<property name="EconomicValue" value="20"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="UnlockedBy" value=""/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="0"/>
+		<!-- no expl. -->
+		<property name="FlyTime" value="1"/>
+		<property name="LifeTime" value=".75"/>
+	</property>
+	<effect_group name="resourceNail" tiered="false"> <!-- nail -->
+		<passive_effect name="EntityDamage" operation="base_set" value="25"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="1"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value=".1" tags="wood"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="20"/>
+		<passive_effect name="ProjectileStickChance" operation="perc_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="ammoNailExplosive">
+	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
+	<property name="CustomIconTint" value="191,15,15"/>
+	<property name="HoldType" value="45"/>
+	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourceScrapIron"/>
+	<property name="Stacknumber" value="500"/> <!-- STK resource -->
+	<property name="EconomicValue" value="30"/>
+	<property name="EconomicBundleSize" value="10"/>
+	<property name="Tags" value="ammo,ranged,attStrength,perkMiner69r"/>
+	<property name="Group" value="Ammo/Weapons"/>
+	<property name="UnlockedBy" value=""/>
+	<property class="Action1">
+		<property name="Class" value="Projectile"/>
+		<property name="Explosion.ParticleIndex" value="5"/> <!-- which Prefab/particle is used -->
+		<property name="Explosion.RadiusBlocks" value="1.5"/> <!-- damage radius for blocks -->
+		<property name="Explosion.RadiusEntities" value="3"/> <!-- damage radius for entities -->
+		<property name="Explosion.DamageBonus.stone" value=".1"/>
+		<property name="Explosion.DamageBonus.metal" value=".05"/>
+		<property name="Explosion.DamageBonus.earth" value="0"/>
+		<property name="Explosion.DamageBonus.wood" value=".5"/>
+		<property name="Explosion.DamageBonus.water" value="0"/>
+		<property name="FlyTime" value="2"/>
+		<property name="LifeTime" value="20"/>
+
+		<property name="Explosion.BlockDamage" value="10"/> <!-- workaround, not affected by perks at all -->
+		<property name="Explosion.EntityDamage" value="730"/> <!-- workaround, not affected by perks at all -->
+	</property>
+
+	<effect_group name="ammoNailExplosive" tiered="false">
+		<passive_effect name="BlockDamage" operation="base_set" value="10" tags="perkDemolitionsExpert"/><display_value name="dExDamageBlock" value="20"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="100" tags="perkDemolitionsExpert"/><display_value name="dExDamageEntity" value="700"/>
+		<passive_effect name="ProjectileVelocity" operation="base_set" value="25" tags="perkDemolitionsExpert"/>
+		<display_value name="dExRadius" value="6"/>
+	</effect_group>
+</item>
+
+<item name="meleeToolRepairT3Nailgun">
+	<property name="Tags" value="tool,nailgun,sideAttachments,attStrength,perkMiner69r,canHaveCosmetic,noMods"/>
+	<property name="DisplayType" value="rangedRepairTool"/>
+	<property name="HoldType" value="37"/>
+	<property name="Meshfile" value="#Other/Items?Tools/nailgunPrefab.prefab"/>
+	<property name="Material" value="MmechanicalParts"/> <property name="Weight" value="10"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="CrosshairUpAfterShot" value="true"/>
+	<property name="Stacknumber" value="1"/>
+	<property name="UnlockedBy" value="perkAdvancedEngineering,meleeToolRepairT3NailgunSchematic"/>
+	<property name="ShowQuality" value="true"/>
+	<property class="Action0">
+		<property name="Class" value="Launcher"/>
+		<property name="Hitmask_override" value="Arrow"/>
+		<property name="Delay" value=".3"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="resourceNail,ammoNailSteel,ammoNailExplosive"/>
+		<property name="Instantiate_on_load" value="false"/>
+		<property name="Reload_time" value="2"/>
+		<property name="Sound_start" value="nailgun_fire"/>
+		<property name="Particles_muzzle_fire" value="nailgunfire"/>
+	<!-- <property name="Particles_muzzle_smoke" value="nozzlesmoke"/> -->
+		<property name="Sound_repeat" value=""/>
+		<property name="Sound_end" value=""/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="nailgun_reload"/>
+	</property>
+	<property class="Action1"> <!-- UseAction -->
+		<property name="Class" value="Repair"/>
+		<property name="Delay" value=".73"/> <!-- Repair actions still need the delay amount -->
+		<property name="Repair_amount" value="1000"/>
+		<property name="Upgrade_hit_offset" value="-5"/>
+		<property name="Repair_action_sound" value="nailgun_fire"/>
+		<property name="Upgrade_action_sound" value="nailgun_fire"/>
+		<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,ironDoor1_v1,vaultDoor01,scrapHatch_v1,vaultHatch_v1,resourceYuccaFibers,resourceCloth,resourceScrapPolymers,resourceNail"/>
+		<!--<property name="Restricted_upgrade_items" value="concrete"/>-->
+	</property>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1000"/>
+	<effect_group name="meleeToolRepairT3Nailgun" tiered="true"> <!-- meleeToolRepairT3Nailgun -->
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="3" tags="perkMiner69r"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random effective rng -->
+		<passive_effect name="MaxRange" operation="base_set" value="10" tags="perkMiner69r"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="1.3"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".4"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2"/>
+
+		<display_value name="dBlockRepairAmount" value="1000"/>
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="2" tags="perkMiner69r"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".7" tags="perkMiner69r"/> <!-- crosshair reset speed -->
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="200" tags="perkMiner69r"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1" tags="perkMiner69r"/> <!-- for the Launcher class this instantly fires BurstRoundCount projectiles on pulling the trigger -->
+		<passive_effect name="MagazineSize" operation="base_set" value="10"/>
+		<!-- <passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/>  does not work at all on the nailgun -->
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.7" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".7" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.6" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1000" tags="nailgun"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="nailgun"/>
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+</item>
 
 <!-- ***LOOT*** -->
 
@@ -53,6 +175,16 @@
 <!-- ***QUESTS*** -->
 
 <!-- ***RECIPES*** -->
+
+<recipe name="ammoSteelNail" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="unit_iron" count="5"/>
+	<ingredient name="unit_clay" count="1"/>
+</recipe>
+
+<recipe name="ammoExplosiveNail" count="1" material_based="true" craft_area="forge" tags="perkAdvancedEngineering">
+	<ingredient name="resourceNail" count="1"/>
+	<ingredient name="GUNPOWDER" count="7"/>
+</recipe>
 
 <!-- ***WORKS IN PROGRESS*** -->
 
@@ -109,7 +241,7 @@
 </recipe>
 
 WorkingWoodStove,blocks,Block,,,Wood Burning Stove,,
-WorkingWoodStoveDesc,blocks,Block,,,A wood burning stove for cooking food plus advanced recipes. Generates less heat that a campfire.\n\nCrafted in a workbench.,,
+WorkingWoodStoveDesc,blocks,Block,,,A wood burning stove for cooking food plus advanced recipes. Generates less heat than a campfire.\n\nCrafted in a workbench.,,
 
 <!-- needs unlockedby?, water code -->
 
