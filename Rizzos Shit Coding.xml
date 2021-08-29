@@ -1,5 +1,34 @@
 <!-- ***BLOCKS*** -->
 
+<insertAfter  xpath="/blocks/block[@name='cntWoodBurningStove']/property[@name='Extends']">
+    <property name="DescriptionKey" value="WorkingWoodStoveDesc"/>
+</insertAfter>
+
+		
+		<!-- Painting block tested and works -->
+<block name="decoPaintingsMaster">
+	<property name="Material" value="Mwood_weak"/>
+	<property name="CustomIcon" value="paintingRizzoZombie"/>
+	<property name="DescriptionKey" value="decoPaintingsMasterDesc"/>
+	<property name="Tags" value="wood"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="Shape" value="ModelEntity"/>
+	<property name="Model" value="Entities/Misc/missing_blockPrefab"/>
+	<property name="Texture" value="282"/>
+	<property name="IsTerrainDecoration" value="true"/>
+	<property name="CustomUpgradeSound" value="place_block_wood"/>
+	<property name="FuelValue" value="100"/>
+	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
+	<drop event="Destroy" name="resourceWood" count="1,3"/>
+	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
+	<property name="EconomicValue" value="5"/>
+	<property name="EconomicBundleSize" value="1"/>
+	<property name="Group" value="Decor/Miscellaneous"/>
+	<property name="FilterTags" value="fdecor,fother"/>
+	<property name="SelectAlternates" value="true"/>
+	<property name="PlaceAltBlockValue" value="paintingRizzoZombie,paintingRizzoTwitch,paintingRizCo,hiddenSafePaintingPooTea"/>
+</block>
+
 
 
 <!-- ***ENTITYCLASSES*** -->
@@ -12,22 +41,12 @@
 
 <!-- ***ITEMS*** -->
 
-		<!-- tested, works. Needs icon -->
-<item name="resourceFuelCrapSack"> <!-- scrap material -->
-	<property name="HoldType" value="45"/>
-	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="MresourceWood"/>
-	<property name="Weight" value="5"/>
-	<property name="Stacknumber" value="10"/> <!-- STK resource -->
-	<property name="FuelValue" value="750"/>
-	<property name="EconomicValue" value="25"/>
-	<property name="EconomicBundleSize" value="50"/>
-	<property name="Group" value="Resources"/>
-	<property name="RepairAmount" value="100"/>
-	<property name="LootExpValue" value="1"/>
-	<property name="CraftingIngredientTime" value="3"/>
-</item>
+		
+		<!-- For some reason pedestal sinks inside POI won't work for water -->
+<property name="Focused_blockname_11" value="drinkingfountainSingle" />
+<property name="Focused_blockname_12" value="drinkingfountainDouble" />
+<property name="Focused_blockname_13" value="cntBathTubEmpty" />
+<property name="Focused_blockname_14" value="decoClawFootBathTub" />
 
 
 <!-- ***LOOT*** -->
@@ -38,69 +57,20 @@
 
 <!-- ***RECIPES*** -->
 
-<recipe name="resourceFuelCrapSack" count="1">
-	<ingredient name="foodEdibleturd" count="1"/>
-	<ingredient name="resourceCloth" count="3"/>
+<recipe name="decoPaintingsMaster" count="1">
+	<ingredient name="resourceNail" count="4"/>
+	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="resourcePaint" count="1"/>
 </recipe>
-
-<!-- ***WORKS IN PROGRESS*** -->
-
-<!-- will also need advanced food recipes, unlockedby? (does it need one?) -->
-<block name="WorkingWoodStove">
-	<property name="Class" value="Campfire"/>
-	<property name="Model" value="Entities/Furniture/woodBurningStovePrefab"/> <property name="Place" value="TowardsPlacerInverted"/>
-	<property name="CustomIcon" value="cntWoodBurningStove" />
-	<property name="Material" value="MstoneNoGlue"/>
-	<property name="MaxDamage" value="500"/>
-	<property name="StabilitySupport" value="false"/> <!-- build restriction -->
-	<property name="Shape" value="ModelEntity"/>
-	<property name="ImposterDontBlock" value="true"/>
-	<property name="Collide" value="movement,melee,bullet,arrow,rocket"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="ParticleName" value="campfire"/>
-	<property name="ParticleOffset" value="0.5,0,0.5"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="HeatMapStrength" value="3"/>
-	<property name="HeatMapTime" value="3000"/>
-	<property name="HeatMapFrequency" value="750"/>
-	<property name="BuffsWhenWalkedOn" value="buffBurningEnvironment"/>
-	<property name="ActiveRadiusEffects" value="buffCampfireAOE(3)"/>
-	<property name="ActiveRadiusEffects" value="+heatSource(3)"/>
-	<property name="CanPickup" value="true"/>
-
-	<property class="Workstation">
-		<property name="Modules" value="tools,output,fuel,input"/>
-		<property name="Collide" value="melee,bullet,arrow,rocket"/>
-	</property>
-	<property name="WorkstationIcon" value="ui_game_symbol_campfire"/>
-	<property name="CraftActionName" value="lblContextActionCook"/>
-	<property name="CraftIcon" value="ui_game_symbol_spatula"/>
-	<property name="OpenSound" value="campfire_open"/>
-	<property name="CloseSound" value="campfire_close"/>
-	<property name="CraftSound" value="campfire_cook_click"/>
-	<property name="CraftCompleteSound" value="campfire_complete_item"/>
-	<property name="WorkstationJournalTip" value="heatMapTip"/>
-	<property name="PickupJournalEntry" value="campfireTip"/>
-	<property class="RepairItems"> <property name="resourceForgedIron" value="5"/> </property>
-	<drop event="Destroy" name="resourceForgedIron" count="3"/>
-	<property name="Group" value="Food/Cooking,Decor"/>
-	<property name="DescriptionKey" value="WorkingWoodStoveDesc"/>
-	<property name="EconomicValue" value="5"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FilterTags" value="fdecor,fother,ffurniture"/>
-	<property name="SortOrder1" value="70i0"/>
-</block>
 
 <recipe name="WorkingWoodStove" count="1" craft_area="workbench" tags="workbenchCrafting">
 	<ingredient name="resourceForgedIron" count="3"/>
 	<ingredient name="resourceWood" count="10"/>
 </recipe>
 
-WorkingWoodStove,blocks,Block,,,Wood Burning Stove,,
-WorkingWoodStoveDesc,blocks,Block,,,A wood burning stove for cooking food plus advanced recipes. Generates less heat than a campfire.\n\nCrafted in a workbench.,,
 
-<!-- needs unlockedby?, water code -->
+<!-- ***WORKS IN PROGRESS*** -->
+
 
 <block name="WorkingComputer">
 	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePCPrefab"/>
