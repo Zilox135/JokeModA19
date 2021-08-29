@@ -2,6 +2,7 @@
 <set xpath="/items/item[contains(@name,'food')]/property[@name='Meshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[contains(@name,'food')]/property[@name='DropMeshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set>
+<set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@name='UnlockedBy']/@value">gunHandgunT1PistolSchematic</set>
 
 <append xpath="/items/item[@name='meleeToolPickT3Auger']">
     <property name="Tags" value="melee,heavy,tool,motorTool,auger,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>    
@@ -1995,7 +1996,7 @@
 
 <item name="qc_ladiesofthenight">
 	<property name="Extends" value="challengeQuestMaster"/>
-	<property name="CustomIconTint" value="0,0,204" />	
+	<property name="CustomIconTint" value="114,188,212" />	
 	<property class="Action0">
 		<property name="QuestGiven" value="challenge_ladiesofthenight"/>
 	</property>
@@ -2004,10 +2005,225 @@
 <item name="qc_dontgetcocky">
     <property name="Extends" value="challengeQuestMaster"/>
     <property name="DescriptionKey" value="qc_AnimalGroupDesc"/>	
-	<property name="CustomIconTint" value="0,0,204" />	
+	<property name="CustomIconTint" value="114,188,212" />	
     <property class="Action0">
         <property name="QuestGiven" value="challenge_dontgetcocky"/>
     </property>
+</item>
+
+<item name="DontGetCockyQuestbook">
+	<property name="Extends" value="challengeQuestMaster"/>
+	<property name="EconomicValue" value="400"/>	
+	<property name="Stacknumber" value="1"/> 	
+	<property name="CustomIcon" value="QuestBook"/>
+	<property name="CustomIconTint" value="114,188,212" />		
+	<property class="Action0">
+	<property name="QuestGiven" value="challenge_dontgetcocky"/>
+	</property>
+</item>
+
+<item name="LadiesOfTheNightQuestbook">
+	<property name="Extends" value="challengeQuestMaster"/>
+	<property name="EconomicValue" value="400"/>		
+	<property name="Stacknumber" value="1"/> 	
+	<property name="CustomIcon" value="QuestBook"/>
+	<property name="CustomIconTint" value="114,188,212" />		
+	<property class="Action0">
+	<property name="QuestGiven" value="challenge_ladiesofthenight"/>
+	</property>
+</item>
+
+<item name="Tier1ClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="400"/>			
+	<property name="SellableToTrader" value="false"/>
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="159,105,52"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier1_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier2ClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="675"/>		
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="255,165,0"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier2_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier3ClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="900"/>		
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="191,238,144"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier3_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier4ClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="1020"/>		
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="26,255,26"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier4_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier5ClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="2040"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="0,0,255"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier5_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier2FetchAndClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="700"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="255,165,0"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier2_fetch_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier3FetchAndClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="1000"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="191,238,144"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier3_fetch_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier4FetchAndClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="1150"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="26,255,26"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier4_fetch_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier5FetchAndClearQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="2300"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="0,0,255"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier5_fetch_clear"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier1FetchQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="165"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="159,105,52"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier1_fetch"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier2FetchQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="280"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="255,165,0"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier2_fetch"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier3FetchQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="400"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="191,238,144"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier3_fetch"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier4FetchQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="510"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="26,255,26"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier4_fetch"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier5FetchQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="1020"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="0,0,255"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier5_fetch"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier1BuriedSuppliesQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="280"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="159,105,52"/>	
+	<property class="Action0">
+	<property name="QuestGiven" value="tier1_buried_supplies"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
+</item>
+
+<item name="Tier2BuriedSuppliesQuestbook">
+	<property name="Extends" value="questMaster"/>
+	<property name="EconomicValue" value="470"/>	
+	<property name="Stacknumber" value="1"/> 		
+	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIconTint" value="255,165,0"/>		
+	<property class="Action0">
+	<property name="QuestGiven" value="tier2_buried_supplies"/>	
+	<property name="Class" value="Quest"/>	
+	</property>
 </item>
 
 

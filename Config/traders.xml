@@ -1,0 +1,39 @@
+<Configs>
+
+	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='modMeleeT1']">
+			<trader_item_group name="QuestBooks" count="all">
+			<item name="DontGetCockyQuestbook"/>
+			<item name="LadiesOfTheNightQuestbook"/>			
+			<item name="Tier1ClearQuestbook"/>
+			<item name="Tier2ClearQuestbook"/>			
+			<item name="Tier3ClearQuestbook"/>			
+			<item name="Tier4ClearQuestbook"/>			
+			<item name="Tier5ClearQuestbook"/>
+			<item name="Tier2FetchAndClearQuestbook"/>
+			<item name="Tier3FetchAndClearQuestbook"/>
+			<item name="Tier4FetchAndClearQuestbook"/>
+			<item name="Tier5FetchAndClearQuestbook"/>
+			<item name="Tier1FetchQuestbook"/>
+			<item name="Tier2FetchQuestbook"/>			
+			<item name="Tier3FetchQuestbook"/>			
+			<item name="Tier4FetchQuestbook"/>			
+			<item name="Tier5FetchQuestbook"/>
+			<item name="Tier1BuriedSuppliesQuestbook"/>
+			<item name="Tier2BuriedSuppliesQuestbook"/>			
+		</trader_item_group>
+	</insertBefore>
+	
+	<insertBefore xpath="/traders/trader_item_groups/trader_item_group[@name='foodVending']">
+		<trader_item_group name="Quests">
+			<item group="QuestBooks" count="1"/>
+		</trader_item_group>
+	</insertBefore>
+	
+	<insertBefore xpath="/traders/trader_info[@id='5']">
+	<trader_info id="10" full_reset="true" reset_interval="3" override_buy_markup="1.0" allow_sell="true" min_inventory="8" max_inventory="18" min_items_swapped="8" max_items_swapped="18">
+		<trader_items count="1">
+			<item group="QuestBooks" />
+		</trader_items>
+	</trader_info>
+	</insertBefore>
+</Configs>
