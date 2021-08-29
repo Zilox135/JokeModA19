@@ -1540,7 +1540,7 @@
 	<property name="CustomIcon" value="BanHammer"/>
 	<property name="DescriptionKey" value="meleeToolT3BanHammerDesc"/>	
 	<property name="HoldType" value="32"/>
-	<property name="Meshfile" value="#@modfolder:Resources/BanHammer1.unity3d?BanHammer.prefab"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Tools.unity3d?BanHammer.prefab"/>
 	<property name="Material" value="Mmetal"/>
 	<property name="RepairTools" value="resourceRepairKit"/>
 	<property name="DegradationBreaksAfter" value="false"/>
