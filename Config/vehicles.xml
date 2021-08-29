@@ -1,0 +1,3 @@
+<Configs>
+<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='hornSound']/@value">VultureHorn</set>
+</Configs>
