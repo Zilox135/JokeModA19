@@ -4,6 +4,10 @@
     <property name="DescriptionKey" value="WorkingWoodStoveDesc"/>
 </insertAfter>
 
+
+		<!-- Add this to the working PC -->
+<property name="DescriptionKey" value="decoComputerMonitorKeyboardMousePCDesc"/>
+
 		
 		<!-- Painting block tested and works -->
 <block name="decoPaintingsMaster">
@@ -41,6 +45,7 @@
 
 <!-- ***ITEMS*** -->
 
+The challenges are fine but ALL of the quests will need DescriptionKey tags on them.
 		
 		<!-- For some reason pedestal sinks inside POI won't work for water -->
 <property name="Focused_blockname_11" value="drinkingfountainSingle" />
