@@ -19,7 +19,14 @@
 			<item name="Tier4FetchQuestbook"/>			
 			<item name="Tier5FetchQuestbook"/>
 			<item name="Tier1BuriedSuppliesQuestbook"/>
-			<item name="Tier2BuriedSuppliesQuestbook"/>			
+			<item name="Tier2BuriedSuppliesQuestbook"/>
+			<item name="TreasureTaylorQuestbook"/>			
+			<item name="TreasureNickoleQuestbook"/>			
+			<item name="TreasureStephanQuestbook"/>			
+			<item name="TreasureJenniferQuestbook"/>			
+			<item name="TreasureClaudeQuestbook"/>			
+			<item name="TreasureSarahQuestbook"/>			
+			<item name="TreasureRaphaelQuestbook"/>						
 		</trader_item_group>
 	</insertBefore>
 	
@@ -30,7 +37,7 @@
 	</insertBefore>
 	
 	<insertBefore xpath="/traders/trader_info[@id='5']">
-	<trader_info id="10" full_reset="true" reset_interval="3" override_buy_markup="1.0" allow_sell="true" min_inventory="8" max_inventory="18" min_items_swapped="8" max_items_swapped="18">
+	<trader_info id="10" full_reset="true" reset_interval="3" override_buy_markup="1.0" allow_sell="true" min_inventory="20" max_inventory="25" min_items_swapped="8" max_items_swapped="18">
 		<trader_items count="1">
 			<item group="QuestBooks" />
 		</trader_items>

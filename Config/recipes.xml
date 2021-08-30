@@ -164,6 +164,17 @@
 	<ingredient name="resourceRockSmall" count="5000"/>
 </recipe>
 
+<recipe name="decoPaintingsMaster" count="1">
+	<ingredient name="resourceNail" count="4"/>
+	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="resourcePaint" count="1"/>
+</recipe>
+
+<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="3"/>
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
+
 <!-- Decor Items -->
 
 <!-- 
