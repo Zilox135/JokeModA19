@@ -152,7 +152,7 @@
 	<property name="Tags" value="food"/>
 	<property name="HoldType" value="31"/>
 	<property name="DisplayType" value="food"/>
-	<property name="CustomIcon" value="KPsBuns" />
+	<property name="CustomIcon" value="KPsBuns" /> <!-- Credit for marmite jar icon made by https://www.flaticon.com/authors/smashicons -->
 	<property name="DescriptionKey" value="foodKPsBunsDesc"/>	
 	<property name="Meshfile" value="#@modfolder:Resources/Turd.unity3d?Turd.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -237,7 +237,7 @@
 <item name="foodCanDeezNuts">
 	<property name="Tags" value="food"/>
 	<property name="HoldType" value="31"/>
-	<property name="CustomIcon" value="Can" />
+	<property name="CustomIcon" value="BowlOfNuts" /> <!-- Credit for Icon made by https://www.freepik.com -->
 	<property name="DescriptionKey" value="foodCanDeezNutsDesc"/>	
 	<property name="DisplayType" value="foodRaw"/>
 	<property name="Meshfile" value="#@modfolder:Resources/Turd.unity3d?Turd.prefab"/>
@@ -771,6 +771,7 @@
 
 <item name="resourceFuelCrapSack"> <!-- scrap material -->
 	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="ICONSackOfCrap"/>	
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="MresourceWood"/>
@@ -2039,6 +2040,7 @@
 
 <item name="Tier1ClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier1ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="400"/>			
 	<property name="SellableToTrader" value="false"/>
@@ -2053,6 +2055,7 @@
 
 <item name="Tier2ClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier2ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="675"/>		
 	<property name="Stacknumber" value="1"/> 		
@@ -2066,6 +2069,7 @@
 
 <item name="Tier3ClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier3ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="900"/>		
 	<property name="Stacknumber" value="1"/> 		
@@ -2079,6 +2083,7 @@
 
 <item name="Tier4ClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier4ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1020"/>		
 	<property name="Stacknumber" value="1"/> 		
@@ -2092,6 +2097,7 @@
 
 <item name="Tier5ClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier5ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="2040"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2105,6 +2111,7 @@
 
 <item name="Tier2FetchAndClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier2FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="700"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2118,6 +2125,7 @@
 
 <item name="Tier3FetchAndClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier3FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1000"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2131,6 +2139,7 @@
 
 <item name="Tier4FetchAndClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier4FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1150"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2144,6 +2153,7 @@
 
 <item name="Tier5FetchAndClearQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier5FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="2300"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2157,6 +2167,7 @@
 
 <item name="Tier1FetchQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier1FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="165"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2170,6 +2181,7 @@
 
 <item name="Tier2FetchQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier2FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="280"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2183,6 +2195,7 @@
 
 <item name="Tier3FetchQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier3FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="400"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2196,6 +2209,7 @@
 
 <item name="Tier4FetchQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier4FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="510"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2209,6 +2223,7 @@
 
 <item name="Tier5FetchQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier5FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="1020"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2222,6 +2237,7 @@
 
 <item name="Tier1BuriedSuppliesQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier1BuriedSuppliesQuestbookDesc"/>	
 	<property name="EconomicValue" value="280"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2235,6 +2251,7 @@
 
 <item name="Tier2BuriedSuppliesQuestbook">
 	<property name="Extends" value="questMaster"/>
+	<property name="Group" value="Special Items,Mods"/>	
 	<property name="DescriptionKey" value="Tier2BuriedSuppliesQuestbookDesc"/>	
 	<property name="EconomicValue" value="470"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2269,7 +2286,7 @@
 </item>
 
 <item name="TreasureStephanQuestbook">
-	<property name="Extends" value="treasureQuestMaster"/>
+	<property name="Extends" value="treasureQuestMaster"/>	
 	<property name="DescriptionKey" value="TreasureStephanQuestbookDesc"/>	
 	<property name="EconomicValue" value="5000"/>	
 	<property name="Stacknumber" value="1"/> 		
@@ -2841,7 +2858,7 @@
 	<property class="Action0">
 		<property name="Class" value="Launcher"/>
 		<property name="Delay" value=".8"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Magazine_items" value="ammoLauncherGrenade,ammoLauncherGrenadeMD,thrownAmmoMolotovCocktail"/>
+		<property name="Magazine_items" value="ammoLauncherGrenade,ammoLauncherGrenadeMD,ammoLauncherMolotov"/>
 		<property name="Reload_time" value="3"/>
 		<property name="Sound_start" value="pump_shotgun_fire"/>
 		<property name="Sound_repeat" value=""/>
@@ -3868,7 +3885,7 @@ needed?
 
 <item name="ammoNailSteel">
 	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
-	<property name="CustomIconTint" value="101,104,138"/>
+	<property name="CustomIcon" value="ICONSteelNail"/>
 	<property name="HoldType" value="45"/>
 	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -3886,7 +3903,7 @@ needed?
 		<property name="FlyTime" value="1"/>
 		<property name="LifeTime" value=".75"/>
 	</property>
-	<effect_group name="resourceNail" tiered="false"> <!-- nail -->
+	<effect_group name="ammoNailSteel" tiered="false"> <!-- nail -->
 		<passive_effect name="EntityDamage" operation="base_set" value="25"/>
 		<passive_effect name="BlockDamage" operation="base_set" value="1"/>
 		<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth,metal,cloth"/>
@@ -3898,7 +3915,7 @@ needed?
 
 <item name="ammoNailExplosive">
 	<property name="Meshfile" value="#Other/Items?Tools/nailProjectilePrefab.prefab"/>
-	<property name="CustomIconTint" value="191,15,15"/>
+	<property name="CustomIcon" value="ICONExplosiveNail"/>
 	<property name="HoldType" value="45"/>
 	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
