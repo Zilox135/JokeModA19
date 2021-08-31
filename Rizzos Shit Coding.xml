@@ -1,37 +1,5 @@
 <!-- ***BLOCKS*** -->
 
-<insertAfter  xpath="/blocks/block[@name='cntWoodBurningStove']/property[@name='Extends']">
-    <property name="DescriptionKey" value="WorkingWoodStoveDesc"/>
-</insertAfter>
-
-
-		<!-- Add this to the working PC -->
-<property name="DescriptionKey" value="decoComputerMonitorKeyboardMousePCDesc"/>
-
-		
-		<!-- Painting block tested and works -->
-<block name="decoPaintingsMaster">
-	<property name="Material" value="Mwood_weak"/>
-	<property name="CustomIcon" value="paintingRizzoZombie"/>
-	<property name="DescriptionKey" value="decoPaintingsMasterDesc"/>
-	<property name="Tags" value="wood"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="Shape" value="ModelEntity"/>
-	<property name="Model" value="Entities/Misc/missing_blockPrefab"/>
-	<property name="Texture" value="282"/>
-	<property name="IsTerrainDecoration" value="true"/>
-	<property name="CustomUpgradeSound" value="place_block_wood"/>
-	<property name="FuelValue" value="100"/>
-	<property class="RepairItems"> <property name="resourceWood" value="3"/> </property>
-	<drop event="Destroy" name="resourceWood" count="1,3"/>
-	<drop event="Fall" name="terrDestroyedWoodDebris" count="1" prob="0.3" stick_chance="1"/>
-	<property name="EconomicValue" value="5"/>
-	<property name="EconomicBundleSize" value="1"/>
-	<property name="Group" value="Decor/Miscellaneous"/>
-	<property name="FilterTags" value="fdecor,fother"/>
-	<property name="SelectAlternates" value="true"/>
-	<property name="PlaceAltBlockValue" value="paintingRizzoZombie,paintingRizzoTwitch,paintingRizCo,hiddenSafePaintingPooTea"/>
-</block>
 
 
 
@@ -45,13 +13,7 @@
 
 <!-- ***ITEMS*** -->
 
-The challenges are fine but ALL of the quests will need DescriptionKey tags on them.
-		
-		<!-- For some reason pedestal sinks inside POI won't work for water -->
-<property name="Focused_blockname_11" value="drinkingfountainSingle" />
-<property name="Focused_blockname_12" value="drinkingfountainDouble" />
-<property name="Focused_blockname_13" value="cntBathTubEmpty" />
-<property name="Focused_blockname_14" value="decoClawFootBathTub" />
+
 
 
 <!-- ***LOOT*** -->
@@ -60,40 +22,222 @@ The challenges are fine but ALL of the quests will need DescriptionKey tags on t
 
 <!-- ***QUESTS*** -->
 
+
 <!-- ***RECIPES*** -->
 
-<recipe name="decoPaintingsMaster" count="1">
-	<ingredient name="resourceNail" count="4"/>
-	<ingredient name="resourceWood" count="10"/>
-	<ingredient name="resourcePaint" count="1"/>
-</recipe>
-
-<recipe name="WorkingWoodStove" count="1" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceForgedIron" count="3"/>
-	<ingredient name="resourceWood" count="10"/>
-</recipe>
 
 
 <!-- ***WORKS IN PROGRESS*** -->
 
+<quest id="tier1_FetchGive">
+		<property name="name_key" value="quest_tier1_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
 
-<block name="WorkingComputer">
-	<property name="Model" value="Entities/Electrical/monitorKeyboardMousePCPrefab"/>
-	<property name="DescriptionKey" value="WorkingComputerDesc"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="DisplayType" value="blockMulti"/>
-	<property name="MultiBlockDim" value="2,1,1"/>
-	<property name="ModelOffset" value=".5,.5,0"/>
-	<property name="Path" value="solid"/>
-	<drop event="Harvest" name="terrStone" count="0" tool_category="Disassemble"/>
-	<drop event="Harvest" name="resourceElectricParts" count="2,6" tag="salvageHarvest"/>
-	<drop event="Harvest" name="resourceScrapPolymers" count="1,2" tag="salvageHarvest"/>
-	<drop event="Destroy" name="resourceScrapIron" count="4,6"/>
-	<property name="FilterTags" value="floot,ffurniture,fdecor,fother"/>
-	<property class="Workstation">
-				<property name="Modules" value="output"/>
-	</property>
-</block>
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
 
-WorkingComputer,blocks,Block,,,Working Computer,,
-WorkingComputerDesc,blocks,Block,,,A computer that works. Still runs off Windows 95 but at least it connects to the internet.\n\nUsed to obtain quests from traders on Reddit.\n\nCrafted in a workbench.,,
+		<objective type="FetchKeep" id="foodEdibleturd" value="100" phase="1"/>
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="24000"/>
+		<reward type="Item" id="casinoCoin" value="7200"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+</quest>
+
+
+		<!-- TRADER GROUP PC LIST -->
+<trader_item_group name="WorkingPC" count="1">
+            <item group="CustomGlasses" prob="0.25"/>
+            <item group="TraderSpawn" prob="0.01"/>
+            <item name="PCItemPool"/>
+            <item name="PCItemPoolRare" prob="0.1"/>
+            <item name="?"/>
+            <item name="?"/>
+</trader_item_group>
+
+<trader_item_group name="CustomGlasses" count="1">
+			<item name="apparelBeerGoggles"/>
+			<item name="apparelColorBlinders"/>
+			<item name="apparelRadGlasses"/>
+</trader_item_group>
+
+<trader_item_group name="TraderSpawn" count="1">
+			<item name="spawnTrader"/>
+</trader_item_group>
+
+<trader_item_group name="PCItemPool" count="1">
+			<!-- Food/Drink -->
+			<item name="drinkJarPapaRizzsPooTea"/>
+			<item name="foodRizzosBerryCrunch"/>
+			<item name="foodKPsBuns"/>
+			<item name="foodEdibleturd"/>
+			<item name="foodCanDeezNuts"/>
+			<item name="foodCanPremiumDogFood"/>
+			<item name="foodRottingFlesh"/>
+			<item name="drinkJarBeer"/>
+			
+			<!-- Drugs -->
+			<item name="drugToiletBrush"/>
+			<item name="Toiletpaper"/>
+			<item name="TubeSock"/>
+			
+			<!-- Items -->
+			<item name="resourceFuelCrapSack"/>
+			<item name="treeOakDeco"/>
+			<item name="decoPaintingsMaster"/>
+			<item name="resourceSnowBall"/>
+			<item name="resourceTestosteroneExtract"/>
+			<item name="resourceNail"/>
+			<item name="terrBedrock"/>
+			<item name="terrSnow"/>
+			<item name="terrAsphalt"/>
+			<item name="woodPole"/>
+			<item name="treeDeadTree01"/>
+			<item name="treeStump"/>
+			<item name="treeCactus01"/>
+			<item name="forestFlower"/>
+			<item name="decoPumpkinJackOLantern"/>
+			<item name="signNoHazardousWaste"/>
+			<item name="signRoadWork"/>
+			<item name="signPosterWantedMissing01"/>
+			<item name="signMegaCrushAd"/>
+			<item name="cntGasGrillClosed"/>
+			<item name="cntMicrowaveOvenVer1Closed"/>
+			<item name="cntToaster"/>
+			<item name="cntCoffeeMaker"/>
+			<item name="cntSodaFountain"/>
+			<item name="cntBeerCooler"/>
+			<item name="cntLaundryBasketVer2Full"/>
+			<item name="cntTrashCompactor"/>
+			<item name="cntTrashPile01"/>
+			<item name="cntDumpsterFlies"/>
+			<item name="fountain"/>
+			<item name="cntGunSafe"/>
+			<item name="schoolDesk"/>
+			<item name="officeChair01"/>
+			<item name="wineBarrel"/>
+			<item name="decoPoolTable"/>
+			<item name="decoReptileTerrarium"/>
+			<item name="decoClassicDogHouse"/>
+			<item name="decoLargePetCage"/>
+			<item name="decoSwingSet"/>
+			<item name="decoBasketBallHoop"/>
+			<item name="decoStationaryBike"/>
+			<item name="decoTreadmill"/>
+			<item name="decoBenchPress"/>
+			<item name="bodyBagPileMix"/>
+			<item name="bodyBagBlackFlies"/>
+			<item name="cntCoffin"/>
+			<item name="cntCoffinWildWestClosed"/>
+			<item name="cntBathTubGore"/>
+			<item name="cntCashRegister"/>
+			<item name="cntShoppingCartEmpty"/>
+			<item name="cntToolBoxClosed"/>
+			<item name="cntRollingToolBoxOpen"/>
+			<item name="decoMannequinMale"/>
+			<item name="decoMannequinFemale"/>
+			<item name="cntPurse01"/>
+			<item name="cntLuggageMediumClosed"/>
+			<item name="birdBathPlanter"/>
+			<item name="cntBirdnest"/>
+			<item name="decoWildWestWagon"/>
+			<item name="decoCowSkull"/>
+			<item name="modularRopeNoose"/>
+			<item name="cobweb"/>
+			<item name="emberPileDeco1"/>
+			<item name="satelliteDish"/>
+			<item name="graveStone01"/>
+			<item name="tableSaw"/>
+			<item name="cntBusSchool"/>
+			<item name="chandelierLight"/>
+			<item name="candelabraLight"/>
+			<item name="signExitLight"/>
+			<item name="burningBarrel"/>
+			<item name="xRayDisplayLight1"/>
+			<item name="goreBlockHumanCorpse"/>
+			<item name="goreBlockHumanCorpse2"/>
+			<item name="goreBlockHumanCorpse3"/>
+			<item name="goreBlockHumanBones"/>
+			<item name="jailBars"/>
+			<item name="cntBarrelAcidSingle00"/>
+			<item name="cntBarrelRadiatedSingle00"/>
+			<item name="decoCarSeatUpright"/>
+			
+			<!-- Tools/Melee -->
+			<item name="meleeToolPickT2ForkPickaxe"/>
+			<item name="meleeToolShovelT2SpoonShovel"/>
+			<item name="meleeToolAxeT2KnifeAxe"/>
+			<item name="meleeToolAxeT1PlasticFireaxe"/>
+			<item name="meleeToolShovelT1PlasticShovel"/>
+			<item name="meleeToolPickT1PlasticPickaxe"/>
+			<item name="meleeToolRepairT0PlasticHammer"/>
+			<item name="meleeToolPickT0PlantFiberPickaxe"/>
+			<item name="meleeToolShovelT0PlantFiberShovel"/>
+			<item name="meleeToolT0PlantFiberAxe"/>
+			<item name="meleeWpnBladeWatermelonSword"/>
+			<item name="meleeWpnClubT0RollingPin"/>
+			<item name="meleeWpnBladeT1ToyKnife"/>
+			<item name="meleeWpnBladeT0PlantFiberKnife"/>
+			<item name="meleeWpnClubT0ALargeBone"/>
+			<item name="meleeWpnClubT0Plunger"/>
+			<item name="meleeWpnClubT1Microphone"/>
+			<item name="meleeWpnBladeT1CandyKnife"/>
+			<item name="gunBotT1JunkSledge"/>
+			
+			<!-- Ranged -->
+			<item name="gunRifleT2GoldenRifle"/>
+			<item name="gunHandgunT1WaterGun"/>
+			<item name="gunHandgunT0BBGun"/>
+			
+			<!-- Ammo -->
+			<item name="ammoCasinoCoin" count="5,25"/>
+			<item name="ammoLauncherGrenade"/>
+			<item name="ammoLauncherGrenadeMD"/>
+			<item name="ammoLauncherMolotov"/>
+			<item name="ammoNailSteel"/>
+			<item name="ammoNailExplosive"/>
+			<item name="thrownTimedCharge"/>
+			<item name="thrownDynamite"/>
+			<item name="thrownAmmoFlare"/>
+			
+			<!-- Schematics -->
+			<item name="foodbeefdogSchematic"/>
+			<item name="foodKPsBunsSchematic"/>
+			<item name="foodRizzosBerryCrunchSchematic"/>
+			<item name="drinkJarPapaRizzsPooTeaSchematic"/>
+			<item name="gunRifleT2GoldenRifleSchematic"/>
+			<item name="gunHandgunT1WaterGunSchematic"/>
+</trader_item_group>
+
+<trader_item_group name="PCItemPoolRare" count="1">
+			<item name="meleeToolT3BanHammer"/>
+			<item name="meleeWpnClubBatTotheMoon"/>
+			<item name="meleeWpnBladeT3BananaKatana"/>
+</trader_item_group>
