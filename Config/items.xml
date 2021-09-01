@@ -4328,6 +4328,151 @@ needed?
 	</effect_group>
 </item>
 
+<!-- Paper Armour -->
+<item name="armorPaperMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorClothHat"/>
+	<property name="DisplayType" value="armorLight"/>
+	<property name="Material" value="Mpaper"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorPaperGroupDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="75"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="armorPaperHat">
+	<property name="Extends" value="armorPaperMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="PaperHood"/>	
+	<property name="Tags" value="head,armor,armorHead,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<property name="UMA.Overlay0Tint" value="255,255,255"/>
+	<property name="UMA.Overlay1Tint" value="255,255,255"/>	
+	<effect_group name="cloth armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+	</effect_group>
+	<property class="UMA">		
+		<property name="Mesh" value="armor_leather_hood"/>
+		<property name="Overlay0" value="plant_fiber_hood"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="Mask0" value="Head" param1="inner"/>
+		<property name="Mask1" value="Head" param1="outer"/>
+	</property>
+</item>
+
+<item name="armorPaperJacket">
+	<property name="Extends" value="armorPaperMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="PaperChest"/>		
+	<property name="Tags" value="upperbody,chest,armor,armorChest,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<property name="UMA.Overlay0Tint" value="255,255,255"/>
+	<property name="UMA.Overlay1Tint" value="255,255,255"/>	
+	<effect_group name="cloth armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="plant_fiber_shirt"/>
+		<property name="Overlay0" value="fiberCloth_chest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="armorPaperGloves">
+	<property name="Extends" value="armorPaperMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="PaperGloves"/>		
+	<property name="Tags" value="upperbody,hands,armor,armorHands,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<property name="UMA.Overlay0Tint" value="255,255,255"/>
+	<property name="UMA.Overlay1Tint" value="255,255,255"/>	
+	<effect_group name="cloth armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="plant_fiber_gloves"/>
+		<property name="Overlay0" value="fiberCloth_gloves"/>
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="armorPaperPants">
+	<property name="Extends" value="armorPaperMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="PaperLeg"/>		
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<property name="UMA.Overlay0Tint" value="255,255,255"/>
+	<property name="UMA.Overlay1Tint" value="255,255,255"/>	
+	<effect_group name="cloth armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="plant_fiber_pants"/>
+		<property name="Overlay0" value="fiberCloth_legs"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="armorPaperBoots">
+	<property name="Extends" value="armorPaperMaster" param1="CustomIcon"/>
+	<property name="CustomIcon" value="PaperBoots"/>		
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,lightArmor,padded,canHaveCosmetic,lightArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<property name="UMA.Overlay0Tint" value="255,255,255"/>
+	<property name="UMA.Overlay1Tint" value="255,255,255"/>	
+	<effect_group name="cloth armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="5.1,7.3" tier="1,6" tags="heat,electrical"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.041" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="75,150" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="lightArmorDeg"/>
+		<display_value name="dStaminaChangeOT" value="0"/>
+	</effect_group>
+	<property class="UMA">
+		<property name="Mesh" value="plant_fiber_shoes"/>
+		<property name="Overlay0" value="fiberCloth_shoes"/>
+		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
 </append>
 </configs>
 

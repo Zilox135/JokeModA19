@@ -1,8 +1,8 @@
 <configs>
 
- 	<append xpath="/quests">
+<append xpath="/quests">
 
-	<quest id="challenge_ladiesofthenight">
+<quest id="challenge_ladiesofthenight">
 		<property name="name_key" value="challenge_ladiesofthenight"/>
 		<property name="subtitle_key" value="challenge_ladiesofthenight_subtitle"/>
 		<property name="description_key" value="challenge_ladiesofthenight_offer"/>
@@ -34,9 +34,9 @@
 
 		<reward type="Exp" value="500"/>
 		<reward type="Item" id="casinoCoin" value="1000"/>
-	</quest>
+        </quest>
 	
-	<quest id="challenge_dontgetcocky">
+<quest id="challenge_dontgetcocky">
         <property name="name_key" value="challenge_dontgetcocky"/>
         <property name="subtitle_key" value="challenge_dontgetcocky_subtitle"/>
         <property name="description_key" value="challenge_dontgetcocky_offer"/>
@@ -68,7 +68,51 @@
 
         <reward type="Exp" value="500"/>
         <reward type="Item" id="casinoCoin" value="1000"/>
-    </quest>
+        </quest>
+		
+<quest id="tier1_FetchGive">
+		<property name="name_key" value="quest_tier1_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
+		
+
+		<objective type="Fetch" id="foodEdibleturd" value="100">
+			<property name="phase" value="1"/>		
+		</objective>
+
+		<objective type="ReturnToNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+		</objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="24000"/>
+		<reward type="Item" id="casinoCoin" value="7200"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="6"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+</quest>
 
 	</append>	
 </configs>	
