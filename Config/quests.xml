@@ -78,6 +78,89 @@
 		<property name="repeatable" value="true"/>
 		<property name="category_key" value="quest"/>
 		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
+		<property name="difficulty" value="easy"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
+
+		 <objective type="Fetch" id="foodEdibleturd" value="100">
+            <property name="phase" value="1"/>        
+        </objective>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<reward type="Exp" value="2500"/>
+		<reward type="Item" id="casinoCoin" value="350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+</quest>
+
+<quest id="tier2_FetchGive">
+		<property name="name_key" value="quest_tier2_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier2_fetchgive_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
+		
+		<objective type="Fetch" id="foodEdibleturd" value="100" phase="1"/>
+		<objective type="Fetch" id="Toiletpaper" value="50" phase="1"/>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<reward type="Exp" value="3750"/>
+		<reward type="Item" id="casinoCoin" value="550"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+</quest>
+
+<quest id="tier1_FetchMurderChicken">
+		<property name="name_key" value="quest_tier1_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
 		<property name="difficulty" value="medium"/>
 		<property name="difficulty_tier" value="1"/>
 		<property name="statement_key" value="quest_fetchgive_statement"/>
@@ -88,23 +171,36 @@
 		<property name="completion_key" value="quest_fetchgive_completion"/>
 		
 
-		<objective type="Fetch" id="foodEdibleturd" value="100">
+		<objective type="Fetch" id="foodEgg" value="20">
 			<property name="phase" value="1"/>		
 		</objective>
+		
+        <objective type="RandomGoto" value="500-800" phase="2">
+            <property name="completion_distance" value="50"/>
+            <property name="nav_object" value="quest" />
+        </objective>
+
+        <objective type="RallyPoint">
+            <property name="start_mode" value="Create"/>
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="rally" />
+        </objective>
+
+        <action type="SpawnEnemy" id="animalGiantMurderChicken" value="1" phase="3"/>
+        <objective type="ZombieKill" id="animalGiantMurderChicken" value="1" phase="3"/>		
 
 		<objective type="ReturnToNPC">
-			<property name="phase" value="2"/>
+			<property name="phase" value="4"/>
 			<property name="nav_object" value="return_to_trader" />
 		</objective>
 
 		<objective type="InteractWithNPC">
-			<property name="phase" value="3"/>
+			<property name="phase" value="5"/>
 			<property name="nav_object" value="return_to_trader" />
 		</objective>
 
-		<!-- I have not messed with anything past here -->
-		<reward type="Exp" value="24000"/>
-		<reward type="Item" id="casinoCoin" value="7200"/>
+		<reward type="Exp" value="9000"/>
+		<reward type="Item" id="casinoCoin" value="3200"/>
 
 		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="6"/>
 		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="6"/>
