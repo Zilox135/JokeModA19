@@ -13,7 +13,19 @@
 
 <!-- ***ITEMS*** -->
 
-
+<item name="AirGuiter">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="" />
+	<property name="DescriptionKey" value="AirGuiterDesc"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Mplastics"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="1"/>
+	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="Group" value="Resources"/>
+</item>
 
 
 <!-- ***LOOT*** -->
@@ -22,10 +34,128 @@
 
 <!-- ***QUESTS*** -->
 
+<quest id="tier1_FetchGive">
+		<property name="name_key" value="quest_tier1_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
+		<property name="difficulty" value="easy"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
 
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
+
+		 <objective type="Fetch" id="foodEdibleturd" value="100">
+            <property name="phase" value="1"/>        
+        </objective>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<reward type="Exp" value="2500"/>
+		<reward type="Item" id="casinoCoin" value="350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+</quest>
+
+<quest id="tier2_FetchGive">
+		<property name="name_key" value="quest_tier2_fetchgive"/>
+		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
+		<property name="description_key" value="quest_fetchgive_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier2_fetchgive_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2"/>
+		<property name="statement_key" value="quest_fetchgive_statement"/>
+		<property name="response_key" value="quest_fetchgive_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_fetchgive_completion"/>
+
+		 <objective type="Fetch" id="foodEdibleturd" value="100">
+		 <objective type="Fetch" id="Toiletpaper" value="50">
+            <property name="phase" value="1"/>        
+        </objective>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<reward type="Exp" value="3750"/>
+		<reward type="Item" id="casinoCoin" value="550"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+</quest>
 <!-- ***RECIPES*** -->
 
-
+<!-- ***LOCAL CHANGES*** -->
+DontGetCockyQuestbook,items,Quest - Challenge,,,Don't Get Cocky Challenge,,
+DontGetCockyQuestbookDesc,items,Quest - Challenge,,,Don't Get Cocky Challenge,,
+LadiesOfTheNightQuestbook,items,Quest - Challenge,,,Ladies of the Night Challenge,,
+LadiesOfTheNightQuestbookDesc,items,Quest - Challenge,,,Ladies of the Night Challenge,,
+Tier1ClearQuestbook,items,Quest - Challenge,,,Tier 1 Clear Quest,,
+Tier1ClearQuestbookDesc,items,Quest - Challenge,,,Piece of cake! You could probably punch everything to death,,
+Tier2ClearQuestbook,items,Quest - Challenge,,,Tier 2 Clear Quest,,
+Tier2ClearQuestbookDesc,items,Quest - Challenge,,,Still easy mode.,,
+Tier3ClearQuestbook,items,Quest - Challenge,,,Tier 3 Clear Quest,,
+Tier3ClearQuestbookDesc,items,Quest - Challenge,,,Ok these are getting tougher. Shouldn’t be a problem right?,,
+Tier4ClearQuestbook,items,Quest - Challenge,,,Tier 4 Clear Quest,,
+Tier4ClearQuestbookDesc,items,Quest - Challenge,,,Sure you can do this? Yeah why not. You got this… until you wake them all up,,
+Tier5ClearQuestbook,items,Quest - Challenge,,,Tier 5 Clear Quest,,
+Tier5ClearQuestbookDesc,items,Quest - Challenge,,,Look how tough you are! Momma must be proud!,,
+Tier2FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 2 Fetch and Clear Quest,,
+Tier2FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Good ol easy mode snatch and kill,,
+Tier3FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 3 Fetch and Clear Quest,,
+Tier3FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Ever wonder who even hid a satchel in a zombie filled building?,,
+Tier4FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 4 Fetch and Clear Quest,,
+Tier4FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Hope you brought a good gun for this.,,
+Tier5FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 5 Fetch and Clear Quest,,
+Tier5FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Be sure to wear your brown pants for this one, you might need them.,,
+Tier1FetchQuestbook,items,Quest - Challenge,,,Tier 1 Fetch Quest,,
+Tier1FetchQuestbookDesc,items,Quest - Challenge,,,Fetch! Good boy! Now roll over!,,
+Tier2FetchQuestbook,items,Quest - Challenge,,,Tier 2 Fetch Quest,,
+Tier2FetchQuestbookDesc,items,Quest - Challenge,,,Getting more dangerous. You are like a ninja though right?,,
+Tier3FetchQuestbook,items,Quest - Challenge,,,Tier 3 Fetch Quest,,
+Tier3FetchQuestbookDesc,items,Quest - Challenge,,,Totally not an illegal stash. Nothing to see here.,,
+Tier4FetchQuestbook,items,Quest - Challenge,,,Tier 4 Fetch Quest,,
+Tier4FetchQuestbookDesc,items,Quest - Challenge,,,Tier 4 Fetch Quest,,
+Tier5FetchQuestbook,items,Quest - Challenge,,,Tier 5 Fetch Quest,,
+Tier5FetchQuestbookDesc,items,Quest - Challenge,,,Tier 5 Fetch Quest,,
+Tier1BuriedSuppliesQuestbook,items,Quest - Challenge,,,Tier 1 Buried Supplies Quest,,
+Tier1BuriedSuppliesQuestbookDesc,items,Quest - Challenge,,,Not much of a supply stash, but you’ll do anything for a quick duke.,,
+Tier2BuriedSuppliesQuestbook,items,Quest - Challenge,,,Tier 2 Buried Supplies Quest,,
 
 <!-- ***WORKS IN PROGRESS*** -->
 
@@ -69,6 +199,308 @@
 		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="6"/>
 		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="6"/>
 		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
+</quest>
+
+<quest id="tier1_KillZombies">
+		<property name="name_key" value="quest_tier1_killzombies"/>
+		<property name="subtitle_key" value="quest_killzombies_subtitle"/>
+		<property name="description_key" value="quest_killzombies_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier1_killzombies_offer"/>
+		<property name="difficulty" value="easy"/>
+		<property name="difficulty_tier" value="1"/>
+		<property name="statement_key" value="quest_killzombies_statement"/>
+		<property name="response_key" value="quest_killzombies_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_killzombies_completion"/>
+
+		<objective type="zombieKill" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo,zombieBoeFeral,zombieBoeRadiated,zombieFootballPlayer,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieMoeFeral,zombieMoeRadiated,zombieArleneFeral,zombieArleneRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieScreamer,zombieScreamerFeral,zombieScreamerRadiated,zombieDarleneFeral,zombieDarleneRadiated,zombieMarleneFeral,zombieMarleneRadiated,zombieYoFeral,zombieYoRadiated,zombieSteve,zombieSteveFeral,zombieSteveRadiated,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieBusinessMan,zombieBusinessManFeral,zombieSnow,zombieSnowFeral,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieBurnt,zombieNurse,zombieNurseFeral,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieMaleHazmat,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieDemolition,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieCheerleader,zombieCheerleaderFeral,zombieCheerleaderRadiated,zombieOldTimer,zombieOldTimerFeral,zombieOldTimerRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieFarmer,zombieFarmerFeral,zombieStripper,zombieStripperFeral" value="25" phase="1"/>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="2500"/>
+		<reward type="Item" id="casinoCoin" value="350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+</quest>
+
+<quest id="tier2_KillZombies">
+		<property name="name_key" value="quest_tier2_killzombies"/>
+		<property name="subtitle_key" value="quest_killzombies_subtitle"/>
+		<property name="description_key" value="quest_killzombies_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier2_killzombies_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2"/>
+		<property name="statement_key" value="quest_killzombies_statement"/>
+		<property name="response_key" value="quest_killzombies_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_killzombies_completion"/>
+
+		<objective type="zombieKill" id="zombieArlene,zombieDarlene,zombieMarlene,zombieBoe,zombieJoe,zombieMoe,zombieYo,zombieBoeFeral,zombieBoeRadiated,zombieFootballPlayer,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieJanitor,zombieJanitorFeral,zombieJanitorRadiated,zombieMoeFeral,zombieMoeRadiated,zombieArleneFeral,zombieArleneRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,zombieScreamer,zombieScreamerFeral,zombieScreamerRadiated,zombieDarleneFeral,zombieDarleneRadiated,zombieMarleneFeral,zombieMarleneRadiated,zombieYoFeral,zombieYoRadiated,zombieSteve,zombieSteveFeral,zombieSteveRadiated,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieBusinessMan,zombieBusinessManFeral,zombieSnow,zombieSnowFeral,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieBurnt,zombieNurse,zombieNurseFeral,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieMaleHazmat,zombieUtilityWorker,zombieUtilityWorkerFeral,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieDemolition,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieCheerleader,zombieCheerleaderFeral,zombieCheerleaderRadiated,zombieOldTimer,zombieOldTimerFeral,zombieOldTimerRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,zombieFarmer,zombieFarmerFeral,zombieStripper,zombieStripperFeral" value="50" phase="1"/>
+
+        <objective type="ReturnToNPC">
+            <property name="phase" value="2"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="3"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="4500"/>
+		<reward type="Item" id="casinoCoin" value="1350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
+</quest>
+
+<quest id="tier2_GoToKillMegaKaren">
+		<property name="name_key" value="quest_tier2_gotokillmegakaren"/>
+		<property name="subtitle_key" value="quest_gotokillmegakaren_subtitle"/>
+		<property name="description_key" value="quest_gotokillmegakaren_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier2_gotokillmegakaren_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3"/>
+		<property name="statement_key" value="quest_gotokillmegakaren_statement"/>
+		<property name="response_key" value="quest_gotokillmegakaren_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_gotokillmegakaren_completion"/>
+		
+		<objective type="RandomGoto" value="500-800" phase="1">
+			<property name="completion_distance" value="50"/>
+			<property name="nav_object" value="quest" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="SpawnEnemy" id="zombieMegaKaren" value="3,4" phase="3"/>
+		
+		<objective type="ZombieKill" id="zombieMegaKaren" value="2" phase="3"/>
+		
+        
+		<objective type="ReturnToNPC">
+            <property name="phase" value="4"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="5"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="3000"/>
+		<reward type="Item" id="casinoCoin" value="950"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+</quest>
+
+<quest id="tier3_GoToKillDemos">
+		<property name="name_key" value="quest_tier3_gotokilldemos"/>
+		<property name="subtitle_key" value="quest_gotokilldemos_subtitle"/>
+		<property name="description_key" value="quest_gotokilldemos_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier3_gotokilldemos_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3"/>
+		<property name="statement_key" value="quest_gotokilldemos_statement"/>
+		<property name="response_key" value="quest_gotokilldemos_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_gotokilldemos_completion"/>
+		
+		<objective type="RandomGoto" value="500-800" phase="1">
+			<property name="completion_distance" value="50"/>
+			<property name="nav_object" value="quest" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="SpawnEnemy" id="zombieMiniDemolition" value="8,12" phase="3"/>
+		
+		<objective type="ZombieKill" id="zombieMiniDemolition" value="6" phase="3"/>
+		
+        
+		<objective type="ReturnToNPC">
+            <property name="phase" value="4"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="5"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="4500"/>
+		<reward type="Item" id="casinoCoin" value="1350"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+</quest>
+
+<quest id="tier2_GoToKillMountainLion">
+		<property name="name_key" value="quest_tier2_gotokillmountainlion"/>
+		<property name="subtitle_key" value="quest_gotokillmountainlion_subtitle"/>
+		<property name="description_key" value="quest_gotokillmountainlion_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier2_gotokillmountainlion_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="2"/>
+		<property name="statement_key" value="quest_gotokillmountainlion_statement"/>
+		<property name="response_key" value="quest_gotokillmountainlion_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_gotokillmountainlion_completion"/>
+		
+		<objective type="RandomGoto" value="500-800" phase="1">
+			<property name="completion_distance" value="50"/>
+			<property name="nav_object" value="quest" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="SpawnAnimal" id="animalMountainLion" value="7,10" phase="3"/>
+		
+		<objective type="AnimalKill" id="animalMountainLion" value="5" phase="3"/>
+		
+        
+		<objective type="ReturnToNPC">
+            <property name="phase" value="4"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="5"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="2500"/>
+		<reward type="Item" id="casinoCoin" value="750"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
+</quest>
+
+<quest id="tier3_GoToKillGiantChickens">
+		<property name="name_key" value="quest_tier2_gotokillgiantchickens"/>
+		<property name="subtitle_key" value="quest_gotokillgiantchickens_subtitle"/>
+		<property name="description_key" value="quest_gotokillgiantchickens_description"/>
+		<property name="icon" value="ui_game_symbol_quest"/>
+		<property name="repeatable" value="true"/>
+		<property name="category_key" value="quest"/>
+		<property name="offer_key" value="quest_tier3_gotokillgiantchickens_offer"/>
+		<property name="difficulty" value="medium"/>
+		<property name="difficulty_tier" value="3"/>
+		<property name="statement_key" value="quest_gotokillgiantchickens_statement"/>
+		<property name="response_key" value="quest_gotokillgiantchickens_response"/>
+		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+
+		<property name="completiontype" value="TurnIn"/>
+		<property name="completion_key" value="quest_gotokillgiantchickens_completion"/>
+		
+		<objective type="RandomGoto" value="500-800" phase="1">
+			<property name="completion_distance" value="50"/>
+			<property name="nav_object" value="quest" />
+		</objective>
+
+		<objective type="RallyPoint">
+			<property name="start_mode" value="Create"/>
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="rally" />
+		</objective>
+		
+		<action type="SpawnAnimal" id="animalGiantMurderChicken" value="7,10" phase="3"/>
+		
+		<objective type="AnimalKill" id="animalGiantMurderChicken" value="5" phase="3"/>
+		
+        
+		<objective type="ReturnToNPC">
+            <property name="phase" value="4"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+        <objective type="InteractWithNPC">
+            <property name="phase" value="5"/>
+            <property name="nav_object" value="return_to_trader" />
+        </objective>
+
+		<!-- I have not messed with anything past here -->
+		<reward type="Exp" value="3500"/>
+		<reward type="Item" id="casinoCoin" value="1200"/>
+
+		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="3"/>
+		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="4"/>
+		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="3"/>
+		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
 </quest>
 
 
