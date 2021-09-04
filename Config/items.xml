@@ -815,16 +815,30 @@
 	<property name="CraftingIngredientTime" value="3"/>
 </item>
 
-<item name="AirGuiter">
+<item name="AirGuitar">
 	<property name="HoldType" value="45"/>
 	<property name="CustomIcon" value="" />
-	<property name="DescriptionKey" value="AirGuiterDesc"/>
+	<property name="DescriptionKey" value="AirGitarDesc"/>
 	<property name="Tags" value="junk"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 	<property name="Material" value="Mplastics"/>
 	<property name="Weight" value="5"/>
 	<property name="EconomicValue" value="1"/>
+	<property name="Stacknumber" value="1"/> <!-- STK resource -->
+	<property name="Group" value="Resources"/>
+</item>
+
+<item name="RektsPorn">
+	<property name="HoldType" value="45"/>
+	<property name="CustomIcon" value="questCassadoreSupplies" />
+	<property name="DescriptionKey" value="RektsPornDesc"/>
+	<property name="Tags" value="junk"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="MresourcePaper"/>
+	<property name="Weight" value="5"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="Stacknumber" value="1"/> <!-- STK resource -->
 	<property name="Group" value="Resources"/>
 </item>
@@ -4063,6 +4077,98 @@ needed?
 		<passive_effect name="DegradationMax" operation="base_set" value="1000" tags="nailgun"/>
 		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="nailgun"/>
 		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+	</effect_group>
+</item>
+
+<item name="gunMGT3GoldenMinigun">
+	<property name="Tags" value="weapon,ranged,holdBreathAiming,reloadPenalty,gun,barrelAttachments,noSilencer,sideAttachments,magazine,drumMagazine,bottomAttachments,attFortitude,perkMachineGunner,canHaveCosmetic"/>
+	<property name="DisplayType" value="rangedGun"/>
+	<property name="CustomIcon" value="GoldenMinigun"/>
+	<property name="HoldType" value="19"/>
+	<property name="Meshfile" value="#@modfolder:Resources/Guns.unity3d?GoldenMinigun.prefab"/>
+	<property name="Material" value="MMachineGunParts"/> <property name="Weight" value="6"/>
+
+	<property name="CrosshairOnAim" value="true"/> <!-- aimTest -->
+	<property name="CrosshairUpAfterShot" value="true"/> <!-- aimTest -->
+
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+
+	<property name="SoundJammed" value="weapon_jam"/>
+	<property name="Sound_Sight_In" value="rifle_sight_in"/>
+	<property name="Sound_Sight_Out" value="rifle_sight_out"/>
+
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="ShowQuality" value="true"/>
+	<property name="Group" value="Ammo/Weapons"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Delay" value=".150"/> <!-- obsolete if rounds per minute exists -->
+		<property name="Magazine_items" value="ammoCasinoCoin"/>
+		<property name="Sound_start" value="MinigunFire"/>
+		<property name="Sound_loop" value="MinigunFire"/>
+		<property name="Sound_empty" value="dryfire"/>
+		<property name="Sound_reload" value="m60_reload"/>
+		<property name="Sound_end" value="MiniGunFireEnd"/>
+		<property name="Particles_muzzle_fire" value="gunfire_m60"/>
+		<property name="Particles_muzzle_smoke" value="gunfire_smoke"/>
+		<property name="Particles_muzzle_fire_fpv" value="gunfire_m60_fpv"/>
+		<property name="Particles_muzzle_smoke_fpv" value="gunfire_smoke_fpv"/>
+		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+	</property>
+
+	<property class="Action1">
+		<property name="Class" value="Zoom"/>
+		<property name="Zoom_max_out" value="55"/>
+		<property name="Zoom_max_in" value="55"/>
+		<property name="ScopeCameraOffset" value="-.00062,0,.055"/>
+	</property>
+
+	<effect_group name="gunMGT3GoldenMinigun">
+		<passive_effect name="MaxRange" operation="base_set" value="90" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="50" tags="perkMachineGunner"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="base_add" value="-6" tags="perkMachineGunner"/>
+
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMachineGunner"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMachineGunner"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMachineGunner"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMachineGunner"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMachineGunner"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="1000" tags="perkMachineGunner"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="2000" tags="perkMachineGunner"/>
+
+		<passive_effect name="MagazineSize" operation="base_set" value="750" tags="perkMachineGunner"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMachineGunner"/>
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2.8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2.8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierAiming" operation="base_set" value=".33" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierCrouching" operation="base_set" value=".8" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierWalking" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="SpreadMultiplierRunning" operation="base_set" value="2.2" tags="perkMachineGunner"/>
+
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.4" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1.1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1" tags="perkMachineGunner"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1" tags="perkMachineGunner"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1.5" tags="perkMachineGunner"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value=".83" tags="perkMachineGunner"/> <!-- M60 -->
+
+		<passive_effect name="DegradationMax" operation="base_set" value="300,650" tier="1,6" tags="perkMachineGunner,perkBookAutoWeapons"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMachineGunner,perkBookAutoWeapons"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
 	</effect_group>
 </item>
 

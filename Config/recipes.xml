@@ -175,6 +175,16 @@
 	<ingredient name="resourceWood" count="10"/>
 </recipe>
 
+<recipe name="meleeWpnBladeT0PlantFiberKnife" count="1" tags="perkDeepCuts">
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="resourceWood" count="2"/>
+</recipe>
+
+<recipe name="signSafetyWorkProtection" count="1" tags="workbenchCrafting">
+	<ingredient name="resourcePaper" count="10"/>
+	<ingredient name="resourcePaint" count="2"/>
+</recipe>
+
 <!-- Decor Items -->
 
 <!-- 

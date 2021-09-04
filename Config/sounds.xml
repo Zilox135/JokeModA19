@@ -29,6 +29,18 @@
 	<AudioClip ClipName="#@modfolder:Resources/WaterGunSounds.unity3d?WaterDry"/>
 	<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/>
 </SoundDataNode>
+
+<SoundDataNode name="MinigunFire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="0" noise="52" time="2" muffled_when_crouched="0.8" heat_map_strength="0.65" heat_map_time="180"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?MinigunFire"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
+
+<SoundDataNode name="MiniGunFireEnd"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
+	<Noise ID="2" noise="11" time="3" muffled_when_crouched="0.5"/>
+	<AudioClip ClipName="#@modfolder:Resources/Sounds.unity3d?MinigunFireEnd"/>
+	<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/>
+</SoundDataNode>
 	
 </append>
 </Configs>	

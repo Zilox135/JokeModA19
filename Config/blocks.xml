@@ -5,6 +5,267 @@
 <set xpath="/blocks/block[@name='bed02']/property[@name='Model']/@value">Entities/Furniture/hospitalBedPrefab</set>
 <set xpath="/blocks/block[@name='bed02']/property[@name='Shape']/@value">ModelEntity</set>
 
+<!-- Computer Vendor blocks with no prices -->
+<append xpath="/blocks/block[@name='spawnTrader']">
+    <property name="EconomicValue" value="25000"/>    
+</append>
+
+<append xpath="/blocks/block[@name='terrBedrock']">
+    <property name="EconomicValue" value="6500"/>    
+</append>
+
+<append xpath="/blocks/block[@name='treeDeadTree01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='treeCactus01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='forestFlower']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='signRoadArrowheadApache']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntGasGrillClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoEntityMetalMaster']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBeerCooler']">
+    <property name="EconomicValue" value="42"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntLaundryBasketVer2Full']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntTrashCompactor']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntTrashPile01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntDumpsterFlies']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='fountain']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntGunSafe']">
+    <property name="EconomicValue" value="500"/>    
+</append>
+
+<append xpath="/blocks/block[@name='schoolDesk']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='officeChair01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='wineBarrel']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoPoolTable']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoReptileTerrarium']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoClassicDogHouse']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoLargePetCage']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoSwingSet']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoBasketBallHoop']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoStationaryBike']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='bodyBagPileMix']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='bodyBagBlackFlies']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCoffin']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCoffinWildWestClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBathTubGore']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCashRegister']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntShoppingCartEmpty']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntToolBoxClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntRollingToolBoxOpen']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoMannequinMale']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoMannequinFemale']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntPurse01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntLuggageMediumClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='birdBathPlanter']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBirdnest']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoWildWestWagon']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoCowSkull']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='modularRopeNoose']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cobweb']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='emberPileDeco1']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='satelliteDish']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='graveStone01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='tableSaw']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBusSchool']">
+    <property name="EconomicValue" value="2499"/>    
+</append>
+
+<append xpath="/blocks/block[@name='chandelierLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='candelabraLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='signExitLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='burningBarrelPlayer']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='xRayDisplayLight1']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse2']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse3']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanBones']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='jailBars']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBarrelAcidSingle00']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBarrelRadiatedSingle00']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoCarSeatUpright']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoBenchPress']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoTreadmill']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='spawnTrader']">
+    <property name="CustomIcon" value="cntCashRegister"/>    
+</append>
+
 <append xpath="/blocks/block[@name='cntWoodBurningStove']">
 	<property name="Class" value="Campfire"/>
     <property name="DescriptionKey" value="WorkingWoodStoveDesc"/>	
@@ -104,6 +365,7 @@
 <block name="treeOakDeco">
 	<property name="Material" value="MtreeWoodFull" />
 	<property name="CustomIcon" value="OakTree"/>
+    <property name="EconomicValue" value="69"/>	
 	<property name="DescriptionKey" value="treeOakDecoDesc"/>	
 	<property name="Class" value="ModelTree"/>
 	<property name="Shape" value="DistantDecoTree"/>	
@@ -357,6 +619,7 @@
 <block name="decoPaintingsMaster">
 	<property name="Material" value="Mwood_weak"/>
 	<property name="CustomIcon" value="paintingRizzoZombie"/>
+    <property name="EconomicValue" value="69"/>	
 	<property name="DescriptionKey" value="decoPaintingsMasterDesc"/>
 	<property name="Tags" value="wood"/>
 	<property name="CreativeMode" value="Player"/>
