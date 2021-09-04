@@ -1,7 +1,274 @@
 <!-- ***BLOCKS*** -->
 
+<append xpath="/blocks/block[@name='spawnTrader']">
+    <property name="CustomIcon" value="cntCashRegister"/>    
+</append>
 
+			<!-- Computer Vendor blocks with no prices -->
 
+<append xpath="/blocks/block[@name='spawnTrader']">
+    <property name="EconomicValue" value="25000"/>    
+</append>
+
+<append xpath="/blocks/block[@name='treeOakDeco']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoPaintingsMaster']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='terrBedrock']">
+    <property name="EconomicValue" value="6500"/>    
+</append>
+
+<append xpath="/blocks/block[@name='treeDeadTree01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='treeCactus01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='forestFlower']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='signRoadArrowheadApache']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntGasGrillClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoEntityMetalMaster']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBeerCooler']">
+    <property name="EconomicValue" value="42"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntLaundryBasketVer2Full']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntTrashCompactor']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntTrashPile01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntDumpsterFlies']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='fountain']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntGunSafe']">
+    <property name="EconomicValue" value="500"/>    
+</append>
+
+<append xpath="/blocks/block[@name='schoolDesk']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='officeChair01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='wineBarrel']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoPoolTable']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoReptileTerrarium']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoClassicDogHouse']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoLargePetCage']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoSwingSet']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoBasketBallHoop']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoStationaryBike']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='bodyBagPileMix']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='bodyBagBlackFlies']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCoffin']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCoffinWildWestClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBathTubGore']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntCashRegister']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntShoppingCartEmpty']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntToolBoxClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntRollingToolBoxOpen']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoMannequinMale']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoMannequinFemale']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntPurse01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntLuggageMediumClosed']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='birdBathPlanter']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBirdnest']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoWildWestWagon']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoCowSkull']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='modularRopeNoose']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cobweb']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='emberPileDeco1']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='satelliteDish']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='graveStone01']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='tableSaw']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBusSchool']">
+    <property name="EconomicValue" value="2499"/>    
+</append>
+
+<append xpath="/blocks/block[@name='chandelierLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='candelabraLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='signExitLight']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='burningBarrelPlayer']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='xRayDisplayLight1']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse2']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanCorpse3']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='goreBlockHumanBones']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='jailBars']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBarrelAcidSingle00']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='cntBarrelRadiatedSingle00']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoCarSeatUpright']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoBenchPress']">
+    <property name="EconomicValue" value="69"/>    
+</append>
+
+<append xpath="/blocks/block[@name='decoTreadmill']">
+    <property name="EconomicValue" value="69"/>    
+</append>
 
 <!-- ***ENTITYCLASSES*** -->
 
@@ -13,20 +280,20 @@
 
 <!-- ***ITEMS*** -->
 
-<item name="AirGuiter">
+		<!-- Does NOT need a recipe. Find only item -->
+<item name="RektsPorn">
 	<property name="HoldType" value="45"/>
-	<property name="CustomIcon" value="" />
-	<property name="DescriptionKey" value="AirGuiterDesc"/>
+	<property name="CustomIcon" value="questWhiteRiverSupplies" />
+	<property name="DescriptionKey" value="RektsPornDesc"/>
 	<property name="Tags" value="junk"/>
 	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mplastics"/>
+	<property name="Material" value="MresourcePaper"/>
 	<property name="Weight" value="5"/>
-	<property name="EconomicValue" value="1"/>
+	<property name="EconomicValue" value="1500"/>
 	<property name="Stacknumber" value="1"/> <!-- STK resource -->
 	<property name="Group" value="Resources"/>
 </item>
-
 
 <!-- ***LOOT*** -->
 
@@ -34,128 +301,69 @@
 
 <!-- ***QUESTS*** -->
 
-<quest id="tier1_FetchGive">
-		<property name="name_key" value="quest_tier1_fetchgive"/>
-		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
-		<property name="description_key" value="quest_fetchgive_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
+<!-- Basic Survival 2 - Craft a Stone Axe/> -->
+	<quest id="quest_BasicSurvival2">
+		<property name="group_name_key" value="quest_BasicSurvival"/>
+		<property name="name_key" value="quest_BasicSurvival2"/>
+		<property name="subtitle" value="Craft a Plant Fiber Axe"/>
+		<property name="subtitle_key" value="quest_BasicSurvival2_subtitle"/>
+		<property name="description_key" value="quest_BasicSurvival2_description"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
 		<property name="category_key" value="quest"/>
-		<property name="offer_key" value="quest_tier1_fetchgive_offer"/>
-		<property name="difficulty" value="easy"/>
-		<property name="difficulty_tier" value="1"/>
-		<property name="statement_key" value="quest_fetchgive_statement"/>
-		<property name="response_key" value="quest_fetchgive_response"/>
-		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
+		<property name="offer_key" value="quest_BasicSurvival_offer"/>
+		<property name="shareable" value="false"/>
 
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetchgive_completion"/>
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+		<objective type="FetchKeep" id="resourceWood" value="2" phase="1"/>
 
-		 <objective type="Fetch" id="foodEdibleturd" value="100">
-            <property name="phase" value="1"/>        
-        </objective>
+		<objective type="Craft">
+			<property name="phase" value="2"/>
+			<property name="item" value="meleeToolT0PlantFiberAxe"/>
+			<property name="count" value="1"/>
+		</objective>
 
-        <objective type="ReturnToNPC">
-            <property name="phase" value="2"/>
-            <property name="nav_object" value="return_to_trader" />
-        </objective>
+		<reward type="Exp" value="50"/>
+		<reward type="Quest" id="quest_BasicSurvival3"/>
+	</quest>
 
-        <objective type="InteractWithNPC">
-            <property name="phase" value="3"/>
-            <property name="nav_object" value="return_to_trader" />
-        </objective>
+	<!-- Basic Survival 3 - Craft Plant Fiber Clothing/> -->
+	<quest id="quest_BasicSurvival3">
+		<property name="group_name_key" value="quest_BasicSurvival"/>
+		<property name="name_key" value="quest_BasicSurvival3"/>
+		<property name="subtitle_key" value="quest_BasicSurvival3_subtitle"/>
+		<property name="description_key" value="quest_BasicSurvival3_description"/>
+		<property name="icon" value="ui_game_symbol_tailoring"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="veryeasy"/>
+		<property name="shareable" value="false"/>
 
-		<reward type="Exp" value="2500"/>
-		<reward type="Item" id="casinoCoin" value="350"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="1"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="1"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="1"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="1"/>
+		<objective type="FetchKeep" id="resourceYuccaFibers" value="10" phase="1"/>
+		<objective type="FetchKeep" id="resourceWood" value="2" phase="1"/>
+		
+		<objective type="Craft">
+			<property name="phase" value="3"/>
+			<property name="item" value="meleeWpnBladeT0PlantFiberKnife"/>
+			<property name="count" value="1"/>
+		</objective>
+		
+		<reward type="Quest" id="quest_whiteRiverCitizen1">
+			<property name="chainquest" value="false"/>
+		</reward>
+		<reward type="SkillPoints" value="4" chainreward="true"/>
 </quest>
 
-<quest id="tier2_FetchGive">
-		<property name="name_key" value="quest_tier2_fetchgive"/>
-		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
-		<property name="description_key" value="quest_fetchgive_description"/>
-		<property name="icon" value="ui_game_symbol_quest"/>
-		<property name="repeatable" value="true"/>
-		<property name="category_key" value="quest"/>
-		<property name="offer_key" value="quest_tier2_fetchgive_offer"/>
-		<property name="difficulty" value="medium"/>
-		<property name="difficulty_tier" value="2"/>
-		<property name="statement_key" value="quest_fetchgive_statement"/>
-		<property name="response_key" value="quest_fetchgive_response"/>
-		<property name="login_rally_reset" value="true"/>  <!-- Not sure what this affects -->
-
-		<property name="completiontype" value="TurnIn"/>
-		<property name="completion_key" value="quest_fetchgive_completion"/>
-
-		 <objective type="Fetch" id="foodEdibleturd" value="100">
-		 <objective type="Fetch" id="Toiletpaper" value="50">
-            <property name="phase" value="1"/>        
-        </objective>
-
-        <objective type="ReturnToNPC">
-            <property name="phase" value="2"/>
-            <property name="nav_object" value="return_to_trader" />
-        </objective>
-
-        <objective type="InteractWithNPC">
-            <property name="phase" value="3"/>
-            <property name="nav_object" value="return_to_trader" />
-        </objective>
-
-		<reward type="Exp" value="3750"/>
-		<reward type="Item" id="casinoCoin" value="550"/>
-
-		<reward type="LootItem" id="groupQuestWeapons" ischosen="true" isfixed="true" value="2"/>
-		<reward type="LootItem" id="groupQuestArmor,groupQuestMedical" ischosen="true" isfixed="true" value="2"/>
-		<reward type="LootItem" id="groupQuestAmmo" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestTools" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestSchematics" ischosen="true" value="2"/>
-		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="2"/>
-</quest>
 <!-- ***RECIPES*** -->
 
-<!-- ***LOCAL CHANGES*** -->
-DontGetCockyQuestbook,items,Quest - Challenge,,,Don't Get Cocky Challenge,,
-DontGetCockyQuestbookDesc,items,Quest - Challenge,,,Don't Get Cocky Challenge,,
-LadiesOfTheNightQuestbook,items,Quest - Challenge,,,Ladies of the Night Challenge,,
-LadiesOfTheNightQuestbookDesc,items,Quest - Challenge,,,Ladies of the Night Challenge,,
-Tier1ClearQuestbook,items,Quest - Challenge,,,Tier 1 Clear Quest,,
-Tier1ClearQuestbookDesc,items,Quest - Challenge,,,Piece of cake! You could probably punch everything to death,,
-Tier2ClearQuestbook,items,Quest - Challenge,,,Tier 2 Clear Quest,,
-Tier2ClearQuestbookDesc,items,Quest - Challenge,,,Still easy mode.,,
-Tier3ClearQuestbook,items,Quest - Challenge,,,Tier 3 Clear Quest,,
-Tier3ClearQuestbookDesc,items,Quest - Challenge,,,Ok these are getting tougher. Shouldn’t be a problem right?,,
-Tier4ClearQuestbook,items,Quest - Challenge,,,Tier 4 Clear Quest,,
-Tier4ClearQuestbookDesc,items,Quest - Challenge,,,Sure you can do this? Yeah why not. You got this… until you wake them all up,,
-Tier5ClearQuestbook,items,Quest - Challenge,,,Tier 5 Clear Quest,,
-Tier5ClearQuestbookDesc,items,Quest - Challenge,,,Look how tough you are! Momma must be proud!,,
-Tier2FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 2 Fetch and Clear Quest,,
-Tier2FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Good ol easy mode snatch and kill,,
-Tier3FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 3 Fetch and Clear Quest,,
-Tier3FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Ever wonder who even hid a satchel in a zombie filled building?,,
-Tier4FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 4 Fetch and Clear Quest,,
-Tier4FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Hope you brought a good gun for this.,,
-Tier5FetchAndClearQuestbook,items,Quest - Challenge,,,Tier 5 Fetch and Clear Quest,,
-Tier5FetchAndClearQuestbookDesc,items,Quest - Challenge,,,Be sure to wear your brown pants for this one, you might need them.,,
-Tier1FetchQuestbook,items,Quest - Challenge,,,Tier 1 Fetch Quest,,
-Tier1FetchQuestbookDesc,items,Quest - Challenge,,,Fetch! Good boy! Now roll over!,,
-Tier2FetchQuestbook,items,Quest - Challenge,,,Tier 2 Fetch Quest,,
-Tier2FetchQuestbookDesc,items,Quest - Challenge,,,Getting more dangerous. You are like a ninja though right?,,
-Tier3FetchQuestbook,items,Quest - Challenge,,,Tier 3 Fetch Quest,,
-Tier3FetchQuestbookDesc,items,Quest - Challenge,,,Totally not an illegal stash. Nothing to see here.,,
-Tier4FetchQuestbook,items,Quest - Challenge,,,Tier 4 Fetch Quest,,
-Tier4FetchQuestbookDesc,items,Quest - Challenge,,,Tier 4 Fetch Quest,,
-Tier5FetchQuestbook,items,Quest - Challenge,,,Tier 5 Fetch Quest,,
-Tier5FetchQuestbookDesc,items,Quest - Challenge,,,Tier 5 Fetch Quest,,
-Tier1BuriedSuppliesQuestbook,items,Quest - Challenge,,,Tier 1 Buried Supplies Quest,,
-Tier1BuriedSuppliesQuestbookDesc,items,Quest - Challenge,,,Not much of a supply stash, but you’ll do anything for a quick duke.,,
-Tier2BuriedSuppliesQuestbook,items,Quest - Challenge,,,Tier 2 Buried Supplies Quest,,
+		<!-- IS THAT THE CORRECT TAG? -->
+<recipe name="meleeWpnBladeT0PlantFiberKnife" count="1" tags="perkDeepCuts">
+	<ingredient name="resourceYuccaFibers" count="10"/>
+	<ingredient name="resourceWood" count="2"/>
+</recipe>
+
+<recipe name="signSafetyWorkProtection" count="1" tags="workbenchCrafting">
+	<ingredient name="resourcePaper" count="10"/>
+	<ingredient name="resourcePaint" count="2"/>
+</recipe>
 
 <!-- ***WORKS IN PROGRESS*** -->
 
@@ -504,171 +712,4 @@ Tier2BuriedSuppliesQuestbook,items,Quest - Challenge,,,Tier 2 Buried Supplies Qu
 </quest>
 
 
-		<!-- TRADER GROUP PC LIST -->
-<trader_item_group name="WorkingPC" count="1">
-            <item group="CustomGlasses" prob="0.25"/>
-            <item group="TraderSpawn" prob="0.01"/>
-            <item group="PCItemPool" prob="0.6"/>
-            <item group="PCItemPoolRare" prob="0.1"/>
-</trader_item_group>
-
-<trader_item_group name="CustomGlasses" count="1">
-			<item name="apparelBeerGoggles"/>
-			<item name="apparelColorblinders"/>
-			<item name="apparelRadGlasses"/>
-</trader_item_group>
-
-<trader_item_group name="TraderSpawn" count="1">
-			<item name="spawnTrader"/>
-</trader_item_group>
-
-<trader_item_group name="PCItemPoolRare" count="1">
-			<item name="meleeToolT3BanHammer"/>
-			<item name="meleeWpnClubBatTotheMoon"/>
-			<item name="meleeWpnBladeT3BananaKatana"/>
-			<item name="foodbeefdogSchematic"/>
-			<item name="foodKPsBunsSchematic"/>
-			<item name="foodRizzosBerryCrunchSchematic"/>
-			<item name="drinkJarPapaRizzsPooTeaSchematic"/>
-			<item name="gunRifleT2GoldenRifleSchematic"/>
-			<item name="gunHandgunT1WaterGunSchematic"/>
-</trader_item_group>
-
-<trader_item_group name="PCItemPool" count="1">
-			<!-- Food/Drink -->
-			<item name="drinkJarPapaRizzsPooTea" count="1,5"/>
-			<item name="foodRizzosBerryCrunch" count="1,4"/>
-			<item name="foodKPsBuns" count="1,5"/>
-			<item name="foodEdibleturd" count="3,10"/>
-			<item name="foodCanDeezNuts" count="1,5"/>
-			<item name="foodCanPremiumDogFood" count="1,5"/>
-			<item name="foodRottingFlesh" count="5,10"/>
-			<item name="drinkJarBeer" count="1,4"/>
-			
-			<!-- Drugs -->
-			<item name="drugToiletBrush"/>
-			<item name="Toiletpaper" count="1,4"/>
-			<item name="TubeSock"/>
-			
-			<!-- Items -->
-			<item name="resourceFuelCrapSack" count="2,5"/>
-			<item name="treeOakDeco"/>
-			<item name="decoPaintingsMaster"/>
-			<item name="resourceSnowBall" count="5,10"/>
-			<item name="resourceTestosteroneExtract"/>
-			<item name="resourceNail" count="10,20"/>
-			<item name="terrBedrock" count="3,7"/>
-			<item name="terrSnow" count="5,10"/>
-			<item name="terrAsphalt" count="5,10"/>
-			<item name="woodPole"/>
-			<item name="treeDeadTree01"/>
-			<item name="treeStump"/>
-			<item name="treeCactus01"/>
-			<item name="forestFlower"/>
-			<item name="decoPumpkinJackOLantern"/>
-			<item name="signNoHazardousWaste"/>
-			<item name="signRoadWork"/>
-			<item name="signPosterWantedMissing01"/>
-			<item name="signMegaCrushAd"/>
-			<item name="cntGasGrillClosed"/>
-			<item name="cntMicrowaveOvenVer1Closed"/>
-			<item name="cntToaster"/>
-			<item name="cntCoffeeMaker"/>
-			<item name="cntSodaFountain"/>
-			<item name="cntBeerCooler"/>
-			<item name="cntLaundryBasketVer2Full"/>
-			<item name="cntTrashCompactor"/>
-			<item name="cntTrashPile01"/>
-			<item name="cntDumpsterFlies"/>
-			<item name="fountain"/>
-			<item name="cntGunSafe"/>
-			<item name="schoolDesk"/>
-			<item name="officeChair01"/>
-			<item name="wineBarrel"/>
-			<item name="decoPoolTable"/>
-			<item name="decoReptileTerrarium"/>
-			<item name="decoClassicDogHouse"/>
-			<item name="decoLargePetCage"/>
-			<item name="decoSwingSet"/>
-			<item name="decoBasketBallHoop"/>
-			<item name="decoStationaryBike"/>
-			<item name="decoTreadmill"/>
-			<item name="decoBenchPress"/>
-			<item name="bodyBagPileMix"/>
-			<item name="bodyBagBlackFlies"/>
-			<item name="cntCoffin"/>
-			<item name="cntCoffinWildWestClosed"/>
-			<item name="cntBathTubGore"/>
-			<item name="cntCashRegister"/>
-			<item name="cntShoppingCartEmpty"/>
-			<item name="cntToolBoxClosed"/>
-			<item name="cntRollingToolBoxOpen"/>
-			<item name="decoMannequinMale"/>
-			<item name="decoMannequinFemale"/>
-			<item name="cntPurse01"/>
-			<item name="cntLuggageMediumClosed"/>
-			<item name="birdBathPlanter"/>
-			<item name="cntBirdnest"/>
-			<item name="decoWildWestWagon"/>
-			<item name="decoCowSkull"/>
-			<item name="modularRopeNoose"/>
-			<item name="cobweb"/>
-			<item name="emberPileDeco1"/>
-			<item name="satelliteDish"/>
-			<item name="graveStone01"/>
-			<item name="tableSaw"/>
-			<item name="cntBusSchool"/>
-			<item name="chandelierLight"/>
-			<item name="candelabraLight"/>
-			<item name="signExitLight"/>
-			<item name="burningBarrelPlayer"/>
-			<item name="xRayDisplayLight1"/>
-			<item name="goreBlockHumanCorpse"/>
-			<item name="goreBlockHumanCorpse2"/>
-			<item name="goreBlockHumanCorpse3"/>
-			<item name="goreBlockHumanBones"/>
-			<item name="jailBars"/>
-			<item name="cntBarrelAcidSingle00"/>
-			<item name="cntBarrelRadiatedSingle00"/>
-			<item name="decoCarSeatUpright"/>
-			
-			<!-- Tools/Melee -->
-			<item name="meleeToolPickT2ForkPickaxe"/>
-			<item name="meleeToolShovelT2SpoonShovel"/>
-			<item name="meleeToolAxeT2KnifeAxe"/>
-			<item name="meleeToolAxeT1PlasticFireaxe"/>
-			<item name="meleeToolShovelT1PlasticShovel"/>
-			<item name="meleeToolPickT1PlasticPickaxe"/>
-			<item name="meleeToolRepairT0PlasticHammer"/>
-			<item name="meleeToolPickT0PlantFiberPickaxe"/>
-			<item name="meleeToolShovelT0PlantFiberShovel"/>
-			<item name="meleeToolT0PlantFiberAxe"/>
-			<item name="meleeWpnBladeWatermelonSword"/>
-			<item name="meleeWpnClubT0RollingPin"/>
-			<item name="meleeWpnBladeT1ToyKnife"/>
-			<item name="meleeWpnBladeT0PlantFiberKnife"/>
-			<item name="meleeWpnClubT0ALargeBone"/>
-			<item name="meleeWpnClubT0Plunger"/>
-			<item name="meleeWpnClubT1Microphone"/>
-			<item name="meleeWpnBladeT1CandyKnife"/>
-			<item name="gunBotT1JunkSledge"/>
-			
-			<!-- Ranged -->
-			<item name="gunRifleT2GoldenRifle"/>
-			<item name="gunHandgunT1WaterGun"/>
-			<item name="gunHandgunT0BBGun"/>
-			
-			<!-- Ammo -->
-			<item name="ammoCasinoCoin" count="5,25"/>
-			<item name="ammoLauncherGrenade" count="1,4"/>
-			<item name="ammoLauncherGrenadeMD" count="1,2"/>
-			<item name="ammoLauncherMolotov" count="1,5"/>
-			<item name="ammoNailSteel" count="5,35"/>
-			<item name="ammoNailExplosive" count="1,5"/>
-			<item name="thrownTimedCharge"/>
-			<item name="thrownDynamite" count="1,3"/>
-			<item name="thrownAmmoFlare" count="2,5"/>
-			
-			<!-- Schematics -->
-			
-</trader_item_group>
+<!-- WORKS IN PROGRESS -->
