@@ -29,42 +29,62 @@
 	<item name="TreasureRaphaelQuestbook"/>						
 </trader_item_group>
 
+<!-- WORKING TRADER PC -->
+<trader_item_group name="WorkingPC" count="1">
+            <item group="CustomGlasses" prob="0.25"/>
+            <item group="TraderSpawn" prob="0.01"/>
+            <item group="PCItemPool" prob="0.6"/>
+            <item group="PCItemPoolRare" prob="0.1"/>
+</trader_item_group>
+
 <trader_item_group name="CustomGlasses" count="1">
-	<item name="apparelBeerGoggles"/>
-	<item name="apparelColorBlinders"/>
-	<item name="apparelRadGlasses"/>
+			<item name="apparelBeerGoggles"/>
+			<item name="apparelColorblinders"/>
+			<item name="apparelRadGlasses"/>
 </trader_item_group>
 
 <trader_item_group name="TraderSpawn" count="1">
-	<item name="spawnTrader"/>
+			<item name="spawnTrader"/>
+</trader_item_group>
+
+<trader_item_group name="PCItemPoolRare" count="1">
+			<item name="meleeToolT3BanHammer"/>
+			<item name="meleeWpnClubBatTotheMoon"/>
+			<item name="meleeWpnBladeT3BananaKatana"/>
+			<item name="foodbeefdogSchematic"/>
+			<item name="foodKPsBunsSchematic"/>
+			<item name="foodRizzosBerryCrunchSchematic"/>
+			<item name="drinkJarPapaRizzsPooTeaSchematic"/>
+			<item name="gunRifleT2GoldenRifleSchematic"/>
+			<item name="gunHandgunT1WaterGunSchematic"/>
 </trader_item_group>
 
 <trader_item_group name="PCItemPool" count="1">
 			<!-- Food/Drink -->
-			<item name="drinkJarPapaRizzsPooTea"/>
-			<item name="foodRizzosBerryCrunch"/>
-			<item name="foodKPsBuns"/>
-			<item name="foodEdibleturd"/>
-			<item name="foodCanDeezNuts"/>
-			<item name="foodCanPremiumDogFood"/>
-			<item name="foodRottingFlesh"/>
-			<item name="drinkJarBeer"/>
+			<item name="drinkJarPapaRizzsPooTea" count="1,5"/>
+			<item name="foodRizzosBerryCrunch" count="1,4"/>
+			<item name="foodKPsBuns" count="1,5"/>
+			<item name="foodEdibleturd" count="3,10"/>
+			<item name="foodCanDeezNuts" count="1,5"/>
+			<item name="foodCanPremiumDogFood" count="1,5"/>
+			<item name="foodRottingFlesh" count="5,10"/>
+			<item name="drinkJarBeer" count="1,4"/>
 			
 			<!-- Drugs -->
 			<item name="drugToiletBrush"/>
-			<item name="Toiletpaper"/>
+			<item name="Toiletpaper" count="1,4"/>
 			<item name="TubeSock"/>
 			
 			<!-- Items -->
-			<item name="resourceFuelCrapSack"/>
+			<item name="resourceFuelCrapSack" count="2,5"/>
 			<item name="treeOakDeco"/>
 			<item name="decoPaintingsMaster"/>
-			<item name="resourceSnowBall"/>
+			<item name="resourceSnowBall" count="5,10"/>
 			<item name="resourceTestosteroneExtract"/>
-			<item name="resourceNail"/>
-			<item name="terrBedrock"/>
-			<item name="terrSnow"/>
-			<item name="terrAsphalt"/>
+			<item name="resourceNail" count="10,20"/>
+			<item name="terrBedrock" count="3,7"/>
+			<item name="terrSnow" count="5,10"/>
+			<item name="terrAsphalt" count="5,10"/>
 			<item name="woodPole"/>
 			<item name="treeDeadTree01"/>
 			<item name="treeStump"/>
@@ -126,7 +146,7 @@
 			<item name="chandelierLight"/>
 			<item name="candelabraLight"/>
 			<item name="signExitLight"/>
-			<item name="burningBarrel"/>
+			<item name="burningBarrelPlayer"/>
 			<item name="xRayDisplayLight1"/>
 			<item name="goreBlockHumanCorpse"/>
 			<item name="goreBlockHumanCorpse2"/>
@@ -165,14 +185,14 @@
 			
 			<!-- Ammo -->
 			<item name="ammoCasinoCoin" count="5,25"/>
-			<item name="ammoLauncherGrenade"/>
-			<item name="ammoLauncherGrenadeMD"/>
-			<item name="ammoLauncherMolotov"/>
-			<item name="ammoNailSteel"/>
-			<item name="ammoNailExplosive"/>
+			<item name="ammoLauncherGrenade" count="1,4"/>
+			<item name="ammoLauncherGrenadeMD" count="1,2"/>
+			<item name="ammoLauncherMolotov" count="1,5"/>
+			<item name="ammoNailSteel" count="5,35"/>
+			<item name="ammoNailExplosive" count="1,5"/>
 			<item name="thrownTimedCharge"/>
-			<item name="thrownDynamite"/>
-			<item name="thrownAmmoFlare"/>
+			<item name="thrownDynamite" count="1,3"/>
+			<item name="thrownAmmoFlare" count="2,5"/>
 			
 			<!-- Schematics -->
 			<item name="foodbeefdogSchematic"/>
@@ -181,21 +201,10 @@
 			<item name="drinkJarPapaRizzsPooTeaSchematic"/>
 			<item name="gunRifleT2GoldenRifleSchematic"/>
 			<item name="gunHandgunT1WaterGunSchematic"/>
+			
 </trader_item_group>
 
-<trader_item_group name="PCItemPoolRare" count="1">
-	<item name="meleeToolT3BanHammer"/>
-	<item name="meleeWpnClubBatTotheMoon"/>
-	<item name="meleeWpnBladeT3BananaKatana"/>
-</trader_item_group>
 
-<trader_item_group name="WorkingPC" count="1">
-    <item group="CustomGlasses" prob="0.25"/>
-    <item group="TraderSpawn" prob="0.01"/>
-    <item group="PCItemPool"/>
-    <item group="PCItemPoolRare" prob="0.1"/>
-    <item group="QuestBooks" prob="0.25"/>
-</trader_item_group>
 	</append>
 	
 <append xpath="/traders">
