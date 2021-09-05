@@ -8,7 +8,30 @@ Add MegaScreamer as a semi-low chance of spawning in wild
 
 <!-- ***ITEM MODIFIERS*** -->
 
+<!-- Make rare loot item and/or rare item in PC trader -->
+<append xpath="/item_modifiers/item_modifier[@name='modArmorJumpJets']">
+		<property name="CreativeMode" value="Player"/>
+		<property name="CustomIcon" value="ICONJetpack"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.045" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.09" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.9"/>
+</append>
 
+<!-- Check the coding on this. I am not sure what the stink resist would be called or which value to put on it. -->
+<item_modifier name="modArmorAntiFartUndies" installable_tags="armorLegs" modifier_tags="???" blocked_tags="noMods" type="attachment">
+		<property name="UnlockedBy" value="???"/>
+		<property name="CustomIcon" value="ICONAntiFartUndies"/>
+		<property name="DescriptionKey" value="modArmorAntiFartUndiesDesc"/>
+		<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+		
+		<effect_group tiered="false">
+			<requirement name="ItemHasTags" tags="armorChest"/>
+				<passive_effect name="DiseaseResist" operation="base_add" value="4">
+		</effect_group>
+		
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+</item_modifier>
 
 <!-- ***ITEMS*** -->
 
@@ -40,173 +63,6 @@ Remove the stove recipe at the bottom of the list, it is not needed
 
 <!-- ***TRADERS*** -->
 
-<trader_item_group name="WorkingPC" count="1">
-            <item group="CustomGlasses" prob="0.25"/>
-            <item group="TraderSpawn" prob="0.01"/>
-            <item group="PCItemPool" prob="0.6"/>
-            <item group="PCItemPoolRare" prob="0.1"/>
-</trader_item_group>
-
-<trader_item_group name="CustomGlasses" count="1">
-			<item name="apparelBeerGoggles"/>
-			<item name="apparelColorblinders"/>
-			<item name="apparelRadGlasses"/>
-</trader_item_group>
-
-<trader_item_group name="TraderSpawn" count="1">
-			<item name="spawnTrader"/>
-</trader_item_group>
-
-<trader_item_group name="PCItemPoolRare" count="1">
-			<item name="meleeToolT3BanHammer"/>
-			<item name="meleeWpnClubBatTotheMoon"/>
-			<item name="meleeWpnBladeT3BananaKatana"/>
-			<item name="foodbeefdogSchematic"/>
-			<item name="foodKPsBunsSchematic"/>
-			<item name="foodRizzosBerryCrunchSchematic"/>
-			<item name="drinkJarPapaRizzsPooTeaSchematic"/>
-			<item name="gunRifleT2GoldenRifleSchematic"/>
-			<item name="gunHandgunT1WaterGunSchematic"/>
-</trader_item_group>
-
-<trader_item_group name="PCItemPool" count="1">
-			<!-- Food/Drink -->
-			<item name="drinkJarPapaRizzsPooTea" count="1,5"/>
-			<item name="foodRizzosBerryCrunch" count="1,4"/>
-			<item name="foodKPsBuns" count="1,5"/>
-			<item name="foodEdibleturd" count="3,10"/>
-			<item name="foodCanDeezNuts" count="1,5"/>
-			<item name="foodCanPremiumDogFood" count="1,5"/>
-			<item name="foodRottingFlesh" count="5,10"/>
-			<item name="drinkJarBeer" count="1,4"/>
-			
-			<!-- Drugs -->
-			<item name="drugToiletBrush"/>
-			<item name="Toiletpaper" count="1,4"/>
-			<item name="TubeSock"/>
-			
-			<!-- Items -->
-			<item name="resourceFuelCrapSack" count="2,5"/>
-			<item name="treeOakDeco"/>
-			<item name="decoPaintingsMaster"/>
-			<item name="resourceSnowBall" count="5,10"/>
-			<item name="resourceTestosteroneExtract"/>
-			<item name="resourceNail" count="10,20"/>
-			<item name="terrBedrock" count="3,7"/>
-			<item name="terrSnow" count="5,10"/>
-			<item name="terrAsphalt" count="5,10"/>
-			<item name="woodPole"/>
-			<item name="treeDeadTree01"/>
-			<item name="treeStump"/>
-			<item name="treeCactus01"/>
-			<item name="forestFlower"/>
-			<item name="decoPumpkinJackOLantern"/>
-			<item name="signNoHazardousWaste"/>
-			<item name="signRoadWork"/>
-			<item name="signPosterWantedMissing01"/>
-			<item name="signMegaCrushAd"/>
-			<item name="cntGasGrillClosed"/>
-			<item name="cntMicrowaveOvenVer1Closed"/>
-			<item name="cntToaster"/>
-			<item name="cntCoffeeMaker"/>
-			<item name="cntSodaFountain"/>
-			<item name="cntBeerCooler"/>
-			<item name="cntLaundryBasketVer2Full"/>
-			<item name="cntTrashCompactor"/>
-			<item name="cntTrashPile01"/>
-			<item name="cntDumpsterFlies"/>
-			<item name="fountain"/>
-			<item name="cntGunSafe"/>
-			<item name="schoolDesk"/>
-			<item name="officeChair01"/>
-			<item name="wineBarrel"/>
-			<item name="decoPoolTable"/>
-			<item name="decoReptileTerrarium"/>
-			<item name="decoClassicDogHouse"/>
-			<item name="decoLargePetCage"/>
-			<item name="decoSwingSet"/>
-			<item name="decoBasketBallHoop"/>
-			<item name="decoStationaryBike"/>
-			<item name="decoTreadmill"/>
-			<item name="decoBenchPress"/>
-			<item name="bodyBagPileMix"/>
-			<item name="bodyBagBlackFlies"/>
-			<item name="cntCoffin"/>
-			<item name="cntCoffinWildWestClosed"/>
-			<item name="cntBathTubGore"/>
-			<item name="cntCashRegister"/>
-			<item name="cntShoppingCartEmpty"/>
-			<item name="cntToolBoxClosed"/>
-			<item name="cntRollingToolBoxOpen"/>
-			<item name="decoMannequinMale"/>
-			<item name="decoMannequinFemale"/>
-			<item name="cntPurse01"/>
-			<item name="cntLuggageMediumClosed"/>
-			<item name="birdBathPlanter"/>
-			<item name="cntBirdnest"/>
-			<item name="decoWildWestWagon"/>
-			<item name="decoCowSkull"/>
-			<item name="modularRopeNoose"/>
-			<item name="cobweb"/>
-			<item name="emberPileDeco1"/>
-			<item name="satelliteDish"/>
-			<item name="graveStone01"/>
-			<item name="tableSaw"/>
-			<item name="cntBusSchool"/>
-			<item name="chandelierLight"/>
-			<item name="candelabraLight"/>
-			<item name="signExitLight"/>
-			<item name="burningBarrelPlayer"/>
-			<item name="xRayDisplayLight1"/>
-			<item name="goreBlockHumanCorpse"/>
-			<item name="goreBlockHumanCorpse2"/>
-			<item name="goreBlockHumanCorpse3"/>
-			<item name="goreBlockHumanBones"/>
-			<item name="jailBars"/>
-			<item name="cntBarrelAcidSingle00"/>
-			<item name="cntBarrelRadiatedSingle00"/>
-			<item name="decoCarSeatUpright"/>
-			
-			<!-- Tools/Melee -->
-			<item name="meleeToolPickT2ForkPickaxe"/>
-			<item name="meleeToolShovelT2SpoonShovel"/>
-			<item name="meleeToolAxeT2KnifeAxe"/>
-			<item name="meleeToolAxeT1PlasticFireaxe"/>
-			<item name="meleeToolShovelT1PlasticShovel"/>
-			<item name="meleeToolPickT1PlasticPickaxe"/>
-			<item name="meleeToolRepairT0PlasticHammer"/>
-			<item name="meleeToolPickT0PlantFiberPickaxe"/>
-			<item name="meleeToolShovelT0PlantFiberShovel"/>
-			<item name="meleeToolT0PlantFiberAxe"/>
-			<item name="meleeWpnBladeWatermelonSword"/>
-			<item name="meleeWpnClubT0RollingPin"/>
-			<item name="meleeWpnBladeT1ToyKnife"/>
-			<item name="meleeWpnBladeT0PlantFiberKnife"/>
-			<item name="meleeWpnClubT0ALargeBone"/>
-			<item name="meleeWpnClubT0Plunger"/>
-			<item name="meleeWpnClubT1Microphone"/>
-			<item name="meleeWpnBladeT1CandyKnife"/>
-			<item name="gunBotT1JunkSledge"/>
-			
-			<!-- Ranged -->
-			<item name="gunRifleT2GoldenRifle"/>
-			<item name="gunHandgunT1WaterGun"/>
-			<item name="gunHandgunT0BBGun"/>
-			
-			<!-- Ammo -->
-			<item name="ammoCasinoCoin" count="5,25"/>
-			<item name="ammoLauncherGrenade" count="1,4"/>
-			<item name="ammoLauncherGrenadeMD" count="1,2"/>
-			<item name="ammoLauncherMolotov" count="1,5"/>
-			<item name="ammoNailSteel" count="5,35"/>
-			<item name="ammoNailExplosive" count="1,5"/>
-			<item name="thrownTimedCharge"/>
-			<item name="thrownDynamite" count="1,3"/>
-			<item name="thrownAmmoFlare" count="2,5"/>
-			
-			<!-- Schematics -->
-			
-</trader_item_group>
 
 
 
