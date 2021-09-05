@@ -42,6 +42,289 @@ Remove the stove recipe at the bottom of the list, it is not needed
 
 <!-- ***WORKS IN PROGRESS*** -->
 
+		<!-- CUSTOM QUEST LINE -->
+		
+<!-- White River Citizen 1 - Journey to Settlement -->
+<append xpath="/quests/quest[@name='quest_whiteRiverCitizen1']">
+	<reward type="Quest" id="quest_AdvancedSurvival1">
+			<property name="chainquest" value="false"/>
+	</reward>
+</append>
+
+<!-- Part 1 craft and place your workplace hazard sheet -->
+	<quest id="quest_AdvancedSurvival1">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival1"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival1_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival1_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/>
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<!-- <action type="ShowTip" value="tutorialTipQuest02"/> Not sure this will be needed -->
+		<action type="TrackQuest"/>
+
+		<objective type="FetchKeep" id="resourcePaper" value="10" phase="1"/>
+		<objective type="FetchKeep" id="resourcePaint" value="2" phase="1"/>
+		<objective type="Craft">
+			<property name="phase" value="2"/>
+			<property name="item" value="signSafetyWorkProtection"/>
+			<property name="count" value="1"/>
+		</objective>
+
+		<objective type="BlockPlace" id="signSafetyWorkProtection" value="1" phase="3/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival2"/>
+	</quest>
+
+	<!-- Part 2 grab a few lanterns -->
+	<quest id="quest_AdvancedSurvival2">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival2"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival2_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival2_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="easy"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="Fetch" id="lanternLight_player" value="3" phase="1"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+		
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival3"/>
+	</quest>
+
+	<!-- Part 3 kill murder chickens -->
+	<quest id="quest_AdvancedSurvival3">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival3"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival3_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival3_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="AnimalKill" id="animalGiantMurderChicken" value="3" phase="1"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+		
+		<reward type="SkillPoints" value="1" chainreward="true"/>
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival4"/>
+	</quest>
+
+	<!-- Part 4 find toilet paper -->
+	<quest id="quest_AdvancedSurvival4">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival4"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival4_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival4_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="Fetch" id="Goldtoiletpaper" value="1" phase="1"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival5"/>
+	</quest>
+
+	<!-- Part 5 get some beer glasses -->
+	<quest id="quest_AdvancedSurvival5">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival5"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival5_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival5_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="Fetch" id="apparelBeerGoggles" value="1" phase="1"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival6"/>
+	</quest>
+
+	<!-- Part 6 craft bat to the moon -->
+	<quest id="quest_AdvancedSurvival6">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival6"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="resourceForgedSteel" value="50" phase="1"/>
+		<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
+		<objective type="FetchKeep" id="resourceLeather" value="3" phase="1"/>
+		<objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
+		<objective type="FetchKeep" id="modMeleeStunBatonRepulsor" value="1" phase="1"/>
+		<objective type="Fetch" id="meleeWpnClubBatTotheMoon" value="1" phase="2"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="3"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+		
+		<reward type="SkillPoints" value="1" chainreward="true"/>
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival7"/>
+	</quest>
+
+	<!-- Part 7 craft some Dingleberry Crunch -->
+	<quest id="quest_AdvancedSurvival7">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival7"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival7_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival7_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="foodEdibleturd" value="2" phase="1"/>
+		<objective type="FetchKeep" id="foodEgg" value="1" phase="1"/>
+		<objective type="FetchKeep" id="foodCornMeal" value="1" phase="1"/>
+		<objective type="FetchKeep" id="drinkJarBoiledWater" value="1" phase="1"/>
+		
+		<objective type="Fetch" id="foodRizzosBerryCrunch" value="1" phase="2"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival8"/>
+	</quest>
+
+	<!-- Part 8 Find a pet rock, craft pet boulder -->
+	<quest id="quest_AdvancedSurvival8">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival8"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival8_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival8_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="junkPetRock" value="1" phase="1"/>
+		<objective type="Craft" id="rockPetBoulder" value="1" phase="2"/>
+		<objective type="BlockPlace" id="rockPetBoulder" value="1" phase="3"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="4"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival9"/>
+	</quest>
+
+	<!-- Part 9 kill a mega Karen -->
+	<quest id="quest_AdvancedSurvival9">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival6"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="ZombieKill" id="zombieMegaKaren" value="1"/>
+		
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+
+		<reward type="SkillPoints" value="1" chainreward="true"/>
+		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Quest" id="quest_AdvancedSurvival10"/>
+	</quest>
+	
+	<!-- Last part - find Rekts missing porn -->
+	<quest id="quest_AdvancedSurvival10">
+		<property name="group_name_key" value="quest_AdvancedSurvival"/>
+		<property name="name_key" value="quest_AdvancedSurvival10"/>
+		<property name="subtitle_key" value="quest_AdvancedSurvival10_subtitle"/>
+		<property name="description_key" value="quest_AdvancedSurvival10_description"/>
+		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="category_key" value="quest"/>
+		<property name="difficulty" value="medium"/>
+		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
+		<property name="shareable" value="false"/>
+
+		<objective type="FetchKeep" id="RektsPorn" value="3" phase="1"/>
+
+		<objective type="InteractWithNPC">
+			<property name="phase" value="2"/>
+			<property name="nav_object" value="return_to_trader" />
+			<property name="use_closest" value="true" />
+		</objective>
+		
+		<reward type="SkillPoints" value="4" chainreward="true"/>
+		<reward type="Item" value="decoComputerMonitorKeyboardMousePC" chainreward="true"/>
+		<!-- <reward type="ShowTip" value="whiteRiverCitizen" stage="aftercomplete"/> -->
+	</quest>
+	
+	
+	
+	
+	
+	
+	
+
 <quest id="tier1_FetchGive">
 		<property name="name_key" value="quest_tier1_fetchgive"/>
 		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
