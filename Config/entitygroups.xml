@@ -1,9 +1,29 @@
 <configs>
 <append xpath="/entitygroups">
 	
-		<entitygroup name="EnemyAnimalsForest">
-	<entity name="animalGiantMurderChicken" prob="0.3"/>
-	</entitygroup>
+<entitygroup name="EnemyAnimalsForest">
+	<entity name="animalGiantMurderChicken" prob="0.03"/>
+</entitygroup>
+
+<entitygroup name="ZombiesAll">
+    <entity name="zombieMegaKaren" prob="0.01"/>
+</entitygroup>
+
+<entitygroup name="AnimalsFarm">
+	<entity name="animalPig"/>
+</entitygroup>
+	
+<entitygroup name="BoarGroup">
+	<entity name="animalPig"/>
+</entitygroup>
+
+<entitygroup name="ZombieFarmGroup">
+	<entity name="animalPig"/>
+</entitygroup>
+
+<entitygroup name="WildGameForest">
+	<entity name="animalPig" prob="0.5"/>
+</entitygroup>	
 	
 	</append>
 </configs>

@@ -170,11 +170,6 @@
 	<ingredient name="resourcePaint" count="1"/>
 </recipe>
 
-<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" tags="workbenchCrafting">
-	<ingredient name="resourceForgedIron" count="3"/>
-	<ingredient name="resourceWood" count="10"/>
-</recipe>
-
 <recipe name="meleeWpnBladeT0PlantFiberKnife" count="1" tags="perkDeepCuts">
 	<ingredient name="resourceYuccaFibers" count="10"/>
 	<ingredient name="resourceWood" count="2"/>
@@ -185,16 +180,22 @@
 	<ingredient name="resourcePaint" count="2"/>
 </recipe>
 
-<!-- Decor Items -->
+<recipe name="meleeWpnClubBatTotheMoon" count="1" craft_area="workbench" tags="learnable,perkFlurryOfBlows">
+	<ingredient name="resourceForgedSteel" count="50"/>
+	<ingredient name="resourceWood" count="10"/>
+	<ingredient name="resourceLeather" count="3"/>
+	<ingredient name="resourceDuctTape" count="3"/>
+	<ingredient name="modMeleeStunBatonRepulsor" count="1"/>
+	<effect_group>
+		<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="resourceForgedSteel,resourceWood,resourceLeather,resourceDuctTape"/>
+	</effect_group>
+</recipe>
 
-<!-- 
-<recipe name="cntWoodBurningStove" count="1">
-	<ingredient name="resourceForgedIron" count="4"/>
-	<ingredient name="resourceLeather" count="8"/>
-	<ingredient name="resourceMechanicalParts" count="4"/>
-	<ingredient name="resourceCropCottonPlant" count="10"/>
-</recipe> 
--->
+<!-- Decor Items -->
+<recipe name="cntWoodBurningStove" count="1" craft_area="workbench" tags="workbenchCrafting">
+	<ingredient name="resourceForgedIron" count="3"/>
+	<ingredient name="resourceWood" count="10"/>
+</recipe>
 
 </append>
 </configs>
