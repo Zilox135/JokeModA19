@@ -1,6 +1,6 @@
 <configs>
 <append xpath="/buffs">	
-	
+
 	<buff name="buffInfectionCatch" name_key="buff Infection Catch"  hidden="true">
 		<damage_type value="Bashing"/>
 		<stack_type value="ignore"/>
@@ -349,6 +349,5 @@
 			<triggered_effect trigger="onSelfBuffRemove" action="ModifyScreenEffect" intensity="0" fade="1" effect_name="Cold"/>			
 		</effect_group>
 	</buff>
-	
 </append>
 </configs>	
