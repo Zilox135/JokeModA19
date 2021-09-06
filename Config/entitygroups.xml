@@ -2,11 +2,11 @@
 <append xpath="/entitygroups">
 	
 <entitygroup name="EnemyAnimalsForest">
-	<entity name="animalGiantMurderChicken" prob="0.03"/>
+	<entity name="animalGiantMurderChicken" prob="0.003"/>
 </entitygroup>
 
 <entitygroup name="ZombiesAll">
-    <entity name="zombieMegaKaren" prob="0.01"/>
+    <entity name="zombieMegaKaren" prob="0.001"/>
 </entitygroup>
 
 <entitygroup name="AnimalsFarm">
