@@ -2,28 +2,67 @@
 <append xpath="/entitygroups">
 	
 <entitygroup name="EnemyAnimalsForest">
-	<entity name="animalGiantMurderChicken" prob="0.003"/>
+	<entity name="invisibleAnimalEnemy" prob="85"/>
+	<entity name="animalWolf" prob="9"/>
+	<entity name="animalBear" prob="3"/>
+	<entity name="animalDireWolf" prob="3"/>
+	<entity name="animalGiantMurderChicken" prob="0.03"/>	
 </entitygroup>
 
 <entitygroup name="ZombiesAll">
-    <entity name="zombieMegaKaren" prob="0.001"/>
+	<entity name="zombieBoe"/>
+	<entity name="zombieJoe"/>
+	<entity name="zombieSteve"/>
+	<entity name="zombieMoe"/>
+	<entity name="zombieYo"/>
+	<entity name="zombieBusinessMan"/>
+	<entity name="zombieArlene"/>
+	<entity name="zombieDarlene"/>
+	<entity name="zombieMarlene"/>
+	<entity name="zombieSkateboarder"/>
+	<entity name="zombieCheerleader" prob="0.3"/>
+	<entity name="zombieOldTimer" prob="0.3"/>
+	<entity name="zombieBiker" prob="0.3"/>
+	<entity name="zombieFarmer" prob="0.3"/>
+	<entity name="zombieStripper" prob="0.3"/>
+	<entity name="zombieUtilityWorker" prob="0.3"/>
+	<entity name="zombieJanitor" prob="0.2"/>
+	<entity name="zombieNurse" prob="0.3"/>
+	<entity name="zombieSteveCrawler"/>
+	<entity name="zombieFatHawaiian" prob="0.3"/>
+    <entity name="zombieMegaKaren" prob="0.01"/>	
 </entitygroup>
 
 <entitygroup name="AnimalsFarm">
-	<entity name="animalPig"/>
+	<entity name="animalBoar"/>
+	<entity name="animalChicken"/>
+	<entity name="animalPig"/>	
 </entitygroup>
 	
 <entitygroup name="BoarGroup">
-	<entity name="animalPig"/>
+	<entity name="animalBoar"/>
+	<entity name="animalPig"/>	
 </entitygroup>
 
 <entitygroup name="ZombieFarmGroup">
-	<entity name="animalPig"/>
+	<entity name="zombieFarmer"/>
+	<entity name="zombieFemaleFat"/>
+	<entity name="animalZombieDog"/>
+	<entity name="animalBoar"/>
+	<entity name="animalChicken"/>
+	<entity name="zombieFarmer"/>
+	<entity name="animalPig"/>	
 </entitygroup>
 
 <entitygroup name="WildGameForest">
-	<entity name="animalPig" prob="0.5"/>
-</entitygroup>	
-	
+	<entity name="invisibleAnimal" prob="50"/>
+	<entity name="animalRabbit" prob="48"/>
+	<entity name="animalChicken" prob="48"/>
+	<entity name="animalBoar" prob="1"/>
+	<entity name="animalStag" prob="1"/>
+	<entity name="animalDoe" prob="1"/>
+	<entity name="animalWolf" prob="1"/>
+	<entity name="animalPig" prob="0.5"/>	
+</entitygroup>
 	</append>
 </configs>
