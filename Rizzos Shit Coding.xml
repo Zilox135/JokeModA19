@@ -12,136 +12,7 @@
 
 <!-- ***ITEMS*** -->
 
-<item name="thrownGrenadeYeet"> <!-- T2 demolitions (perk 5) -->
-	<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
-	<property name="CustomIcon" value="thrownGrenadeContact"/>
-	<property name="CustomIconTint" value="23,153,58"/>
-	<property name="DescriptionKey" value="thrownGrenadeYeetDesc"/>
-	<property name="DisplayType" value="ammoGrenadeContact"/>
-	<property name="Class" value="ItemClassTimeBomb"/>
-	<property name="HoldType" value="57"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Grenade/GrenadePrefab.prefab"/>
-	<property name="DropScale" value="2.5"/>
-	<property name="Material" value="Mmetal"/>
-	<property name="Stacknumber" value="25"/>
-	<property name="EconomicValue" value="41"/>
-	<property name="Weight" value="0"/>
-	<property name="Explosion.ParticleIndex" value="13"/>
-	<property name="Explosion.RadiusBlocks" value="4"/>
-	<property name="Explosion.RadiusEntities" value="7"/>
-	<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
-	<property name="Explosion.DamageBonus.water" value="0"/>
-	<property name="Explosion.BlastPower" value="75"/> <!-- (int,100) how far ragdolls and such are flung -->
-	<property name="FuseTime" value="6"/>
-	<property name="FusePrimeOnActivate" value="true"/>
-	<property name="ExplodeOnHit" value="true"/>
-	<property name="StickPercent" value=".5"/>
-	<property name="UnlockedBy" value="perkDemolitionsExpert,thrownGrenadeContactSchematic"/>
-	<property name="Group" value="Ammo/Weapons"/>
-	<property name="SoundUnholster" value="grenade_unholster"/>
-	<property class="Action0">
-		<property name="Class" value="ThrowAway"/>
-		<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
-		<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
-		<property name="Throw_strength_default" value="8"/>
-		<property name="Throw_strength_max" value="50"/>
-		<property name="Max_strain_time" value="1.25"/>
-		<property name="Sound_start" value="grenade_throw"/>
-		<property name="Gravity" value="-5"/>
-		<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
-	</property>
-	<property class="Action1">
-		<property name="Class" value="Activate"/>
-		<property name="Delay" value="1"/>
-		<property name="Sound_start" value="grenade_pullpin"/>
-	</property>
-	<property name="ThrowableDecoy" value="true"/>
-	<effect_group tiered="false">
-		<passive_effect name="BlockDamage" operation="base_set" value="0"/><display_value name="dExDamageBlock" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="100"/><display_value name="dExDamageEntity" value="100"/>
-		<display_value name="dExRadius" value="8"/>
-	</effect_group>
 
-	<effect_group name="thrownGrenadeYeet">
-		<triggered_effect trigger="onProjectileImpact" action="Ragdoll" target="other" duration="2.5" force="5000">
-		<requirement name="!EntityTagCompare" target="other" tags="trader"/>
-		</triggered_effect>
-
-		<triggered_effect trigger="onProjectileImpact" action="Ragdoll" target="positionAOE" range="8" target_tags="zombie,animal" duration="2.5" force="5000">
-		</triggered_effect>
-	</effect_group>
-	
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="Equals" value="1"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".1"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".1"/>
-			<passive_effect name="DismemberChance" operation="base_add" value=".05"/>
-	</effect_group>
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="Equals" value="2"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".2"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".2"/>
-			<passive_effect name="DismemberChance" operation="base_add" value=".1"/>
-	</effect_group>
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="Equals" value="3"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".3"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".3"/>
-			<passive_effect name="DismemberChance" operation="base_add" value=".2"/>
-	</effect_group>
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="Equals" value="4"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".4"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".4"/>
-			<passive_effect name="DismemberChance" operation="base_add" value=".3"/>
-	</effect_group>
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="ProgressionLevel" progression_name="perkDemolitionsExpert" operation="Equals" value="5"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".5"/>
-			<passive_effect name="DismemberChance" operation="base_add" value=".45"/>
-	</effect_group>
-	<effect_group tiered="false" name="workaround for explosives ignoring perks/buffs">
-		<requirement name="HasBuff" buff="buffDrugAtomJunkies"/>
-			<passive_effect name="EntityDamage" operation="perc_add" value=".5"/>
-			<passive_effect name="BlockDamage"  operation="perc_add" value=".5"/>
-	</effect_group>
-</item>
-
-<item name="ammoRocketNuke">
-	<property name="Tags" value="ammo"/>
-	<property name="DisplayType" value="ammoLauncher"/>
-	<property name="DescriptionKey" value="ammoRocketNukeDesc"/>
-	<property name="CustomIcon" value="ICONRocketNuke"/>
-	<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
-	<property name="HoldType" value="45"/>
-	<property name="HandMeshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mlead_scrap"/>
-	<property name="Stacknumber" value="1"/>
-	<property name="EconomicValue" value="250"/>
-	<property name="Group" value="Ammo/Weapons"/>
-	<property name="UnlockedBy" value="perkDemolitionsExpert,gunExplosivesT3RocketLauncherSchematic"/>
-	<property class="Action1">
-		<property name="Class" value="Projectile"/>
-		<property name="Explosion.ParticleIndex" value="5"/> <!-- which Prefab/particle is used -->
-		<property name="Explosion.RadiusBlocks" value="20"/> <!-- damage radius for blocks -->
-		<property name="Explosion.RadiusEntities" value="20"/> <!-- damage radius for entities -->
-		<property name="Explosion.DamageBonus.water" value="0"/>
-		<property name="Gravity" value="-6"/>
-		<property name="FlyTime" value=".2"/>
-		<property name="LifeTime" value="20"/>
-
-		<property name="Explosion.BlockDamage" value="3500"/> <!-- workaround, not affected by perks at all -->
-		<property name="Explosion.EntityDamage" value="2500"/> <!-- workaround, not affected by perks at all -->
-	</property>
-	<effect_group name="ammoRocketHE" tiered="false">
-		<passive_effect name="BlockDamage" operation="base_set" value="0" tags="perkDemolitionsExpert"/><display_value name="dExDamageBlock" value="3500"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="200" tags="perkDemolitionsExpert"/><display_value name="dExDamageEntity" value="2500"/>
-		<passive_effect name="ProjectileVelocity" operation="base_set" value="50" tags="perkDemolitionsExpert"/>
-		<display_value name="dExRadius" value="20"/>
-	</effect_group>
-</item>
 
 <!-- ***LOOT*** -->
 
@@ -149,38 +20,13 @@
 
 <!-- ***QUESTS*** -->
 
-
-
-<!-- ***RECIPES*** -->
-
-
-
-<!-- ***TRADERS*** -->
-
-
-
-
-
-
-
-<!-- ***WORKS IN PROGRESS*** -->
-
-		<!-- CUSTOM QUEST LINE -->
-		
-<!-- White River Citizen 1 - Journey to Settlement -->
-<append xpath="/quests/quest[@name='quest_whiteRiverCitizen1']">
-	<reward type="Quest" id="quest_AdvancedSurvival1">
-			<property name="chainquest" value="false"/>
-	</reward>
-</append>
-
 <!-- Part 1 craft and place your workplace hazard sheet -->
 	<quest id="quest_AdvancedSurvival1">
 		<property name="group_name_key" value="quest_AdvancedSurvival"/>
 		<property name="name_key" value="quest_AdvancedSurvival1"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival1_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival1_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -197,15 +43,15 @@
 			<property name="count" value="1"/>
 		</objective>
 
-		<objective type="BlockPlace" id="signSafetyWorkProtection" value="1" phase="3/>
-		
+		<objective type="BlockPlace" id="signSafetyWorkProtection" value="1" phase="3"/>
+
 		<objective type="InteractWithNPC">
 			<property name="phase" value="4"/>
 			<property name="nav_object" value="return_to_trader" />
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="150"/>
 		<reward type="Quest" id="quest_AdvancedSurvival2"/>
 	</quest>
 
@@ -215,7 +61,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival2"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival2_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival2_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_map_house"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -229,7 +75,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="250"/>
 		<reward type="Quest" id="quest_AdvancedSurvival3"/>
 	</quest>
 
@@ -239,13 +85,13 @@
 		<property name="name_key" value="quest_AdvancedSurvival3"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival3_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival3_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
 		<property name="shareable" value="false"/>
 
-		<objective type="AnimalKill" id="animalGiantMurderChicken" value="3" phase="1"/>
+		<objective type="ZombieKill" id="animalGiantMurderChicken" value="3" phase="1"/>
 		
 		<objective type="InteractWithNPC">
 			<property name="phase" value="2"/>
@@ -253,8 +99,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="1000"/>
 		<reward type="Quest" id="quest_AdvancedSurvival4"/>
 	</quest>
 
@@ -264,9 +110,9 @@
 		<property name="name_key" value="quest_AdvancedSurvival4"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival4_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival4_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_treasure"/>
 		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
+		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
 		<property name="shareable" value="false"/>
 
@@ -278,7 +124,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="350"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival5"/>
 	</quest>
 
@@ -288,7 +134,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival5"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival5_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival5_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_shirt"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -302,7 +148,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="500"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival6"/>
 	</quest>
 
@@ -312,7 +158,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival6"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_club"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -331,8 +177,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="650"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival7"/>
 	</quest>
 
@@ -342,7 +188,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival7"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival7_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival7_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_campfire"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -356,12 +202,12 @@
 		<objective type="Fetch" id="foodRizzosBerryCrunch" value="1" phase="2"/>
 		
 		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
+			<property name="phase" value="3"/>
 			<property name="nav_object" value="return_to_trader" />
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="750"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival8"/>
 	</quest>
 
@@ -371,7 +217,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival8"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival8_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival8_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_loot_sack"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -387,7 +233,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="900"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival9"/>
 	</quest>
 
@@ -397,7 +243,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival6"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_knife"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -411,18 +257,18 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="1250"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival10"/>
 	</quest>
 	
-	<!-- Last part - find Rekts missing porn -->
+		<!-- Last part - find Rekts missing porn -->
 	<quest id="quest_AdvancedSurvival10">
 		<property name="group_name_key" value="quest_AdvancedSurvival"/>
 		<property name="name_key" value="quest_AdvancedSurvival10"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival10_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival10_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_treasure"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -436,11 +282,25 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="4" chainreward="true"/>
-		<reward type="Item" value="decoComputerMonitorKeyboardMousePC" chainreward="true"/>
+		<reward type="SkillPoints" value="4" chainreward="false"/>
+		<reward type="Exp" value="69"/>
+		<reward type="Item" id="decoComputerMonitorKeyboardMousePC" value="1"/>		
 		<!-- <reward type="ShowTip" value="whiteRiverCitizen" stage="aftercomplete"/> -->
 	</quest>
-	
+
+<!-- ***RECIPES*** -->
+
+
+
+<!-- ***TRADERS*** -->
+
+
+<!-- ***WINDOWS*** -->
+
+
+
+<!-- ***WORKS IN PROGRESS*** -->
+
 	
 	
 	
