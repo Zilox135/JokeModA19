@@ -265,13 +265,15 @@
 		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="6"/>
 </quest>
 
+<!-- Custom Quest Line -->
+
 <!-- Part 1 craft and place your workplace hazard sheet -->
 	<quest id="quest_AdvancedSurvival1">
 		<property name="group_name_key" value="quest_AdvancedSurvival"/>
 		<property name="name_key" value="quest_AdvancedSurvival1"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival1_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival1_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/>
+		<property name="icon" value="ui_game_symbol_hammer"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -296,7 +298,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="150"/>
 		<reward type="Quest" id="quest_AdvancedSurvival2"/>
 	</quest>
 
@@ -306,7 +308,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival2"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival2_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival2_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_map_house"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -320,7 +322,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="250"/>
 		<reward type="Quest" id="quest_AdvancedSurvival3"/>
 	</quest>
 
@@ -330,7 +332,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival3"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival3_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival3_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_zombie"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -344,8 +346,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="1000"/>
 		<reward type="Quest" id="quest_AdvancedSurvival4"/>
 	</quest>
 
@@ -355,9 +357,9 @@
 		<property name="name_key" value="quest_AdvancedSurvival4"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival4_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival4_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_treasure"/>
 		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
+		<property name="difficulty" value="easy"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
 		<property name="shareable" value="false"/>
 
@@ -369,7 +371,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="350"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival5"/>
 	</quest>
 
@@ -379,7 +381,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival5"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival5_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival5_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_shirt"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -393,7 +395,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="500"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival6"/>
 	</quest>
 
@@ -403,7 +405,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival6"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_club"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -422,8 +424,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="650"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival7"/>
 	</quest>
 
@@ -433,7 +435,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival7"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival7_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival7_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_campfire"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -452,7 +454,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="750"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival8"/>
 	</quest>
 
@@ -462,7 +464,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival8"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival8_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival8_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_loot_sack"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -478,7 +480,7 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="Exp" value="900"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival9"/>
 	</quest>
 
@@ -488,7 +490,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival6"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_knife"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -502,8 +504,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 
-		<reward type="SkillPoints" value="1" chainreward="true"/>
-		<reward type="Exp" value="50"/> <!-- this needs chaged -->
+		<reward type="SkillPoints" value="1" chainreward="false"/>
+		<reward type="Exp" value="1250"/> <!-- this needs chaged -->
 		<reward type="Quest" id="quest_AdvancedSurvival10"/>
 	</quest>
 	
@@ -513,7 +515,7 @@
 		<property name="name_key" value="quest_AdvancedSurvival10"/>
 		<property name="subtitle_key" value="quest_AdvancedSurvival10_subtitle"/>
 		<property name="description_key" value="quest_AdvancedSurvival10_description"/>
-		<property name="icon" value="ui_game_symbol_map_bed"/> <!-- this needs chaged -->
+		<property name="icon" value="ui_game_symbol_treasure"/>
 		<property name="category_key" value="quest"/>
 		<property name="difficulty" value="medium"/>
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
@@ -527,7 +529,8 @@
 			<property name="use_closest" value="true" />
 		</objective>
 		
-		<reward type="SkillPoints" value="4" chainreward="true"/>
+		<reward type="SkillPoints" value="4" chainreward="false"/>
+		<reward type="Exp" value="69"/>
 		<reward type="Item" id="decoComputerMonitorKeyboardMousePC" value="1"/>		
 		<!-- <reward type="ShowTip" value="whiteRiverCitizen" stage="aftercomplete"/> -->
 	</quest>
