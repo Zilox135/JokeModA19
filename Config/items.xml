@@ -4592,6 +4592,99 @@ needed?
 	</effect_group>
 </item>
 
+<item name="bookMagazine1"> <!-- first book -->
+	<property name="Extends" value="bookFiremansAlmanacHeat"/>
+	<property name="CustomIcon" value="bookUrbanCombatLanding"/>
+	<property name="DescriptionKey" value="perkUrbanCombatLandingLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatLanding"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatLanding" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine2">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatCigarLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatCigar"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatCigar" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine3">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatSneakingLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatSneaking"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatSneaking" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine4">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatJumpingLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatJumping"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatJumping" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine5">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatLandMinesLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatLandMines"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatLandMines" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine6">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatAdrenalineRushLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatAdrenalineRush"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatAdrenalineRush" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+<item name="bookMagazine7">
+	<property name="Extends" value="bookMagazine1"/>
+	<property name="DescriptionKey" value="perkUrbanCombatRoomClearingLongDesc"/>
+	<property name="Unlocks" value="perkUrbanCombatRoomClearing"/>
+	<effect_group tiered="false">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatRoomClearing" level="-1"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkUrbanCombatComplete" level="-1">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+			<requirement name="PerksUnlocked" skill_name="skillUrbanCombat" operation="GTE" value="7"/></triggered_effect>
+	</effect_group>
+</item>
+
 
 <!-- This part contains all clothing and armour. -->
 

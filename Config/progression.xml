@@ -4,5 +4,59 @@
 <append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='4,5']/@tags">,foodRizzosBerryCrunch</append>
 <append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='3,5']/@tags">,foodbeefdog</append>
 <append xpath="/progression/perks/perk[@name='perkMasterChef']/effect_group/passive_effect[@level='1,5']/@tags">,foodKPsBuns</append>
-	
+
+<append xpath="/progression/skills">
+
+	<skill name="skillMagazine" parent="attBooks" name_key="perkMagazine0Name" desc_key="perkUrbanCombat0Desc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_light_armor2"><effect_group/></skill>
+</append>
+
+<append xpath="/progression/perks">
+	<!-- = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = = -->
+
+	<perk name="perkMagazine1" parent="skillMagazine" max_level="1" base_skill_point_cost="0" name_key="bookMagazine1" desc_key="perkUrbanCombatLandingDesc" long_desc_key="perkUrbanCombatLandingLongDesc">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="armorMilitaryStealthBoots"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine2" parent="skillMagazine" max_level="1" base_skill_point_cost="0" name_key="bookMagazine2" desc_key="perkUrbanCombatCigarDesc" long_desc_key="perkUrbanCombatCigarLongDesc">
+		<effect_group>
+			<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="apparelCigar"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine3" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatSneakingDesc" long_desc_key="perkUrbanCombatSneakingLongDesc">
+		<effect_group>
+			<requirement name="CVarCompare" cvar="_crouching" operation="Equals" value="1"/>
+				<passive_effect name="SilenceBlockSteps" operation="base_set" level="1" value="1" tags="trashPile"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine4" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatJumpingDesc" long_desc_key="perkUrbanCombatJumpingLongDesc">
+		<effect_group>
+			<!-- landing effect is in buffPlayerFallingDamage, Landing Sound stealth book -->
+			<!-- jumping effect is in entityclasses.xml -->
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine5" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatLandMinesDesc" long_desc_key="perkUrbanCombatLandMinesLongDesc">
+		<effect_group>
+			<passive_effect name="LandMineImmunity" operation="base_set" level="1" value="1"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine6" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatAdrenalineRushDesc" long_desc_key="perkUrbanCombatAdrenalineRushLongDesc">
+		<effect_group>
+			<requirement name="ProgressionLevel" progression_name="perkUrbanCombatAdrenalineRush" operation="Equals" value="1"/>
+				<triggered_effect trigger="onCombatEntered" action="AddBuff" buff="buffUrbanCombatAdrenalineRush"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazine7" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatRoomClearingDesc" long_desc_key="perkUrbanCombatRoomClearingLongDesc">
+		<effect_group>
+			<requirement name="IsIndoors"/>
+				<passive_effect name="EntityDamage" operation="perc_add" level="1" value=".1"/>
+				<passive_effect name="HealthLoss" operation="perc_subtract" level="1" value=".05"/>
+		</effect_group>
+	</perk>
+	<perk name="perkMagazineComplete" parent="skillMagazine" max_level="1" base_skill_point_cost="0" desc_key="perkUrbanCombatCompleteDesc" long_desc_key="perkUrbanCombatCompleteLongDesc">
+		<effect_group>
+			<!-- effect is in modGunSoundSuppressorSilencer -->
+		</effect_group>
+	</perk>
+</append>	
 </configs>
