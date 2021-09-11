@@ -1911,41 +1911,11 @@
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
-</item>
-
 <item name="noteBoobs">
 	<property name="Extends" value="blankNoteMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="noteBoobsDesc"/>
 	<property name="CustomIcon" value="questMaster" />
-</item>
-
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
 </item>
 
 <item name="notePaint">
@@ -1955,41 +1925,11 @@
 	<property name="CustomIcon" value="questMaster"/>
 </item>
 
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
-</item>
-
 <item name="noteLotto">
 	<property name="Extends" value="blankNoteMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="noteLottoDesc"/>
 	<property name="CustomIcon" value="questMaster" />
-</item>
-
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
 </item>
 
 <item name="noteGrocery">
@@ -1999,41 +1939,11 @@
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="false"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
-</item>
-
 <item name="noteDirections">
 	<property name="Extends" value="blankNoteMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="noteDirectionsDesc"/>
 	<property name="CustomIcon" value="questMaster" />
-</item>
-
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
-	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
 </item>
 
 <item name="noteFucksGiven">
@@ -2042,19 +1952,18 @@
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
-<item name="questMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="21"/>
-	<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
-	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="Material" value="Mpaper"/>
+<item name="noteRCAdvertisement">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteRCAdvertisementDesc"/>
 	<property name="CustomIcon" value="questMaster"/>
-	<property name="Stacknumber" value="50"/> <!-- STK book -->
-	<property name="EconomicValue" value="200"/>
-	<property name="SellableToTrader" value="true"/>
-	<property name="FuelValue" value="2"/>
-	<property name="Weight" value="2"/>
-	<property name="Group" value="Special Items"/>
+</item>
+
+<item name="noteRCHiring">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteRCHiringDesc"/>
+	<property name="CustomIcon" value="questMaster"/>
 </item>
 
 <item name="qc_ladiesofthenight">
@@ -2103,7 +2012,7 @@
 	<property name="EconomicValue" value="400"/>			
 	<property name="SellableToTrader" value="false"/>
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons --> 
     <property name="CustomIconTint" value="159,105,52"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier1_clear"/>	
@@ -2117,7 +2026,7 @@
 	<property name="DescriptionKey" value="Tier2ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="675"/>		
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="255,165,0"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier2_clear"/>	
@@ -2131,7 +2040,7 @@
 	<property name="DescriptionKey" value="Tier3ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="900"/>		
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="191,238,144"/>		
 	<property class="Action0">
 	<property name="QuestGiven" value="tier3_clear"/>	
@@ -2145,7 +2054,7 @@
 	<property name="DescriptionKey" value="Tier4ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1020"/>		
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="26,255,26"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier4_clear"/>	
@@ -2159,8 +2068,8 @@
 	<property name="DescriptionKey" value="Tier5ClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="2040"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
-    <property name="CustomIconTint" value="0,0,255"/>	
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->	
+    <property name="CustomIconTint" value="41,134,204"/>		
 	<property class="Action0">
 	<property name="QuestGiven" value="tier5_clear"/>	
 	<property name="Class" value="Quest"/>	
@@ -2173,7 +2082,7 @@
 	<property name="DescriptionKey" value="Tier2FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="700"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="255,165,0"/>		
 	<property class="Action0">
 	<property name="QuestGiven" value="tier2_fetch_clear"/>	
@@ -2187,7 +2096,7 @@
 	<property name="DescriptionKey" value="Tier3FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1000"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="191,238,144"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier3_fetch_clear"/>	
@@ -2201,7 +2110,7 @@
 	<property name="DescriptionKey" value="Tier4FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="1150"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="26,255,26"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier4_fetch_clear"/>	
@@ -2215,8 +2124,8 @@
 	<property name="DescriptionKey" value="Tier5FetchAndClearQuestbookDesc"/>	
 	<property name="EconomicValue" value="2300"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
-    <property name="CustomIconTint" value="0,0,255"/>		
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
+    <property name="CustomIconTint" value="41,134,204"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier5_fetch_clear"/>	
 	<property name="Class" value="Quest"/>	
@@ -2229,7 +2138,7 @@
 	<property name="DescriptionKey" value="Tier1FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="165"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="159,105,52"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier1_fetch"/>	
@@ -2243,7 +2152,7 @@
 	<property name="DescriptionKey" value="Tier2FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="280"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="255,165,0"/>		
 	<property class="Action0">
 	<property name="QuestGiven" value="tier2_fetch"/>	
@@ -2257,7 +2166,7 @@
 	<property name="DescriptionKey" value="Tier3FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="400"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="191,238,144"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier3_fetch"/>	
@@ -2271,7 +2180,7 @@
 	<property name="DescriptionKey" value="Tier4FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="510"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="26,255,26"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier4_fetch"/>	
@@ -2285,8 +2194,8 @@
 	<property name="DescriptionKey" value="Tier5FetchQuestbookDesc"/>	
 	<property name="EconomicValue" value="1020"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
-    <property name="CustomIconTint" value="0,0,255"/>		
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
+    <property name="CustomIconTint" value="41,134,204"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier5_fetch"/>	
 	<property name="Class" value="Quest"/>	
@@ -2299,7 +2208,7 @@
 	<property name="DescriptionKey" value="Tier1BuriedSuppliesQuestbookDesc"/>	
 	<property name="EconomicValue" value="280"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="159,105,52"/>	
 	<property class="Action0">
 	<property name="QuestGiven" value="tier1_buried_supplies"/>	
@@ -2313,7 +2222,7 @@
 	<property name="DescriptionKey" value="Tier2BuriedSuppliesQuestbookDesc"/>	
 	<property name="EconomicValue" value="470"/>	
 	<property name="Stacknumber" value="1"/> 		
-	<property name="CustomIcon" value="QuestBook"/>
+    <property name="CustomIcon" value="QuestBook"/> <!--  Credit for icon https://www.flaticon.com/authors/smashicons -->
     <property name="CustomIconTint" value="255,165,0"/>		
 	<property class="Action0">
 	<property name="QuestGiven" value="tier2_buried_supplies"/>	
@@ -4842,7 +4751,7 @@ needed?
 	</effect_group>
 </item>
 
-<!-- Paper Armour -->
+<!-- Paper Armour T0 -->
 <item name="armorPaperMaster">
 	<property name="CreativeMode" value="None"/>
 	<property name="CustomIcon" value="armorClothHat"/>
@@ -4984,6 +4893,188 @@ needed?
 		<property name="Mesh" value="plant_fiber_shoes"/>
 		<property name="Overlay0" value="fiberCloth_shoes"/>
 		<property name="Layer" value="1"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
+
+<!-- Tier 4 / Heavy But Cumbersome -->
+<item name="armorBombMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="MarmorSteelSet"/> <property name="Weight" value="4"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorBombMasterDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="UnlockedBy" value="???????"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="armorBombHelmet">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSwatHelmet" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_helmet"/>
+		<property name="Overlay0" value="armor_iron_helmet"/>
+		<property name="Layer" value="middle"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="Mask1" value="Head" param1="inner"/>
+		<property name="Mask3" value="Face" param1="inner"/>
+		<property name="Mask4" value="Face" param1="middle"/>
+		<property name="Mask5" value="Face" param1="outer"/>
+		<property name="Mask7" value="Eyes" param1="inner"/>
+		<property name="Mask8" value="Eyes" param1="middle"/>
+		<property name="Mask9" value="Eyes" param1="outer"/>
+	</property>
+</item>
+
+<item name="armorBombChest">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelChest" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_chest"/>
+		<property name="Overlay0" value="armor_iron_chest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="armorBombChest">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelGloves" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_gloves"/>
+		<property name="Overlay0" value="armor_iron_gloves"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="armorBombLegs">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelLegs" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_pants"/>
+		<property name="Overlay0" value="armor_iron_pants"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="armorBombBoots">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelBoots" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_boots"/>
+		<property name="Overlay0" value="armor_iron_boots"/>
+		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
 </item>

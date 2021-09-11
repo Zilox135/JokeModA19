@@ -204,6 +204,10 @@
       <item group="PCItemPoolRare" prob="0.1"/>
 </trader_item_group>
 </append>
+
+<append xpath="/traders/trader_info[@id='4']/trader_items">
+	<item name="foodEdibleturd" prob="0.50"/>
+</append>
 	
 <append xpath="/traders">
 	<!-- Working Computer -->
