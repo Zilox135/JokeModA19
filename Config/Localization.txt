@@ -1,6 +1,7 @@
 Key,File,Type,UsedInMainMenu,NoTranslate,english,Context
 
 schematicGeneralGroupDesc,items,Book,,,"Read this schematic to magically download instructions to your brain organ on how to craft an item. Cool huh?",,
+
 foodRizzosBerryCrunch,items,Food,,,Rizzo's Dingle Berry Crunch,,
 foodRizzosBerryCrunchSchematic,items,Food,,,Rizzo's Dingle Berry Crunch Recipe,,
 foodRizzosBerryCrunchDesc,items,Food,,,Freshly plucked berries in every box!,,
@@ -21,6 +22,7 @@ foodHoney,items,Food,,,Mint Chews,,
 foodHoneyDesc,items,Food,,,"Mintos, the Flesh Maker!",,
 foodCanDeezNuts,items,Food,,,Deez Nuts,,
 foodCanDeezNutsDesc,items,Food,,,It's not from your favorite supermarket but Deez Nuts will fill you up. Bon appetit!,,"
+
 drinkJarPapaRizzsPooTea,items,Food,,,Papa Rizz's PooTea,,
 drinkJarPapaRizzsPooTeaSchematic,items,Food,,,Papa Rizz's PooTea Recipe,,
 drinkJarPapaRizzsPooTeaDesc,items,Food,,,"Comes in sweetened, unsweetened, and dingleberry flavours.\n\nAnother Fine RizCo Product",,
@@ -34,8 +36,10 @@ drinkJarCoffeeDesc,items,Food,,,Starmucks Flapacinno keeps your stamina up and h
 drinkJarCoffeeSchematic,items,Food,,,Starmucks Flapacinno Recipe,,
 drinkJarBlackStrapCoffee,items,Food,,,Civet Coffee,,
 drinkJarBlackStrapCoffeeDesc,items,Food,,,It's a bit nutty.,,"
+
 perkArtOfMiningBlackStrapDesc,progression,perk  book,,,"Can craft Civet Coffee, a super strong coffee.",,"
 perkArtOfMiningBlackStrapLongDesc,progression,perk  book,,,"For when those regular coffee beans just aren't enough.\n\nTeaches the recipe for Civet Coffee.",,"
+
 drugStrongPainkillers,items,Medical,,,Strong Painkillers,,
 drugStrongPainkillersDesc,items,Medical,,,"You have a prescription for these, right?",,
 drugStrongAntistink,items,Medical,,,Strong Anti-stink Pills,,
@@ -46,6 +50,7 @@ drugHerbalAntibioticsSchematic,items,Medical,,,Herbal Soap Schematic,,
 drugAntibiotics,items,Medical,,,Anti-stink Pills,,
 drugAntibioticsDesc,items,Medical,,,"Through the miracle of science, these pills help reduce how much you stink.",,
 drugAntibioticsSchematic,items,Medical,,,Anti-stink Pills Schematic,,
+
 medicalButtPlug,items,Medical,,,Butt Plug,,
 medicalButtPlugDesc,items,Medical,,,It plugs your butt to stop the Dysentery. Can also be used on your friends for fun!\n\nFully cures Dysentery.\n\nCannot be crafted.,,
 medicalBandage,items,Medical,,,Boo Boo Stickers,,
@@ -58,6 +63,7 @@ medicalFirstAidKitSchematic,items,Medical,,,Uh Oh Fixer Uppers Schematic,,
 medicalFirstAidKitDesc,items,Medical,,,"Uh Oh Fixer Uppers They say time heals all wounds. Well these heal those wounds a bit faster.\nUse the secondary action to treat another player.",,"
 drugXP,items,Medical,,,Smart Pills,,
 drugXPDesc,items,Medical,,,Has life got you down? Are you feeling dumb today? Well do we have the pills for you!\n\nAnother Fine RizCo Product,,
+
 Goldtoiletpaper,items,Food,,,Zilox's Legendary Gold Toilet Paper,,
 GoldtoiletpaperDesc,items,Food,,,This Legendary Gold Toilet Roll greatly speeds up recovering from dysentery and gives you a fat XP boost to go along with it.\n\nRight click to throw.,,
 Toiletpaper,items,Food,,,Extra Soft Toilet Paper,,
@@ -81,6 +87,7 @@ RektsPornDesc,items,Junk,,,Oh hey, you found some porn magazines with Rekt's nam
 resourcePaintDesc,items,Item,,,Use a paint brush to paint building blocks.\n\nEat at your own risk.,,
 resourceFuelCrapSack,items,Item,,,Crap Sack Fuel,,
 resourceFuelCrapSackDesc,items,Item,,,A sack of crap used for fuel in the forge or campfire. Smells horrible but lasts longer than wood,,
+
 zombieFatHawaiian,entityclasses,Entity,,,Beefcake,,
 zombieFatHawaiianFeral,entityclasses,Entity,,,Feral Beefcake,,
 zombieBoe,entityclasses,Entity,,,Stinky Boe,,
@@ -104,6 +111,7 @@ zombieMiniDemolition,entityclasses,Entity,,,Demo Zombie Lite,,
 zombieMegaKaren,entityclasses,Entity,,,Mega Karen,,
 zombieAnnoyingKid,entityclasses,Entity,,,Annoying Kid,,
 zombieJasper,entityclasses,Entity,,,Jasper the Friendly Undead,,
+
 animalStag,entityclasses,Entity,,,Bachelor Deer,,
 animalDoe,entityclasses,Entity,,,Doe Deer,,
 animalRabbit,entityclasses,Entity,,,Booplesnoot,,
@@ -123,6 +131,7 @@ animalBoar,entityclasses,Entity,,,Murder Bacon,,
 animalBossGrace,entityclasses,Entity,,,Ms Double Meat Bacon,,
 animalGiantMurderChicken,entityclasses,Entity,,,Giant Murder Chicken,,
 animalRageCock,entityclasses,Entity,,,Rage Cock,,
+
 buffInfection01GetBetterDesc,buffs,Buff,,,You have treated a mild Stink.\nGetting hit by zombies or animals will make your stink worse.,,"
 buffInfection01GetBetterName,buffs,Buff,,,Treated Mild Stink,,
 buffInfection01UntreatedDesc,buffs,Buff,,,You have a mild Stink.\nIt will get worse until you clean yourself up.\nGetting hit by zombies or animals will make your stink worse.,,"
@@ -145,6 +154,7 @@ BuffleadpoisoningTooltip,buffs,Buff,,,You have Lead Poisoning from eating paint.
 leadpoisoning,buffs,Buffs,,,Lead Poisoning,,
 leadpoisoningDesc,twitch,Buffs,,,This doesn't feel right.,,
 drugXPTooltip,buffs,Buff,,x,Woohoo! You gained free XP!,,,
+
 toolCookingPot,items,Item,,,Crucible,,
 toolCookingGrill,items,Item,,,Advanced Bellows,,
 toolBeaker,items,Item,,,Anvil,
@@ -155,6 +165,7 @@ toolBellows,items,Item,,,Cooking Grill,,
 toolBellowsSchematic,items,Item,,,Cooking Grill Schematic,,
 toolAnvil,items,Item,,,Beaker,,
 toolAnvilSchematic,items,Item,,,Beaker Schematic,,
+
 apparelBeerGoggles,items,Apparel,,,"Beer Goggles",,
 apparelBeerGogglesDesc,items,Apparel,,,"Ever wanna experience being drunk but dislike boozing it up? Well throw on these beer goggles and go for a trip!\n\nAnother Fine RizCo Product",,
 apparelColorblinders,items,Apparel,,,Color Blinders,,
@@ -163,6 +174,7 @@ apparelRadGlasses,items,Apparel,,,Rad Glasses,,
 apparelRadGlassesDesc,items,Apparel,,,These glasses are totally rad!\n\nAnother Fine RizCo Product,,
 apparelCigarette,items,Apparel,,,Cigarette,,
 apparelCigaretteDesc,items,Apparel,,,"Makes you look really cool, but these things are bad for you.\n\nEquip to increase your barter.\n\nAnother Fine RizCo Product",,
+
 meleeWpnClubBatTotheMoon,items,Melee,,,Bat To the Moon,,
 meleeWpnClubBatTotheMoonDesc,items,Melee,,,"As I walk through the valley of the shadow of death, I shall fear no evil, for I carry a big stick.\n\nRepair with a Repair Kit.\nLoot only, scraps to Wood.\n\nAnother Fine RizCo Product",,
 meleeWpnBladeWatermelonSword,items,Melee,,,Watermelon Sword,,
@@ -205,15 +217,15 @@ meleeWpnBladeT0PlantFiberKnife,item,Items,,,Plant Fiber Knife,,
 meleeWpnBladeT0PlantFiberKnifeDesc,items,Item,,,This thing couldn't give a papercut. Sick burns cut deeper than this could.,,
 meleeWpnBladeT1ToyKnife,items,Melee,,,Toy Knife,,
 meleeWpnBladeT1ToyKnifeDesc,items,Melee,,,It slices! It dices! It's probably a dangerous toy for your kids!,,
+
 gunShotgunT1DoubleBarrel,items,Gun,,,BoomStick,,
 gunShotgunT1DoubleBarrelDesc,items,Gun,,,"A rusty old BoomStick, great for close range carnage.\n\nRepair with a Repair Kit.\nScrap to Shotgun Parts.",,"
 gunShotgunT1DoubleBarrelSchematic,items,Gun,,,BoomStick Schematic,,
-gunMGT3M60,items,Gun,,,M60 Go BRRRRR,,
-gunMGT3M60Schematic,items,Gun,,,M60 Go BRRRRR Schematic,,
-gunMGT3M60Desc,items,Gun,,,BRRRRRRRRRRRRRRRR,,
 gunRifleT2GoldenRifle,items,Gun,,,Golden Rifle,,
 gunRifleT2GoldenRifleDesc,items,Gun,,,This baby shoots pure brass in the form of Casino Tokens!\n\nAnother Fine RizCo Product,,"
 gunRifleT2GoldenRifleSchematic,items,Gun,,,Golden Rifle Schematic,,
+gunMGT3GoldenMinigun,items,Gun,,,Golden Minigun,,
+gunMGT3GoldenMinigunDesc,items,Gun,,,It goes BRRRRRRRRRRRRRRRRRRRR.\n\nTakes Casino Tokens as ammo.\n\nAnother Fine RizCo Product,,
 gunHandgunFinger,items,Gun,,,Finger Gun,,
 gunHandgunFingerDesc,items,Gun,,,"Finger gun goes pew pew.\n\nLoot only. Cannot be crafted, sold, repaired, or scrapped.",,"
 gunHandgunT1WaterGun,items,Gun,,,Water Gun,,
@@ -223,12 +235,15 @@ gunGrenadeLauncher,items,Gun,,,Grenade Launcher,,
 gunGrenadeLauncherDesc,items,Gun,,,Sad you cannot throw grenades fast enough? Well do we have a weapon for you!\n\nAnother Fine RizCo Product,,
 gunHandgunT0BBGun,items,Gun,,,Dead Rider BB Gun,,
 gunHandgunT0BBGunDesc,items,Gun,,,"Try not to shoot your eye out. Hell, you probably can't shoot anything's eye out with this.\n\nAnother Fine RizCo Product",,"
-ammoCasinoCoin,items,Ammo,,,Casino Token Ammo,,"
+gunHandgunT1Mac10,items,Gun,,,Mac-10,,
+gunHandgunT1Mac10Desc,items,Gun,,,A machine pistol. A true favorite of low-life scum!,,
+
+ammoCasinoCoin,items,Ammo,,,Casino Token Ammo,,
 ammoCasinoCoinDesc,items,Item,,,Weaponized Dukes. Make it rain!,,
-ammoLauncherGrenade,items,Ammo,,,GL Rounds,,
+ammoLauncherGrenade,items,Ammo,,,Grenade Launcher Rounds,,
 ammoLauncherGrenadeDesc,items,Item,,,Rounds for the Grenade Launcher,,
-ammoLauncherGrenadeMD,items,Ammo,,,GL MD Rounds,,
-ammoLauncherGrenadeMDDesc,items,Item,,,Mass destruction rounds for the Grenade Launcher.\n\nWarning: these do high block damage!,,
+ammoLauncherGrenadeMD,items,Ammo,,,Grenade Launcher MD Rounds,,
+ammoLauncherGrenadeMDDesc,items,Item,,,Mass destruction rounds for the Grenade Launcher.\n\nWarning: These grenades do high block damage!,,
 ammoLauncherMolotov,items,Ammo,,,GL Molotov Rounds,,
 ammoLauncherMolotovDesc,items,Item,,,Molotov ammo for the Grenade Launcher.\n\nYes these WILL set you on fire... and your friends.,,
 ammoSteelNail,items,Ammo,,,Steel Nail,,
@@ -236,9 +251,12 @@ ammoSteelNailDesc,items,Item,,,A steel nail that is ammo for the nailgun.,,
 ammoExplosiveNail,items,Ammo,,,Explosive Nail,,
 ammoExplosiveNailDesc,items,Item,,,An explosive nail that is ammo for the nailgun.\n\nHalf as explosive as a frag rocket and also makes no sense.,,
 ammoRocketNuke,items,Ammo,,,Rocket Nuke,,
-ammoRocketNukeDesc,items,Ammo,,,Wanna hit the reset button?\n\nWARNING: This rocket does massive damage and might just crash your server.\n\nAnother Fine RizCo Product,,
+ammoRocketNukeDesc,items,Ammo,,,Wanna hit the reset button?\n\nWARNING: These rockets do massive block damage!\n\nAnother Fine RizCo Product,,
 thrownGrenadeYeet,items,Ammo,,,Yeet Grenade,,
-thrownGrenadeYeetDesc,items,Ammo,,,A special grenade to knock down your foes!Try not to eat it.\n\nAnother Fine RizCo Product,,
+thrownGrenadeYeetDesc,items,Ammo,,,A special grenade to knock down your foes! Try not to eat it.\n\nAnother Fine RizCo Product,,
+thrownPhoneGrenade,items,Ammo,,,Phone Grenade,,
+thrownPhoneGrenadeDesc,items,Ammo,,,"Remember back in 2016 when phones were exploding? Well, here they are again but more weaponized.",,
+
 modOrganGrinder,item_modifiers,mod,,,Organ Grinder Mod,,
 modOrganGrinderDesc,item_modifiers,mod,,,A mod for the Auger that greatly increases entity damage while slightly decreasing block damage.\n\nDrill baby drill!\n\nAnother Fine RizCo Product,,
 modRipNTear,item_modifiers,mod,,,Rip N Tear Mod,,
@@ -251,12 +269,20 @@ modFannyPack,item_modifiers,mod,,,Fanny Pack,,
 modFannyPackDesc,item_modifiers,mod,,,"A fanny pack that let's you carry more, but makes you look like a nerd.\n\nAnother Fine RizCo Product",,
 modArmorAntiFartUndies,item_modifiers,mod,,,Anti Fart Undies,,
 modArmorAntiFartUndiesDesc,item_modifiers,mod,,,Do you have excessive flatulence? Do we have the product for you!\n\nAnti Fart Undies will help you stink less by filtering your butt trumpet.\n\nAnother Fine RizCo Product,,
+
 armorPaperHat,item,Armor,,,Paper Hat,,
 armorPaperJacket,item,Armor,,,Paper Chest Armor,,
 armorPaperGloves,item,Armor,,,Paper Glove Armor,,
 armorPaperPants,item,Armor,,,Paper Leg Armor,,
 armorPaperBoots,item,Armor,,,Paper Boot Armor,,
 armorPaperGroupDesc,item,Armor,,,"This armor really sucks, but it is better than nothing. Light armor will encumber you a little and provides some protection against damage.\nIt will not protect you from the weather.\n\nRepair with paper.\nScrap to paper".,,
+armorBombHelmet,item,Armor,,,Bomb Squad Helmet,,
+armorBombChest,item,Armor,,,Bomb Squad Chest Armor,,
+armorBombChest,item,Armor,,,Bomb Squad Chest Armor,,
+armorBombLegs,item,Armor,,,Bomb Squad Leg Armor,,
+armorBombBoots,item,Armor,,,Bomb Squad Boots,,
+armorBombMasterDesc,item,Armor,,,This is some damn heavy duty armor! The tradeoff is that it is very cumbersome.\n\nAnother Fine RizCo Product,,
+
 noteToiletpoem,items,Quest - Note,,,Toilet Poem,,
 noteToiletpoemDesc,items,Quest - Note,,,"Here I sit, broken hearted \nTried to poop, but only farted \nLater on I took a chance \nTried to fart and pooped my pants",,
 noteBoobs,items,Quest - Note,,,Picture of Boobs,,
@@ -270,6 +296,13 @@ noteGrocery,items,Quest - Note,,,Grocery List,,
 noteGroceryDesc,items,Quest - Note,,,"Eggs\n\nMilk\n\n2ply extra soft butt paper\n\nRotting flesh\n\nBoo boo stickers\n\nAnti stink pills",,
 noteDirections,items,Quest - Note,,,Directions To The Party,,
 noteDirectionsDesc,items,Quest - Note,,,"First, take a long drive.\n\nThen, go over a short pier.\n\nCreep.",,
+noteRCAdvertisement,items,Quest - Note,,,RizCo Advertisement,,
+noteRCAdvertisementDesc,items,Quest - Note,,,New for 2021! Introducing the RizCo Bat to the Moon!\n\nIt defies physics! It defies expectations! It defies a low price!\n\nGet yours today, only from RizCo!,,
+noteRCHiring,items,Quest - Note,,,RizCo Is Hiring!,,
+noteRCHiringDesc,items,Quest - Note,,,Apocalypse got you jobless? Well RizCo is hiring!\n\nPositions available: street cleaner, trader security, zombie exterminator, product tester, and body removal.\n\nApply at RizCo today!,,
+
+qc_AnimalGroupDesc,items,Quest - Animal Challenge,,,A strange note that is asking you to go murder innocent wildlife. Sure why not!,,
+qc_ZombieGroupDesc,items,Quest - Challenge,,,A strange note from the local trader asking for blood sacrifices in the form of zombie slaying.,,
 qc_ladiesofthenight,items,Quest - Challenge,,,Ladies of the Night Challenge,,
 challenge_ladiesofthenight,Quest,Challenge Info,,,Ladies of the Night,,
 challenge_ladiesofthenight_offer,Quest,Challenge Info,,,"Dear jackass,\nSome unsavory ladies have invaded these lands! Go deal with them so they stop tempting my husband.\n\nSincerely, Karen\n\nChallenge: Kill Some Ladies of the Night",,"
@@ -297,6 +330,7 @@ challenge_killthewabbit_subtitle,Quest,Challenge Info,,,Kill Some Booplesnoots,,
 challenge_killthewabbit,items,Quest - Challenge,,,Kill Some Booplesnoots,,
 DontGetCockyQuestbook,items,Quest - Challenge,,,Don't Get Cocky Challenge,,
 LadiesOfTheNightQuestbook,items,Quest - Challenge,,,Ladies of the Night Challenge,,
+
 Tier1ClearQuestbook,items,Quest - Challenge,,,Tier 1 Clear Quest,,
 Tier1ClearQuestbookDesc,items,Quest - Challenge,,,Tier 1 Clear Quest,,
 Tier2ClearQuestbook,items,Quest - Challenge,,,Tier 2 Clear Quest,,
@@ -335,6 +369,7 @@ quest_tier1_fetchgive_offer,Quest,Quest Info,,,Retrieve Supplies,,
 quest_tier2_fetchgive_offer,Quest,Quest Info,,,Retrieve Supplies,,
 quest_fetchgive_statement,Quest,Quest Info,,,Bring stuff get stuff.,,
 quest_fetchgive_response ,Quest,Quest Info,,,Retrieve Supplies,,
+
 quest_BasicSurvival2_description,Quest,Quest Info,,,Time to get started. Craft a plant fiber axe and get to hackin!,,
 quest_BasicSurvival2_subtitle,Quest,Quest Info,,,Craft a Plant Fiber Axe,,
 quest_BasicSurvival3_description,Quest,Quest Info,,,Craft a plant fiber knife. It barely cuts but it is better than nothing right?,,
@@ -371,6 +406,8 @@ quest_AdvancedSurvival9_description,Quest,Quest Info,,,Look, the traders are tir
 quest_AdvancedSurvival10,Quest,Quest Info,,,Advanced Survival 10/10,,
 quest_AdvancedSurvival10_subtitle,Quest,Quest Info,,,Find Rekts missing porn,,
 quest_AdvancedSurvival10_description,Quest,Quest Info,,,It seems Rekt misplaced a lot of him porn stash. The traders want you to find it so he quits crying himself to sleep at night.,,
+
+qt_desc,items,Quest - Treasure Map,,,"Yarrr, an old tattered pirates treasure map. Go plunder some booty!",,
 TreasureTaylorQuestbook,items,Quest - Treasure Map,,,Captain Khaine the Darkfalls Treasure Map,,
 TreasureTaylorQuestbookDesc,items,Quest - Treasure Map,,,Captain Khaine the Darkfalls Treasure Map,,
 TreasureNickoleQuestbook,items,Quest - Treasure Map,,,Captain KP the Stonehammers Treasure Map,,
@@ -385,19 +422,7 @@ TreasureSarahQuestbook,items,Quest - Treasure Map,,,Captain Rizzo the Papas Trea
 TreasureSarahQuestbookDesc,items,Quest - Treasure Map,,,Captain Rizzo the Papas Treasure Map,,
 TreasureRaphaelQuestbook,items,Quest - Treasure Map,,,Captain Zilox the WorkhorsesTreasure Map,,
 TreasureRaphaelQuestbookDesc,items,Quest - Treasure Map,,,Captain Zilox the WorkhorsesTreasure Map,,
-noteDuke01,items,Quest - Note,,,A note stuck between your buttcheeks,,
-noteDuke01Desc,items,Quest - Note,,,"Hey bruh, found you passed out on the side of the road. Figured you didn't need your stuff so I pawned it. Sucks to be you nerd!\n\nSincerely,\nRichard Noggin III",,
-qc_AnimalGroupDesc,items,Quest - Animal Challenge,,,A strange note that is asking you to go murder innocent wildlife. Sure why not!,,
-qc_ZombieGroupDesc,items,Quest - Challenge,,,A strange note from the local trader asking for blood sacrifices in the form of zombie slaying.,,
-qt_desc,items,Quest - Treasure Map,,,"Yarrr, an old tattered pirates treasure map. Go plunder some booty!",,
-tutorialTipQuest01,Journal Tip,,,,"Welcome to Joke Mod!\n\nI know what you are thinking: 'Wait, this isn't Darkness Falls!' But hey, while you are here, why not give this mod a shot? Who knows, you may actually enjoy it!\n\nSpecial blame goes to Zilox and Khaine for this creation.\n\n-XOXO, RizzoMF\n\nP.S. - Don't forget to wipe",,
-tutorialTipQuest01_title,Journal Tip,,,,Oh Hai There,,
-quest_BasicSurvival,Quest,Quest Info,,,Started Children's Basics of Survival,,
-quest_BasicSurvival_offer,Quest,Quest Info,,,"Dear roadkill,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies on the side of the road. But here is a kids book on wilderness survival. Hope it helps! And also that you can read.\n\nLove, peace, & chicken grease, -Noah",,
-quest_WhiteRiverCitizen1,Quest,Quest Info,,,Head To A Trader,,
-quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Magically you know where the trader is. Head there, maybe he has a part time job for you. Hopefully it is not Rekt. That dude is one miserable human being.",,
-tutorialTipQuest02,Journal Tip,,,,"Dear roadkill,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies on the side of the road. But here is a kids book on wilderness survival. Hope it helps! And also that you can read.\n\nLove, peace, & chicken grease, -Noah",,
-tutorialTipQuest02_title,Journal Tip,,,,Started Children's Basics of Survival,,
+
 qt_claude,items,Quest - Treasure Map,,,Captain Wack Marrows Treasure Map,,
 qt_jennifer,items,Quest - Treasure Map,,,Captain Puffypants Treasure Map,,
 qt_nickole,items,Quest - Treasure Map,,,Captain KP the Stonehammers Treasure Map,,
@@ -405,6 +430,7 @@ qt_raphael,items,Quest - Treasure Map,,,Captain Zilox the WorkhorsesTreasure Map
 qt_sarah,items,Quest - Treasure Map,,,Captain Rizzo the Papas Treasure Map,,
 qt_stephen,items,Quest - Treasure Map,,,Captain Heha the Pahahahirates Treasure Map,,
 qt_taylor,items,Quest - Treasure Map,,,Captain Khaine the Darkfalls Treasure Map,,
+
 treasure_claude,Quest,Challenge Info,,,Captain Wack Marrows Treasure Map,,
 treasure_jennifer,Quest,Challenge Info,,,Captain Puffypants Treasure Map,,
 treasure_nickole,Quest,Challenge Info,,,Captain KP the Stonehammers Treasure Map,,
@@ -419,6 +445,19 @@ treasure_raphael_offer,Quest,Challenge Info,,,"This blood soaked map 'n the boot
 treasure_sarah_offer,Quest,Challenge Info,,,"If ye be readin' this, I am like enough nah dead. Jus' mighty drunk somewhere 'n dropped me map. Please drop it off in the nearest postal box.",,
 treasure_stephan_offer,Quest,Challenge Info,,,"Dear Friend,\n\nIf you've got this note, I'm probably dead, or even worse, one of the monsters. I leave this map to one of my many stockpiles of buried supplies to you. If you find it, promise me you'll use it to make the world a better place again.\n\nYours Truly,\nStephan",,
 treasure_taylor_offer,Quest,Challenge Info,,,"Dear Survivor,\n\nIf you're reading this note, then the worst has probably happened, and the odds are I'm dead. But, rather than let all my stashes of supplies go to waste, I'd like you to have one of them. I've marked the location on this map for you.\n\nGood Luck,\nTaylor",,
+
+noteDuke01,items,Quest - Note,,,A note stuck between your buttcheeks,,
+noteDuke01Desc,items,Quest - Note,,,"Hey bruh, found you passed out on the side of the road. Figured you didn't need your stuff so I pawned it. Sucks to be you nerd!\n\nSincerely,\nRichard Noggin III",,
+tutorialTipQuest01,Journal Tip,,,,"Welcome to Joke Mod!\n\nI know what you are thinking: 'Wait, this isn't Darkness Falls!' But hey, while you are here, why not give this mod a shot? Who knows, you may actually enjoy it!\n\nSpecial blame goes to Zilox and Khaine for this creation.\n\n-XOXO, RizzoMF\n\nP.S. - Don't forget to wipe",,
+tutorialTipQuest01_title,Journal Tip,,,,Oh Hai There,,
+quest_BasicSurvival,Quest,Quest Info,,,Started Children's Basics of Survival,,
+quest_BasicSurvival_offer,Quest,Quest Info,,,"Dear roadkill,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies on the side of the road. But here is a kids book on wilderness survival. Hope it helps! And also that you can read.\n\nLove, peace, & chicken grease, -Noah",,
+quest_WhiteRiverCitizen1,Quest,Quest Info,,,Head To A Trader,,
+quest_WhiteRiverCitizen1_description,Quest,Quest Info,,,"Magically you know where the trader is. Head there, maybe he has a part time job for you. Hopefully it is not Rekt. That dude is one miserable human being.",,
+tutorialTipQuest02,Journal Tip,,,,"Dear roadkill,\n\nThe wasteland can be an unforgiving place, I found you naked and left for dead with no supplies on the side of the road. But here is a kids book on wilderness survival. Hope it helps! And also that you can read.\n\nLove, peace, & chicken grease, -Noah",,
+tutorialTipQuest02_title,Journal Tip,,,,Started Children's Basics of Survival,,
+
+
 uiLoadStartingGame,UI,Game loading,x,,Starting the hamster wheel...,,
 loadingTipNAME,UI,Loading Screen,x,,In Local these start at line 7893 - TIP TEXT,,
 loadingTipNAME_title,UI,Loading Screen,x,,TIP IDENTIFIER HEADER (armor, axes, etc),,
@@ -462,8 +501,8 @@ loadingTipQuestSharing,UI,Loading Screen,x,,Does it look like a water source? It
 loadingTipQuestSharing_title,UI,Loading Screen,x,,Water Sources,,
 loadingTipRadials,UI,Loading Screen,x,,This message will self destruct in 5 4 3 2 1,,
 loadingTipRadials_title,UI,Loading Screen,x,,Self Destruct,,
-loadingTipScrapping,UI,Loading Screen,x,,In Local these start at line 7893 - TIP TEXT,,
-loadingTipScrapping_title,UI,Loading Screen,x,,TIP IDENTIFIER (armor, axes, etc),,
+loadingTipScrapping,UI,Loading Screen,x,,Profiting Off The Apocalypse Since 2013,,
+loadingTipScrapping_title,UI,Loading Screen,x,,RizCo,,
 loadingTipSledgehammers,UI,Loading Screen,x,,In Local these start at line 7893 - TIP TEXT,,
 loadingTipSledgehammers_title,UI,Loading Screen,x,,TIP IDENTIFIER (armor, axes, etc),,
 loadingTipStealth,UI,Loading Screen,x,,In Local these start at line 7893 - TIP TEXT,,
@@ -482,6 +521,7 @@ loadingTipWorkstations,UI,Loading Screen,x,,In Local these start at line 7893 - 
 loadingTipWorkstations_title,UI,Loading Screen,x,,TIP IDENTIFIER (armor, axes, etc),,
 loadingTipWrenches,UI,Loading Screen,x,,In Local these start at line 7893 - TIP TEXT,,
 loadingTipWrenches_title,UI,Loading Screen,x,,TIP IDENTIFIER (armor, axes, etc),,
+
 treeOakDesc,blocks,Block,,,A decorative plant block from the creative menu.,,"
 treeOakDecoDesc,blocks,Block,,,A decorative plant block from the creative menu.,,"
 treeFirDesc,blocks,Block,,,A decorative plant block from the creative menu.,,"
