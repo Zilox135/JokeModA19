@@ -12,7 +12,203 @@
 
 <!-- ***ITEMS*** -->
 
+<item name="noteRCAdvertisement">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteRCAdvertisementDesc"/>
+	<property name="CustomIcon" value="questMaster"/>
+</item>
 
+<item name="noteRCHiring">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
+	<property name="DescriptionKey" value="noteRCHiringDesc"/>
+	<property name="CustomIcon" value="questMaster"/>
+</item>
+
+
+		<!-- TEST AND WORKS. Up to you on tinting the armor in Unity. -->
+<!-- Tier 4 / Heavy But Cumbersome -->
+<item name="armorBombMaster">
+	<property name="CreativeMode" value="None"/>
+	<property name="CustomIcon" value="armorSwatHelmet"/>
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="DisplayType" value="armorHeavy"/>
+	<property name="Material" value="MarmorSteelSet"/> <property name="Weight" value="4"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="DegradationBreaksAfter" value="false"/>
+	<property name="HoldType" value="45"/>
+	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="DescriptionKey" value="armorBombMasterDesc"/>
+	<property name="Group" value="Clothing"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="UnlockedBy" value="???????"/>
+	<property name="ShowQuality" value="true"/>
+</item>
+
+<item name="armorBombHelmet">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSwatHelmet" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Head"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_helmet"/>
+		<property name="Overlay0" value="armor_iron_helmet"/>
+		<property name="Layer" value="middle"/>
+		<property name="UISlot" value="Headgear"/>
+		<property name="Mask1" value="Head" param1="inner"/>
+		<property name="Mask3" value="Face" param1="inner"/>
+		<property name="Mask4" value="Face" param1="middle"/>
+		<property name="Mask5" value="Face" param1="outer"/>
+		<property name="Mask7" value="Eyes" param1="inner"/>
+		<property name="Mask8" value="Eyes" param1="middle"/>
+		<property name="Mask9" value="Eyes" param1="outer"/>
+	</property>
+</item>
+
+<item name="armorBombChest">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelChest" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="upperbody,chest,armor,armorChest,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Chest"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_chest"/>
+		<property name="Overlay0" value="armor_iron_chest"/>
+		<property name="Layer" value="2"/>
+		<property name="UISlot" value="ChestArmor"/>
+	</property>
+</item>
+
+<item name="armorBombChest">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelGloves" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Hands"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_gloves"/>
+		<property name="Overlay0" value="armor_iron_gloves"/>
+		<property name="Layer" value="0"/>
+		<property name="UISlot" value="Gloves"/>
+	</property>
+</item>
+
+<item name="armorBombLegs">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelLegs" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Legs"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_pants"/>
+		<property name="Overlay0" value="armor_iron_pants"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="LegArmor"/>
+	</property>
+</item>
+
+<item name="armorBombBoots">
+	<property name="Extends" value="armorBombMaster"/>
+	<property name="CustomIcon" value="armorSteelBoots" />
+	<property name="CustomIconTint" value="47,79,2"/>
+	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
+	<property name="EquipSlot" value="Feet"/>
+	<effect_group name="bomb armor">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
+		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
+		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
+		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
+		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
+		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
+		<display_value name="dStaminaChangeOT" value="-.09"/>
+		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	</effect_group>
+
+	<property class="UMA">
+		<property name="Mesh" value="armor_iron_boots"/>
+		<property name="Overlay0" value="armor_iron_boots"/>
+		<property name="Layer" value="3"/>
+		<property name="UISlot" value="Footwear"/>
+	</property>
+</item>
 
 <!-- ***LOOT*** -->
 
@@ -20,273 +216,7 @@
 
 <!-- ***QUESTS*** -->
 
-<!-- Part 1 craft and place your workplace hazard sheet -->
-	<quest id="quest_AdvancedSurvival1">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival1"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival1_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival1_description"/>
-		<property name="icon" value="ui_game_symbol_hammer"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
 
-		<!-- <action type="ShowTip" value="tutorialTipQuest02"/> Not sure this will be needed -->
-		<action type="TrackQuest"/>
-
-		<objective type="FetchKeep" id="resourcePaper" value="10" phase="1"/>
-		<objective type="FetchKeep" id="resourcePaint" value="2" phase="1"/>
-		<objective type="Craft">
-			<property name="phase" value="2"/>
-			<property name="item" value="signSafetyWorkProtection"/>
-			<property name="count" value="1"/>
-		</objective>
-
-		<objective type="BlockPlace" id="signSafetyWorkProtection" value="1" phase="3"/>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="4"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Exp" value="150"/>
-		<reward type="Quest" id="quest_AdvancedSurvival2"/>
-	</quest>
-
-	<!-- Part 2 grab a few lanterns -->
-	<quest id="quest_AdvancedSurvival2">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival2"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival2_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival2_description"/>
-		<property name="icon" value="ui_game_symbol_map_house"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="Fetch" id="lanternLight_player" value="3" phase="1"/>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-		
-		<reward type="Exp" value="250"/>
-		<reward type="Quest" id="quest_AdvancedSurvival3"/>
-	</quest>
-
-	<!-- Part 3 kill murder chickens -->
-	<quest id="quest_AdvancedSurvival3">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival3"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival3_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival3_description"/>
-		<property name="icon" value="ui_game_symbol_zombie"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="ZombieKill" id="animalGiantMurderChicken" value="3" phase="1"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-		
-		<reward type="SkillPoints" value="1" chainreward="false"/>
-		<reward type="Exp" value="1000"/>
-		<reward type="Quest" id="quest_AdvancedSurvival4"/>
-	</quest>
-
-	<!-- Part 4 find toilet paper -->
-	<quest id="quest_AdvancedSurvival4">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival4"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival4_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival4_description"/>
-		<property name="icon" value="ui_game_symbol_treasure"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="easy"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="Fetch" id="Goldtoiletpaper" value="1" phase="1"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Exp" value="350"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival5"/>
-	</quest>
-
-	<!-- Part 5 get some beer glasses -->
-	<quest id="quest_AdvancedSurvival5">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival5"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival5_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival5_description"/>
-		<property name="icon" value="ui_game_symbol_shirt"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="Fetch" id="apparelBeerGoggles" value="1" phase="1"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Exp" value="500"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival6"/>
-	</quest>
-
-	<!-- Part 6 craft bat to the moon -->
-	<quest id="quest_AdvancedSurvival6">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival6"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_club"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="FetchKeep" id="resourceForgedSteel" value="50" phase="1"/>
-		<objective type="FetchKeep" id="resourceWood" value="10" phase="1"/>
-		<objective type="FetchKeep" id="resourceLeather" value="3" phase="1"/>
-		<objective type="FetchKeep" id="resourceDuctTape" value="3" phase="1"/>
-		<objective type="FetchKeep" id="modMeleeStunBatonRepulsor" value="1" phase="1"/>
-		<objective type="Fetch" id="meleeWpnClubBatTotheMoon" value="1" phase="2"/>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="3"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-		
-		<reward type="SkillPoints" value="1" chainreward="false"/>
-		<reward type="Exp" value="650"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival7"/>
-	</quest>
-
-	<!-- Part 7 craft some Dingleberry Crunch -->
-	<quest id="quest_AdvancedSurvival7">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival7"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival7_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival7_description"/>
-		<property name="icon" value="ui_game_symbol_campfire"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="FetchKeep" id="foodEdibleturd" value="2" phase="1"/>
-		<objective type="FetchKeep" id="foodEgg" value="1" phase="1"/>
-		<objective type="FetchKeep" id="foodCornMeal" value="1" phase="1"/>
-		<objective type="FetchKeep" id="drinkJarBoiledWater" value="1" phase="1"/>
-		
-		<objective type="Fetch" id="foodRizzosBerryCrunch" value="1" phase="2"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="3"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Exp" value="750"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival8"/>
-	</quest>
-
-	<!-- Part 8 Find a pet rock, craft pet boulder -->
-	<quest id="quest_AdvancedSurvival8">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival8"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival8_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival8_description"/>
-		<property name="icon" value="ui_game_symbol_loot_sack"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="FetchKeep" id="junkPetRock" value="1" phase="1"/>
-		<objective type="Craft" id="rockPetBoulder" value="1" phase="2"/>
-		<objective type="BlockPlace" id="rockPetBoulder" value="1" phase="3"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="4"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="Exp" value="900"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival9"/>
-	</quest>
-
-	<!-- Part 9 kill a mega Karen -->
-	<quest id="quest_AdvancedSurvival9">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival6"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival6_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival6_description"/>
-		<property name="icon" value="ui_game_symbol_knife"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="ZombieKill" id="zombieMegaKaren" value="1"/>
-		
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-
-		<reward type="SkillPoints" value="1" chainreward="false"/>
-		<reward type="Exp" value="1250"/> <!-- this needs chaged -->
-		<reward type="Quest" id="quest_AdvancedSurvival10"/>
-	</quest>
-	
-		<!-- Last part - find Rekts missing porn -->
-	<quest id="quest_AdvancedSurvival10">
-		<property name="group_name_key" value="quest_AdvancedSurvival"/>
-		<property name="name_key" value="quest_AdvancedSurvival10"/>
-		<property name="subtitle_key" value="quest_AdvancedSurvival10_subtitle"/>
-		<property name="description_key" value="quest_AdvancedSurvival10_description"/>
-		<property name="icon" value="ui_game_symbol_treasure"/>
-		<property name="category_key" value="quest"/>
-		<property name="difficulty" value="medium"/>
-		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
-		<property name="shareable" value="false"/>
-
-		<objective type="FetchKeep" id="RektsPorn" value="3" phase="1"/>
-
-		<objective type="InteractWithNPC">
-			<property name="phase" value="2"/>
-			<property name="nav_object" value="return_to_trader" />
-			<property name="use_closest" value="true" />
-		</objective>
-		
-		<reward type="SkillPoints" value="4" chainreward="false"/>
-		<reward type="Exp" value="69"/>
-		<reward type="Item" id="decoComputerMonitorKeyboardMousePC" value="1"/>		
-		<!-- <reward type="ShowTip" value="whiteRiverCitizen" stage="aftercomplete"/> -->
-	</quest>
 
 <!-- ***RECIPES*** -->
 
@@ -294,6 +224,14 @@
 
 <!-- ***TRADERS*** -->
 
+<!-- Vending Machines found in the world. -->
+	<trader_info id="4" full_reset="true" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="15" min_items_swapped="6" max_items_swapped="13">
+		<trader_items count="10">
+			<item group="foodVending"/>
+			<item group="foodCandy" count="1" prob="0.70"/>
+			<item name="foodEdibleturd" count="1,3" prob="0.50"/>
+		</trader_items>
+	</trader_info>
 
 <!-- ***WINDOWS*** -->
 
@@ -302,13 +240,7 @@
 <!-- ***WORKS IN PROGRESS*** -->
 
 	
-	
-	
-	
-	
-	
-
-<quest id="tier1_FetchGive">
+	<quest id="tier1_FetchGive">
 		<property name="name_key" value="quest_tier1_fetchgive"/>
 		<property name="subtitle_key" value="quest_fetchgive_subtitle"/>
 		<property name="description_key" value="quest_fetchgive_description"/>
@@ -652,5 +584,3 @@
 		<reward type="LootItem" id="groupQuestMods" ischosen="true" value="3"/>
 </quest>
 
-
-<!-- WORKS IN PROGRESS -->
