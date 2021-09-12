@@ -83,7 +83,7 @@
 
 				<filledsprite depth="5" name="BarContent" color="0,255,54,128" width="169" type="filled" fill="0" />
 				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="{staticon|once}" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
-				<label depth="7" name="TextContent" pos="40,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{playerfood}%" height="125" controller="PlayerStatsWindow" />
+				<label depth="7" name="TextContent" pos="13,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{playerfood}" height="125" controller="PlayerStatsWindow" />
 
 				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
@@ -98,7 +98,7 @@
 
 				<filledsprite depth="5" name="BarContent" color="0,54,255,128" width="169" type="filled" fill="0"  />
 				<sprite depth="6" name="Icon" atlas="{staticonatlas|once}" sprite="ui_game_symbol_water" size="35,35" pos="26,-24" pivot="center" foregroundlayer="true"/>
-				<label depth="7" name="TextContent" pos="40,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{playerwater}%" height="125" controller="PlayerStatsWindow" />
+				<label depth="7" name="TextContent" pos="13,-23" font_size="32" color="[white]" justify="center" pivot="left" text="{playerwater}" height="125" controller="PlayerStatsWindow" />
 
 				<sprite depth="8" name="border" color="0,0,0,255" type="sliced" fillcenter="false"/>
 				<filledsprite depth="8" name="background" color="0,0,0,255" width="171" fillcenter="false" type="filled" fill="{statmodifiedmax}" />
