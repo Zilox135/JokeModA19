@@ -130,10 +130,12 @@
 	<entity name="animalPig"/>	
 	<entity name="animalCowFemale"/>
 </entitygroup>
-	
+
+<!-- Animals that spawn in the farm POIs -->	
 <entitygroup name="BoarGroup">
 	<entity name="animalBoar"/>
-	<entity name="animalPig"/>	
+	<entity name="animalPig"/>
+	<entity name="animalCowFemale"/>	
 </entitygroup>
 
 <entitygroup name="ZombieFarmGroup">
