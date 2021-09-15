@@ -3,6 +3,7 @@
 <set xpath="/items/item[contains(@name,'food')]/property[@name='DropMeshfile']/@value">#@modfolder:Resources/Turd.unity3d?Turd.prefab</set>
 <set xpath="/items/item[@name='meleeToolRepairT0StoneAxe']/property[@name='Group']/@value">Tools/Traps</set>
 <set xpath="/items/item[@name='gunHandgunT1Pistol']/property[@name='UnlockedBy']/@value">gunHandgunT1PistolSchematic</set>
+<set xpath="/items/item/effect_group/passive_effect[contains(@name, 'ModSlots')][@value='1,1,2,2,3,4']/@value">1,2,3,4,5,6</set>
 <append xpath="/items/item[@name='gunExplosivesT3RocketLauncher']/property[@class='Action0']/property[@name='Magazine_items']/@value">,ammoRocketNuke</append>
 
 <append xpath="/items/item[@name='resourcePaper']">
@@ -1900,6 +1901,85 @@
 	<property name="RepairExpMultiplier" value="5.5"/>
 </item>
 
+<item name="meleeToolPickT3AdvancedAuger">
+	<property name="Tags" value="melee,heavy,tool,motorTool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic"/>
+	<property name="DisplayType" value="motorTool"/>
+	<property name="HoldType" value="20"/>
+	<property name="Meshfile" value="#Other/Items?Tools/augerPrefab.prefab"/>
+	<property name="Material" value="MMotorToolParts"/> <property name="Weight" value="6"/>
+	<property name="RepairTools" value="resourceRepairKit"/>
+	<property name="SoundIdle" value="Auger_Idle"/>
+	<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+	<property name="Group" value="Tools/Traps"/>
+	<property name="RepairExpMultiplier" value="10.8"/>
+	<property name="EconomicValue" value="1500"/>
+	<property name="UnlockedBy" value="meleeToolPickT3AugerSchematic"/>
+	<property name="ShowQuality" value="true"/>
+
+	<property class="Action0">
+		<property name="Class" value="Ranged"/>
+		<property name="Hitmask_override" value="Melee"/>
+		<property name="UseMeleeCrosshair" value="true"/>
+		<property name="Single_magazine_usage" value="false"/>
+		<property name="Magazine_items" value="ammoGasCan"/>
+		<property name="Bullet_material" value="metal"/>
+		<property name="Reload_time" value="4.1"/>
+		<property name="Sound_start" value="Auger_Fire_Start"/>
+		<property name="Sound_repeat" value="Weapons/Motorized/Auger/auger_fire_lp"/>
+		<property name="Sound_end" value="Weapons/Motorized/Auger/auger_fire_end"/>
+		<property name="Sound_empty" value="auger_empty"/>
+		<property name="Sound_reload" value="Auger_Reload"/>
+		<property name="Particles_muzzle_smoke" value="nozzlesmoke_chainsaw"/>
+		<!-- <property name="DamageBonus.wood" value=".25"/> -->
+		<!-- <property name="DamageBonus.head" value="3"/> -->
+		<property name="SupportHarvesting" value="true"/>
+		<property name="ToolCategory.harvestingTools" value="1" param1="1"/>
+	</property>
+
+	<effect_group name="meleeToolPickT3AdvancedAuger">
+		<passive_effect name="EntityDamage" operation="base_set" value="4.2" tags="perkMiner69r"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="20.7" tags="perkMiner69r,miningTool"/>
+		<passive_effect name="RoundsPerMinute" operation="base_set" value="300" tags="perkMiner69r"/>
+		<passive_effect name="DegradationMax" operation="base_set" value="1400,4200" tier="1,6" tags="perkMiner69r"/>
+		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="MaxRange" operation="base_set" value="2.35" tags="perkMiner69r"/>
+		<passive_effect name="BlockRange" operation="base_set" value="3.5" tags="perkMiner69r"/>
+
+		<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+		<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage,BlockDamage"/>
+		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
+
+		<passive_effect name="SphereCastRadius" operation="base_set" value=".1"/>
+		<passive_effect name="DamageFalloffRange" operation="base_set" value="100" tags="perkMiner69r"/>
+		<passive_effect name="DamageFalloffRange" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random effective rng -->
+		<passive_effect name="EntityDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random EntityDmg -->
+		<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+		<passive_effect name="PlayerExpGain" operation="perc_add" value="-.3" tags="Harvesting"/>
+		<passive_effect name="BlockDamage" operation="perc_add" value="-.15,.15" tags="perkMiner69r"/> <!-- random BlockDmg -->
+		<passive_effect name="BlockDamage" operation="perc_add" value=".1,.5" tier="2,6" tags="perkMiner69r"/> <!-- tier bonus -->
+
+		<passive_effect name="DegradationMax" operation="perc_add" value="-.2,.2" tags="perkMiner69r"/> <!-- random DegMax -->
+		<passive_effect name="RoundsPerMinute" operation="perc_add" value="-.05,.05" tags="perkMiner69r"/> <!-- random APM -->
+		<passive_effect name="MagazineSize" operation="perc_add" value="-.122,.122"/> <!-- random MagazineSize -->
+		<passive_effect name="WeaponHandling" operation="perc_add" value="-.08,.08" tags="perkMiner69r"/> <!-- random WeaponHandling -->
+
+		<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+		<passive_effect name="BurstRoundCount" operation="base_set" value="1000" tags="perkMiner69r"/>
+		<passive_effect name="MagazineSize" operation="base_set" value="300" tags="perkMiner69r"/>
+		<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1" tags="perkMiner69r"/> <!-- 3.5s -->
+
+		<passive_effect name="SpreadDegreesVertical" operation="base_set" value=".5" tags="perkMiner69r"/>
+		<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value=".5" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="-.35" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesVerticalMax" operation="base_set" value=".35" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-.35" tags="perkMiner69r"/>
+		<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value=".35" tags="perkMiner69r"/>
+
+		<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="1" tags="perkMiner69r"/>
+		<passive_effect name="WeaponHandling" operation="base_set" value="5" tags="perkMiner69r"/>
+	</effect_group>
+</item>
+
 
 <!-- This part contains all the notes and quests. -->
 
@@ -1915,6 +1995,12 @@
 	<property name="Extends" value="blankNoteMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="noteBoobsDesc"/>
+	<property name="CustomIcon" value="questMaster" />
+</item>
+
+<item name="noteFucksGiven">
+	<property name="Extends" value="blankNoteMaster"/>
+	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
@@ -1943,12 +2029,6 @@
 	<property name="Extends" value="blankNoteMaster"/>
 	<property name="CreativeMode" value="Player"/>
 	<property name="DescriptionKey" value="noteDirectionsDesc"/>
-	<property name="CustomIcon" value="questMaster" />
-</item>
-
-<item name="noteFucksGiven">
-	<property name="Extends" value="blankNoteMaster"/>
-	<property name="CreativeMode" value="Player"/>
 	<property name="CustomIcon" value="questMaster" />
 </item>
 
@@ -4687,70 +4767,6 @@ needed?
 	</effect_group>
 </item>
 
-<!-- This part contains all zombie/animal changes. -->
-
-<item name="meleeHandAnnoyingKid">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property class="Action0">
-		<property name="DamageEntity" value="1"/>
-		<property name="DamageBlock" value="1"/>
-		<!--<property name="Buff" value="buffInjuryBleedingTwo,buffInfectionCatch,buffInjuryStunned01"/>-->
-	</property>
-	<effect_group name="meleeHandZombie01" tiered="false">
-		<!-- these base_add or perc_add have no effect whatsoever on zombies
-		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
-		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
-		-->
-
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
-
-	</effect_group>
-</item>
-
-<item name="meleeHandRageCock">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-		<property name="DamageEntity" value="8"/>
-		<property name="DamageBlock" value="8"/>
-	</property>
-	<effect_group name="meleeHandRagecock" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="20"><!--InfectionRadiated-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="3200"/><!--AbrasionRadiated-->
-	</effect_group>
-</item>
-
-<item name="animalGiantMurderChicken">
-	<property name="Extends" value="meleeHandMaster"/>
-	<property name="CreativeMode" value="None"/>
-	<property name="HoldType" value="35"/>
-	<property class="Action0">
-		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
-		<property name="DamageEntity" value="8"/>
-		<property name="DamageBlock" value="14"/>
-	</property>
-	<effect_group name="animalGiantMurderChicken" tiered="false">
-		<passive_effect name="ModSlots" operation="base_set" value="0"/>
-		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
-		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
-			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
-			weights=".11,.07,.07,.05,.29,.36,.11"/>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
-			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
-		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
-	</effect_group>
-</item>
-
 <!-- Paper Armour T0 -->
 <item name="armorPaperMaster">
 	<property name="CreativeMode" value="None"/>
@@ -5077,6 +5093,92 @@ needed?
 		<property name="Layer" value="3"/>
 		<property name="UISlot" value="Footwear"/>
 	</property>
+</item>
+
+<!-- This part contains all zombie/animal hands. -->
+
+<item name="meleeHandAnnoyingKid">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property class="Action0">
+		<property name="DamageEntity" value="1"/>
+		<property name="DamageBlock" value="1"/>
+		<!--<property name="Buff" value="buffInjuryBleedingTwo,buffInfectionCatch,buffInjuryStunned01"/>-->
+	</property>
+	<effect_group name="meleeHandZombie01" tiered="false">
+		<!-- these base_add or perc_add have no effect whatsoever on zombies
+		<passive_effect name="EntityDamage" operation="base_set" value="10"/>
+		<passive_effect name="BlockDamage" operation="base_set" value="100"/>
+		-->
+
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<passive_effect name="EntityDamage" operation="base_set" value="1"/>
+
+	</effect_group>
+</item>
+
+<item name="meleeHandRageCock">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="HoldType" value="35"/>
+	<property class="Action0">
+		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="8"/>
+	</property>
+	<effect_group name="meleeHandRagecock" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.36,.11"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="20"><!--InfectionRadiated-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="3200"/><!--AbrasionRadiated-->
+	</effect_group>
+</item>
+
+<item name="animalGiantMurderChicken">
+	<property name="Extends" value="meleeHandMaster"/>
+	<property name="CreativeMode" value="None"/>
+	<property name="HoldType" value="35"/>
+	<property class="Action0">
+		<property name="Delay" value=".7"/> <!-- obsolete if rounds per minute exists -->
+		<property name="DamageEntity" value="8"/>
+		<property name="DamageBlock" value="14"/>
+	</property>
+	<effect_group name="animalGiantMurderChicken" tiered="false">
+		<passive_effect name="ModSlots" operation="base_set" value="0"/>
+		<!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
+		<passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+			buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+			weights=".11,.07,.07,.05,.29,.36,.11"/>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="infectionCounter" operation="add" value="10"><!--InfectionRegular-->
+			<requirement name="CVarCompare" target="other" cvar="infectionCounter" operation="GT" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfAttackedOther" action="ModifyCVar" target="other" cvar="abrasionZombieHit" operation="set" value="1800"/><!--AbrasionRegular-->
+	</effect_group>
+</item>
+
+<item name="meleeHandAnimalCow">
+    <property name="Extends" value="meleeHandMaster"/>
+    <property name="CreativeMode" value="None"/>
+    <property name="HoldType" value="35"/>
+    <property class="Action0">
+        <property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+        <property name="Range" value="1.7"/>
+        <property name="DamageEntity" value="14"/>
+        <property name="DamageBlock" value="16"/>
+     </property>
+     <effect_group name="meleeHandAnimalNotWolf" tiered="false">
+        <passive_effect name="ModSlots" operation="base_set" value="0"/>
+        <!--<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/>  A16 .7 -->
+         <passive_effect name="DamageModifier" operation="perc_add" value="3" tags="earth"/>
+         <triggered_effect trigger="onSelfAttackedOther" action="AddBuff" target="other" fireOneBuff="true"
+             buff="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffLaceration,buffAbrasionCatch,buffInjuryStunned01CHTrigger,buffInjuryBleedingTwo"
+             weights=".11,.07,.07,.05,.29,.36,.11">
+        <requirement name="EntityTagCompare" target="other" tags="player"/>
+        </triggered_effect>
+     </effect_group>
 </item>
 
 </append>

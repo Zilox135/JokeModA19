@@ -115,7 +115,7 @@
 
         <action type="SpawnEnemy" id="animalGiantMurderChicken" value="5" phase="3"/>
 
-        <objective type="ZombieKill" id="animalGiantMurderChicken" value="3" phase="3"/>
+        <objective type="AnimalKill" id="animalGiantMurderChicken" value="3" phase="3"/>
 
         <objective type="InteractWithNPC">
             <property name="phase" value="4"/>
@@ -242,7 +242,7 @@
         </objective>
 
         <action type="SpawnEnemy" id="animalGiantMurderChicken" value="1" phase="3"/>
-        <objective type="ZombieKill" id="animalGiantMurderChicken" value="1" phase="3"/>		
+        <objective type="AnimalKill" id="animalGiantMurderChicken" value="1" phase="3"/>		
 
 		<objective type="ReturnToNPC">
 			<property name="phase" value="4"/>
@@ -338,7 +338,7 @@
 		<property name="offer_key" value="quest_AdvancedSurvival_offer"/>
 		<property name="shareable" value="false"/>
 
-		<objective type="ZombieKill" id="animalGiantMurderChicken" value="3" phase="1"/>
+		<objective type="AnimalKill" id="animalGiantMurderChicken" value="3" phase="1"/>
 		
 		<objective type="InteractWithNPC">
 			<property name="phase" value="2"/>

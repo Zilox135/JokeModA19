@@ -108,9 +108,15 @@
 <!-- misc metal container mailbox-->
 <append xpath="/lootcontainers/lootcontainer[@id='14']">
 	<item name="Goldtoiletpaper" prob="0.025"/>	
-	<item name="noteToiletpoem" prob="0.2"/>
-	<item name="noteBoobs" prob="0.2"/>
-	<item name="noteFucksGiven" prob="0.2"/>		
+	<item name="noteToiletpoem" prob="0.030"/>
+	<item name="noteBoobs" prob="0.030"/>
+	<item name="noteFucksGiven" prob="0.030"/>
+	<item name="notePaint" prob="0.030"/>
+	<item name="noteLotto" prob="0.030"/>
+	<item name="noteGrocery" prob="0.030"/>
+	<item name="noteDirections" prob="0.030"/>
+	<item name="noteRCAdvertisement" prob="0.030"/>
+	<item name="noteRCHiring" prob="0.030"/>	
 </append>
 
 <!-- kitchen sink, cupboards (lower), cleaning chemicals, plates, silverware, pots and pans -->
@@ -134,13 +140,20 @@
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='junk']">
-	<item name="Goldtoiletpaper" prob="0.025"/>	
-	<item name="noteBoobs" prob="0.2"/>
-	<item name="noteFucksGiven" prob="0.2"/>	
+	<item name="Goldtoiletpaper" prob="0.025"/>
+	<item name="noteToiletpoem" prob="0.1"/>	
+	<item name="noteBoobs" prob="0.1"/>
+	<item name="noteFucksGiven" prob="0.1"/>		
+	<item name="notePaint" prob="0.1"/>
+	<item name="noteLotto" prob="0.1"/>
+	<item name="noteGrocery" prob="0.1"/>
+	<item name="noteDirections" prob="0.1"/>
+	<item name="noteRCAdvertisement" prob="0.1"/>
+	<item name="noteRCHiring" prob="0.1"/>
 	<item name="TubeSock"/>
-	<item name="medicalButtPlug" prob="0.1"/>
-	<item name="JarOfFarts"/>
-	<item name="BlinkerFluid"/>	
+	<item name="medicalButtPlug" prob="0.040"/>
+	<item name="JarOfFarts" prob="0.3"/>
+	<item name="BlinkerFluid" prob="0.3"/>
 </append>
 
 <append xpath="/lootcontainers/lootgroup[@name='groupQuestWeaponsRangedT2']">
@@ -250,6 +263,6 @@
 	<item name="drinkJarPapaRizzsPooTea"/>
 	<item name="drinkJarPapaRizzsPooTeaSchematic" prob="0.10"/>
 </lootcontainer>
-</append>
 
+</append>
 </config>
