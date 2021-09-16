@@ -22,6 +22,8 @@ foodHoney,items,Food,,,Mint Chews,,
 foodHoneyDesc,items,Food,,,"Mintos, the Flesh Maker!",,
 foodCanDeezNuts,items,Food,,,Deez Nuts,,
 foodCanDeezNutsDesc,items,Food,,,It's not from your favorite supermarket but Deez Nuts will fill you up. Bon appetit!,,"
+foodCatFoodSurprise,items,Food,,,Cat Food Surprise,,
+foodCatFoodSurpriseDesc,items,Food,,,CHANGE ME,,
 
 drinkJarPapaRizzsPooTea,items,Food,,,Papa Rizz's PooTea,,
 drinkJarPapaRizzsPooTeaSchematic,items,Food,,,Papa Rizz's PooTea Recipe,,
@@ -36,6 +38,8 @@ drinkJarCoffeeDesc,items,Food,,,Starmucks Flapacinno keeps your stamina up and h
 drinkJarCoffeeSchematic,items,Food,,,Starmucks Flapacinno Recipe,,
 drinkJarBlackStrapCoffee,items,Food,,,Civet Coffee,,
 drinkJarBlackStrapCoffeeDesc,items,Food,,,It's a bit nutty.,,"
+drinkPumpkinSpiceIcedCoffee,items,Food,,,Pumpkin Spice Iced Coffee,,
+drinkPumpkinSpiceIcedCoffeeDesc,items,Food,,,CHANGE ME,,
 
 perkArtOfMiningBlackStrapDesc,progression,perk  book,,,"Can craft Civet Coffee, a super strong coffee.",,"
 perkArtOfMiningBlackStrapLongDesc,progression,perk  book,,,"For when those regular coffee beans just aren't enough.\n\nTeaches the recipe for Civet Coffee.",,"
@@ -50,6 +54,12 @@ drugHerbalAntibioticsSchematic,items,Medical,,,Herbal Soap Schematic,,
 drugAntibiotics,items,Medical,,,Anti-stink Pills,,
 drugAntibioticsDesc,items,Medical,,,"Through the miracle of science, these pills help reduce how much you stink.",,
 drugAntibioticsSchematic,items,Medical,,,Anti-stink Pills Schematic,,
+drugSnoap,items,Medical,,,Snoap,,
+drugSnoapDesc,items,Medical,,,CHANGE ME,,
+drugPooPooBGone,items,Medical,,,Poo Poo B Gone,,
+drugPooPooBGoneDesc,items,Medical,,,CHANGE ME,,
+drugSwassAssassin,items,Medical,,,Swass Assassin,,
+drugSwassAssassinDesc,items,Medical,,,CHANGE ME,,
 
 medicalButtPlug,items,Medical,,,Butt Plug,,
 medicalButtPlugDesc,items,Medical,,,It plugs your butt to stop the Dysentery. Can also be used on your friends for fun!\n\nFully cures Dysentery.\n\nCannot be crafted.,,
@@ -63,7 +73,10 @@ medicalFirstAidKitSchematic,items,Medical,,,Uh Oh Fixer Uppers Schematic,,
 medicalFirstAidKitDesc,items,Medical,,,"Uh Oh Fixer Uppers They say time heals all wounds. Well these heal those wounds a bit faster.\nUse the secondary action to treat another player.",,"
 drugXP,items,Medical,,,Smart Pills,,
 drugXPDesc,items,Medical,,,Has life got you down? Are you feeling dumb today? Well do we have the pills for you!\n\nAnother Fine RizCo Product,,
-
+medicalSnowberryCream,items,Medical,,,Snowberry Cream,,
+medicalSnowberryCreamDesc,items,Medical,,,CHANGE ME,,
+medicalBearyBandage,items,Medical,,,Beary Bandage,,
+medicalBearyBandageDesc,items,Medical,,,CHANGE ME,,
 Goldtoiletpaper,items,Food,,,Zilox's Legendary Gold Toilet Paper,,
 GoldtoiletpaperDesc,items,Food,,,This Legendary Gold Toilet Roll greatly speeds up recovering from dysentery and gives you a fat XP boost to go along with it.\n\nRight click to throw.,,
 Toiletpaper,items,Food,,,Extra Soft Toilet Paper,,
@@ -72,8 +85,9 @@ drugToiletBrush,items,Medical,,,Toilet Brush,,
 drugToiletBrushDesc,items,Medical,,,For those times you just have nothing else to remove those dingleberries.,,"
 TubeSock,items,Medical,,,Tube Socks,,
 TubeSockDesc,items,Medical,,,"You are not a tube sock fan, but maybe these are good for something?",,"
+
 PoopSock,items,Item,,,Poop Socks,,
-PoopSockDesc,items,Item,,,Socks covered in poop.\n\nRight click to throw at your friends for a laugh.,,
+PoopSockDesc,items,Item,,,Socks covered in poop.\n\nLeft click to throw at your friends for a laugh.,,
 JarOfFarts,items,Junk,,,Jar of farts,,
 JarOfFartsDesc,items,Junk,,,"Weird jar I found, not sure what the label says. Doesn't smell good!",,
 BlinkerFluid,items,Junk,,,Blinker fluid,,
@@ -131,6 +145,11 @@ animalBoar,entityclasses,Entity,,,Murder Bacon,,
 animalBossGrace,entityclasses,Entity,,,Ms Double Meat Bacon,,
 animalGiantMurderChicken,entityclasses,Entity,,,Giant Murder Chicken,,
 animalRageCock,entityclasses,Entity,,,Rage Cock,,
+animalCowMale,entityclasses,Entity,,,Bull,,
+animalCowFemale,entityclasses,Entity,,,Moo Tao Beese,,
+animalBabyBear,entityclasses,Entity,,,Baby Bear,,
+animalCrocodile,entityclasses,Entity,,,Crocadile,,
+animalShark,entityclasses,Entity,,,Shark,,
 
 buffInfection01GetBetterDesc,buffs,Buff,,,You have treated a mild Stink.\nGetting hit by zombies or animals will make your stink worse.,,"
 buffInfection01GetBetterName,buffs,Buff,,,Treated Mild Stink,,
@@ -278,7 +297,7 @@ armorPaperBoots,item,Armor,,,Paper Boot Armor,,
 armorPaperGroupDesc,item,Armor,,,"This armor really sucks, but it is better than nothing. Light armor will encumber you a little and provides some protection against damage.\nIt will not protect you from the weather.\n\nRepair with paper.\nScrap to paper".,,
 armorBombHelmet,item,Armor,,,Bomb Squad Helmet,,
 armorBombChest,item,Armor,,,Bomb Squad Chest Armor,,
-armorBombChest,item,Armor,,,Bomb Squad Chest Armor,,
+armorBombGloves,item,Armor,,,Bomb Squad Glove Armor,,
 armorBombLegs,item,Armor,,,Bomb Squad Leg Armor,,
 armorBombBoots,item,Armor,,,Bomb Squad Boots,,
 armorBombMasterDesc,item,Armor,,,This is some damn heavy duty armor! The tradeoff is that it is very cumbersome.\n\nAnother Fine RizCo Product,,
@@ -297,9 +316,9 @@ noteGroceryDesc,items,Quest - Note,,,"Eggs\n\nMilk\n\n2ply extra soft butt paper
 noteDirections,items,Quest - Note,,,Directions To The Party,,
 noteDirectionsDesc,items,Quest - Note,,,"First, take a long drive.\n\nThen, go over a short pier.\n\nCreep.",,
 noteRCAdvertisement,items,Quest - Note,,,RizCo Advertisement,,
-noteRCAdvertisementDesc,items,Quest - Note,,,New for 2021! Introducing the RizCo Bat to the Moon!\n\nIt defies physics! It defies expectations! It defies a low price!\n\nGet yours today, only from RizCo!,,
+noteRCAdvertisementDesc,items,Quest - Note,,,"New for 2021! Introducing the RizCo Bat to the Moon!\n\nIt defies physics! It defies expectations! It defies a low price!\n\nGet yours today, only from RizCo!",,
 noteRCHiring,items,Quest - Note,,,RizCo Is Hiring!,,
-noteRCHiringDesc,items,Quest - Note,,,Apocalypse got you jobless? Well RizCo is hiring!\n\nPositions available: street cleaner, trader security, zombie exterminator, product tester, and body removal.\n\nApply at RizCo today!,,
+noteRCHiringDesc,items,Quest - Note,,,"Apocalypse got you jobless? Well RizCo is hiring!\n\nPositions available: street cleaner, trader security, zombie exterminator, product tester, and body removal.\n\nApply at RizCo today!",,
 
 qc_AnimalGroupDesc,items,Quest - Animal Challenge,,,A strange note that is asking you to go murder innocent wildlife. Sure why not!,,
 qc_ZombieGroupDesc,items,Quest - Challenge,,,A strange note from the local trader asking for blood sacrifices in the form of zombie slaying.,,
