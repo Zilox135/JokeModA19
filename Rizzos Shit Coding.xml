@@ -12,202 +12,273 @@
 
 <!-- ***ITEMS*** -->
 
-<item name="noteRCAdvertisement">
-	<property name="Extends" value="blankNoteMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="DescriptionKey" value="noteRCAdvertisementDesc"/>
-	<property name="CustomIcon" value="questMaster"/>
-</item>
-
-<item name="noteRCHiring">
-	<property name="Extends" value="blankNoteMaster"/>
-	<property name="CreativeMode" value="Player"/>
-	<property name="DescriptionKey" value="noteRCHiringDesc"/>
-	<property name="CustomIcon" value="questMaster"/>
-</item>
+		<!-- ADD THIS TO BOMB ARMOR PIECES -->
+<property name="UMA.Overlay0Tint" value="47,79,2"/>
 
 
-		<!-- TEST AND WORKS. Up to you on tinting the armor in Unity. -->
-<!-- Tier 4 / Heavy But Cumbersome -->
-<item name="armorBombMaster">
-	<property name="CreativeMode" value="None"/>
-	<property name="CustomIcon" value="armorSwatHelmet"/>
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="DisplayType" value="armorHeavy"/>
-	<property name="Material" value="MarmorSteelSet"/> <property name="Weight" value="4"/>
-	<property name="RepairTools" value="resourceRepairKit"/>
-	<property name="DegradationBreaksAfter" value="false"/>
-	<property name="HoldType" value="45"/>
-	<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+<item name="foodCatFoodSurprise">
+	<property name="Tags" value="food"/>
+	<property name="CustomIcon" value="ICONCatFoodSurprise"/>
+	<property name="DescriptionKey" value="foodCatFoodSurpriseDesc"/>
+	<property name="HoldType" value="31"/>
+	<property name="DisplayType" value="food"/>
+	<property name="Meshfile" value="#Other/Items?Misc/parcelPrefab.prefab"/>
 	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
-	<property name="DescriptionKey" value="armorBombMasterDesc"/>
-	<property name="Group" value="Clothing"/>
-	<property name="RepairExpMultiplier" value="10.8"/>
-	<property name="EconomicValue" value="1500"/>
-	<property name="UnlockedBy" value="???????"/>
-	<property name="ShowQuality" value="true"/>
-</item>
+	<property name="Material" value="Mplants"/>
+	<property name="Stacknumber" value="10"/> <!-- STK resource -->
+	<property name="EconomicValue" value="70"/>
+	<property name="EconomicBundleSize" value="5"/>
+	<property name="CraftingIngredientTime" value="10"/>
+	<!-- 14 is large round hold -->
+	<property name="UnlockedBy" value="perkMasterChef"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_eating"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFFood/Cooking"/>
 
-<item name="armorBombHelmet">
-	<property name="Extends" value="armorBombMaster"/>
-	<property name="CustomIcon" value="armorSwatHelmet" />
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="Tags" value="head,armor,armorHead,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
-	<property name="EquipSlot" value="Head"/>
-	<effect_group name="bomb armor">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
-		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
-		<display_value name="dStaminaChangeOT" value="-.09"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+	<effect_group tiered="false" name="Food Tier 2">
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar=".foodStaminaBonusAdd" operation="add" value="20"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+	</effect_group>
+	
+	<effect_group tiered="false">
+		<display_value name="dPlayerExpGain" value=".2000"/>		
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="2000"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ShowToolbeltMessage" message_key="drugXPTooltip"/>		
+	</effect_group>
+</item>
+		
+<item name="drinkPumpkinSpiceIcedCoffee">                                                         
+	<property name="HoldType" value="3"/>	
+	<property name="DisplayType" value="PumpkinSpiceIcedCoffee"/>
+	<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="Weight" value="10"/>
+	<property name="Stacknumber" value="10"/> <!-- STK drink -->
+	<property name="EconomicValue" value="48"/>
+	<property name="UnlockedBy" value="perkMasterChef,drinkJarPumpkinSpiceIcedCoffeeSchematic"/>
+	<property name="CustomIcon" value="drinkJarYuccaCocktail" />
+	<property name="DescriptionKey" value="drinkPumpkinSpiceIcedCoffeeDesc"/>	
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_drinking"/>
+		<property name="Create_item" value="drinkJarEmpty"/>
+	</property>
+	<property name="Group" value="Food/Cooking,CFDrink/Cooking"/>
+
+	<effect_group tiered="false" name="Drink Tier 1">
+		<requirement name="NotHasBuff" buff="buffIsOnFire"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="36"/>
+		<display_value name="dStaminaRegen" value=".3"/>
+		<display_value name="dHyperthermalResist" value="10"/>
+		<display_value name="dDuration" value="180"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="add" value="183"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffCoffeeDuration" operation="set" value="543">
+			<requirement name="CVarCompare" cvar="$buffCoffeeDuration" operation="GT" value="543"/></triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffCoffee"/>
 	</effect_group>
 
-	<property class="UMA">
-		<property name="Mesh" value="armor_iron_helmet"/>
-		<property name="Overlay0" value="armor_iron_helmet"/>
-		<property name="Layer" value="middle"/>
-		<property name="UISlot" value="Headgear"/>
-		<property name="Mask1" value="Head" param1="inner"/>
-		<property name="Mask3" value="Face" param1="inner"/>
-		<property name="Mask4" value="Face" param1="middle"/>
-		<property name="Mask5" value="Face" param1="outer"/>
-		<property name="Mask7" value="Eyes" param1="inner"/>
-		<property name="Mask8" value="Eyes" param1="middle"/>
-		<property name="Mask9" value="Eyes" param1="outer"/>
-	</property>
+	<effect_group tiered="false">
+		<requirement name="HasBuff" buff="buffIsOnFire"/>
+			<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire"/>
+	</effect_group>
 </item>
 
-<item name="armorBombChest">
-	<property name="Extends" value="armorBombMaster"/>
-	<property name="CustomIcon" value="armorSteelChest" />
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="Tags" value="upperbody,chest,armor,armorChest,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
-	<property name="EquipSlot" value="Chest"/>
-	<effect_group name="bomb armor">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
-		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
-		<display_value name="dStaminaChangeOT" value="-.09"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
-	</effect_group>
-
-	<property class="UMA">
-		<property name="Mesh" value="armor_iron_chest"/>
-		<property name="Overlay0" value="armor_iron_chest"/>
-		<property name="Layer" value="2"/>
-		<property name="UISlot" value="ChestArmor"/>
-	</property>
+<item name="medicalSnowberryCream">
+	<property name="Tags" value="medical"/>
+	<property name="DescriptionKey" value="medicalSnowberryCreamDesc"/>
+	<property name="CustomIcon" value="medicalAloeCream"/>
+	<property name="CustomIconTint" value="150,129,235"/>
+	<property name="DisplayType" value="medical"/>
+	<property name="HoldType" value="64"/>
+	<property name="Meshfile" value="#Other/Items?Health/bandage.fbx"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="EconomicValue" value="10"/>
+	<property name="Stacknumber" value="15"/> <!-- STK medical -->
+	<property name="Group" value="Science,CFChemicals,Medical"/>
 </item>
 
-<item name="armorBombChest">
-	<property name="Extends" value="armorBombMaster"/>
-	<property name="CustomIcon" value="armorSteelGloves" />
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="Tags" value="upperbody,hands,armor,armorHands,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
-	<property name="EquipSlot" value="Hands"/>
-	<effect_group name="bomb armor">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
-		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
-		<display_value name="dStaminaChangeOT" value="-.09"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
+<item name="medicalBearyBandage">
+	<property name="Extends" value="medicalBandage"/>
+	<property name="CustomIcon" value="medicalFirstAidBandage"/>
+	<property name="CustomIconTint" value="150,129,235"/>
+	<property name="Group" value="Science,Medical"/>
+	<property name="EconomicValue" value="15"/>
+	<property name="DescriptionKey" value="medicalBearyBandageDesc"/>
+	<property name="Stacknumber" value="5"/>
+	<property name="UnlockedBy" value="perkPhysician"/>
+
+	<effect_group tiered="false">
+		<!-- used on self -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+		<display_value name="dhealAbrasionMult" value="3"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryAbrasionTreated">
+			<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
+
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medicalRegHealthAmount" operation="add" value="45"/> <!-- X -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="medRegHealthIncSpeed" operation="set" value="@medicRegHealthIncreaseSpeed"/>
+		<display_value name="foodHealthAmount" value="45"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" buff="buffInjuryBleeding"/><display_value name="dStopsBleeding" value="1"/>
+
+		<!-- used on other -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="healAbrasionMult" operation="set" value="3"/> <!-- X -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medicalRegHealthAmount" operation="add" value="45"/> <!-- X -->
+
+		<!-- used on other, regular health per tick based on perkPhysician -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="0"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.5">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="2.8">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.1">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/></triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="ModifyCVar" target="other" cvar="medRegHealthIncSpeed" operation="set" value="3.5">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/></triggered_effect>
+
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffProcessConsumables"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffInjuryBleeding"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="AddBuff" target="other" buff="buffInjuryAbrasionTreated">
+			<requirement name="HasBuff" buff="buffInjuryAbrasion"/></triggered_effect>
 	</effect_group>
 
-	<property class="UMA">
-		<property name="Mesh" value="armor_iron_gloves"/>
-		<property name="Overlay0" value="armor_iron_gloves"/>
-		<property name="Layer" value="0"/>
-		<property name="UISlot" value="Gloves"/>
-	</property>
+	<effect_group tiered="false">
+		<!-- medical XP gains -->
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="40">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="80">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="100">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+	</effect_group>
+
+	<effect_group tiered="false">
+		<!-- medical XP secondary action gains -->
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="100"/>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="40">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="1"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="60">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="80">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="3"/>
+		</triggered_effect>
+				<triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="100">
+			<requirement name="ProgressionLevel" progression_name="perkPhysician" operation="Equals" value="4"/>
+		</triggered_effect>
+	</effect_group>
+
 </item>
 
-<item name="armorBombLegs">
-	<property name="Extends" value="armorBombMaster"/>
-	<property name="CustomIcon" value="armorSteelLegs" />
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="Tags" value="lowerbody,legs,armor,armorLegs,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
-	<property name="EquipSlot" value="Legs"/>
-	<effect_group name="bomb armor">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
-		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
-		<display_value name="dStaminaChangeOT" value="-.09"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
-	</effect_group>
-
-	<property class="UMA">
-		<property name="Mesh" value="armor_iron_pants"/>
-		<property name="Overlay0" value="armor_iron_pants"/>
-		<property name="Layer" value="3"/>
-		<property name="UISlot" value="LegArmor"/>
+<item name="drugSnoap">
+	<property name="Tags" value="medical"/>
+	<property name="CustomIcon" value="ICONSnoap"/>
+	<property name="DescriptionKey" value="drugSnoapDesc"/>	
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="EconomicValue" value="240"/>
+	<property name="Stacknumber" value="10"/> <!-- STK loot -->
+	<property name="UnlockedBy" value="perkPhysician"/>
+	<property name="DisplayType" value="cureInfection"/>
+	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="PlayerMaleHungry"/>
 	</property>
+	<effect_group tiered="false">
+		<display_value name="dCureInfection" value=".75"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="75"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryBleeding"/>		
+	</effect_group>
 </item>
 
-<item name="armorBombBoots">
-	<property name="Extends" value="armorBombMaster"/>
-	<property name="CustomIcon" value="armorSteelBoots" />
-	<property name="CustomIconTint" value="47,79,2"/>
-	<property name="Tags" value="lowerbody,feet,armor,armorFeet,heavyArmor,heavyArmorPenalty,canHaveCosmetic,heavyArmorDeg"/>
-	<property name="EquipSlot" value="Feet"/>
-	<effect_group name="bomb armor">
-		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
-		<passive_effect name="ModPowerBonus" operation="base_add" value="300" tags="EconomicValue"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="10.21,13.71"/>
-		<passive_effect name="PhysicalDamageResist" operation="base_add" value="1,5.29" tier="1,6"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="8.9,12.2" tags="heat,electrical"/>
-		<passive_effect name="ElementalDamageResist" operation="base_add" value="0,5.29" tier="1,6"/>
-		<passive_effect name="BuffResistance" operation="base_add" value="0.071,0.086" tags="buffFatiguedTrigger,buffArmSprainedCHTrigger,buffLegSprainedCHTrigger,buffInjuryBleedingTwo,buffInjuryBleedingBarbedWire,buffLaceration,buffInfectionCatch,buffInjuryStunned01CHTrigger"/>
-		<passive_effect name="DegradationMax" operation="base_set" value="250,500" tier="1,6"/>
-		<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="heavyArmorDeg"/>
-		<passive_effect name="Mobility" operation="perc_add" value="-.09"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.055" tags="walking"/>
-		<passive_effect name="StaminaChangeOT" operation="perc_add" value="-.11" tags="running"/>
-		<display_value name="dStaminaChangeOT" value="-.09"/>
-		<passive_effect name="NoiseMultiplier" operation="perc_add" value=".3"/><display_value name="dNoiseMultiplier" value=".3"/>
-	</effect_group>
-
-	<property class="UMA">
-		<property name="Mesh" value="armor_iron_boots"/>
-		<property name="Overlay0" value="armor_iron_boots"/>
-		<property name="Layer" value="3"/>
-		<property name="UISlot" value="Footwear"/>
+<item name="drugPooPooBGone">
+	<property name="Tags" value="medical"/>
+	<property name="CustomIcon" value="drugAntibiotics"/>
+    <property name="CustomIconTint" value="150,129,235"/>
+	<property name="DescriptionKey" value="drugPooPooBGoneDesc"/>	
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="EconomicValue" value="240"/>
+	<property name="Stacknumber" value="10"/> <!-- STK loot -->
+	<property name="UnlockedBy" value="perkPhysician"/>
+	<property name="DisplayType" value="cureInfection"/>
+	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Sound_start" value="player_painkillers"/>
 	</property>
+	<effect_group tiered="false">
+		<display_value name="dCureInfection" value=".50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="25"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryBleeding"/>		
+	</effect_group>
+	
+	<effect_group tiered="false" name="Drink Tier 1">
+            <display_value name="dCureDysentery" value="1"/>
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffDysenteryAddCurePerc" operation="add" value="100"/>
+            <triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffDysenteryAddCure"/>
+
+            <triggered_effect trigger="onSelfSecondaryActionEnd" action="RemoveBuff" target="other" buff="buffDysenteryMain"/>
+        <triggered_effect trigger="onSelfSecondaryActionEnd" action="GiveExp" exp="10"/>
+    </effect_group>
+</item>
+
+
+<item name="drugSwassAssassin">
+	<property name="Tags" value="medical"/>
+	<property name="CustomIcon" value="ICONSwassAssassin"/>
+	<property name="DescriptionKey" value="drugSwassAssassinDesc"/>	
+	<property name="HoldType" value="16"/>
+	<property name="Meshfile" value="#Other/Items?Health/painkillersPrefab.prefab"/>
+	<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+	<property name="Material" value="Morganic"/>
+	<property name="EconomicValue" value="240"/>
+	<property name="Stacknumber" value="10"/> <!-- STK loot -->
+	<property name="UnlockedBy" value="perkPhysician"/>
+	<property name="DisplayType" value="cureInfection"/>
+	<property name="Group" value="Science,CFChemicals,Medical"/>
+	<property class="Action0">
+		<property name="Class" value="Eat"/>
+		<property name="Delay" value="1.0"/>
+		<property name="Use_time" value="..."/>
+		<property name="Gain_health" value="-440"/>		
+		<property name="Sound_start" value="PlayerMaleHungry"/>
+	</property>
+	<effect_group tiered="false">
+		<display_value name="dCureInfection" value=".50"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="35"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
+		<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInjuryBleeding"/>		
+	</effect_group>
 </item>
 
 <!-- ***LOOT*** -->
@@ -220,18 +291,50 @@
 
 <!-- ***RECIPES*** -->
 
+<recipe name="foodCatFoodSurprise" count="1" craft_area="campfire,WoodBurningStove" craft_tool="toolCookingPot" tags="perkMasterChef,learnable">
+	<ingredient name="foodCanCatfood" count="1"/>
+	<ingredient name="foodCropPotato" count="2"/>
+	<ingredient name="foodCropCorn" count="2"/>
+	<ingredient name="foodEgg" count="1"/>
+	<ingredient name="drinkJarBeer" count="1"/>
+</recipe>
 
+<recipe name="drinkPumpkinSpiceIcedCoffee" count="1" tags="perkMasterChef,learnable">
+	<ingredient name="drinkJarCoffee" count="1"/>
+	<ingredient name="resourceSnowBall" count="2"/>
+	<ingredient name="foodCropPumpkin" count="1"/>
+</recipe>
+
+<recipe name="SnowberryCream" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkPhysician,learnable">
+	<ingredient name="resourceCropSnowberryPlant" count="3"/>
+	<ingredient name="drinkJarRiverWater" count="1"/>
+</recipe>
+
+<recipe name="medicalBearyBandage" count="1" tags="perkPhysician,learnable">
+	<ingredient name="medicalSnowberryCream" count="1"/>
+	<ingredient name="medicalBandage" count="1"/>
+</recipe>
+
+<recipe name="drugSnoap" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkPhysician,learnable">
+	<ingredient name="medicalSnowberryCream" count="1"/>
+	<ingredient name="resourceAnimalFat" count="3"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
+
+<recipe name="drugPooPooBGone" count="1" craft_area="chemistryStation" tags="perkPhysician,learnable,chemStationCrafting">
+	<ingredient name="medicalSnowberryCream" count="3"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="1"/>
+</recipe>
+
+<recipe name="drugSwassAssassin" count="1" craft_area="campfire" craft_tool="toolCookingPot" tags="perkPhysician,learnable">
+	<ingredient name="medicalSnowberryCream" count="1"/>
+	<ingredient name="resourcePotassiumNitratePowder" count="3"/>
+	<ingredient name="drinkJarBoiledWater" count="1"/>
+</recipe>
 
 <!-- ***TRADERS*** -->
 
-<!-- Vending Machines found in the world. -->
-	<trader_info id="4" full_reset="true" reset_interval="1" override_buy_markup="1.0" allow_sell="false" min_inventory="6" max_inventory="15" min_items_swapped="6" max_items_swapped="13">
-		<trader_items count="10">
-			<item group="foodVending"/>
-			<item group="foodCandy" count="1" prob="0.70"/>
-			<item name="foodEdibleturd" count="1,3" prob="0.50"/>
-		</trader_items>
-	</trader_info>
+
 
 <!-- ***WINDOWS*** -->
 
