@@ -164,11 +164,11 @@
 	<ingredient name="resourceRockSmall" count="5000"/>
 </recipe>
 
-<recipe name="decoPaintingsMaster" count="1">
+<!-- <recipe name="decoPaintingsMaster" count="1">
 	<ingredient name="resourceNail" count="4"/>
 	<ingredient name="resourceWood" count="10"/>
 	<ingredient name="resourcePaint" count="1"/>
-</recipe>
+</recipe> -->
 
 <recipe name="meleeWpnBladeT0PlantFiberKnife" count="1" tags="perkDeepCuts">
 	<ingredient name="resourceYuccaFibers" count="10"/>

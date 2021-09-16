@@ -70,7 +70,7 @@
 	<!-- Items -->
 	<item name="resourceFuelCrapSack" count="2,5"/>
 	<item name="treeOakDeco"/>
-	<item name="decoPaintingsMaster"/>
+<!--    <item name="decoPaintingsMaster"/> -->
 	<item name="resourceSnowBall" count="5,10"/>
 	<item name="resourceTestosteroneExtract"/>
 	<item name="resourceNail" count="10,20"/>
